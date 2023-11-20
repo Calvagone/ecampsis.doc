@@ -1,0 +1,55 @@
+--- 
+title: "e-Campsis documentation"
+author: "Calvagone"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+documentclass: book
+bibliography: [book.bib, packages.bib]
+# url: your book url like https://bookdown.org/yihui/bookdown
+cover-image: ecampsis_logo.png
+description: |
+  Here you will find a description of the tabs of e-campsis.
+link-citations: yes
+github-repo: rstudio/bookdown-demo
+---
+
+# About
+
+[e-Campsis](https://ecampsis.shinyapps.io/free/) is a free web application developed by [Calvagone](https://www.calvagone.com/) that provides an intuitive and user-friendly interface for setting up population PK/PD simulations.
+The app is built on the R-package [campsis](https://calvagone.github.io/), which serves as a powerful frontend for running model-based simulations using *mrgsolve* or *rxode2*.
+
+## e-Campsis versions
+
+### e-Campsis free
+
+### e-Campsis free+
+*e-Campsis free* has certain limitations regarding the simulation size for unregistered users.
+
+If you want to simulate up to 16 arms or scenarios, 100 subjects/arm and 250 observations/arm we invite you to become an authorized user of *e-Campsis free+*.
+
+Please send us the pre-filled email below and you will get an invitation to register as soon as possible: campsis@calvagone.com
+
+### e-Campsis pro
+At **Calvagone** we are currently working on an advanced version of e-Campsis including the following additional functionality:
+
+* No limitation of number of subjects, observations, ODEs, arms or scenarios
+* Save all settings of your simulation project within the Shiny environment
+* Import external data into plots for visual comparison to simulations
+* Extensive library, including models with categorical endpoints
+* Sampling of covariates from external databases like e.g. NHANES
+* Run trial replicates, taking into account parameter uncertainty
+* Post-processing of simulation results, applying for example NCA or statistical tests
+* Efficient generation of forest plots on derived simulation output (e.g. Cmax, AUC, effect@time)
+* Semi-automatic parameter sensitivity analysis
+
+For further information, contact us by clicking the link below: campsis@calvagone.com
+
+## Application interface
+
+The app consists of 4 main sections:
+
+* **Model**: a powerful model editor to edit your Campsis model online. Try out one of the numerous models available from the library and adapt it to your needs.
+* **Trial design**: an easy-to-use interface to quickly set-up the dosing regimen, observation times and covariates.
+* **Simulation**: a single screen dedicated to the simulation configuration and visualisation of the results. Explore different scenarios of parameter settings quickly and interactively.
+* **Download**: last but not least, download the model, parameters and the whole code of the simulation to reproduce what you see in the app on your computer using the open-source package campsis.
+

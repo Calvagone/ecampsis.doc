@@ -1,0 +1,28 @@
+# Trial design
+
+## Trial design
+Several study arms can be configured.
+
+For each arm tab, the following information can be entered:
+
+* Number of subjects
+* Arm label
+* Administration type
+* Dose amount
+* Compartment (in which compartment the dose should be assigned)
+* Dosing interval
+* Add. doses (number of additional doses)
+* Observations (observation time), to be written in R format, e.g. *seq(0,24,by=1)* or *c(seq(0, 5), seq(0, 5)+168, seq(0,5)+336, seq(0,504,6))*. Enable the "as-time-after-dose" box, if you want to replicate the observation schedule after each dose.
+* Covariates; e.g. *BW=70*, *DOSE=1|BW=70*, *WT=NormalDistribution(mean=70, sd=10)*
+* Dose adaptation formula (useful if the dose has to be adapted to the body weight); e.g. _DOSE*BW_
+
+## Summary
+
+A summary of your trial design in shown in this box, where you can quickly visualise the characteristics of your arms. 
+
+## Custom dataset
+
+The simulation dataset (arms) can be further edited by clicking "Edit dataset" button. 
+
+[See the Campsis help](https://calvagone.github.io/campsis.doc/articles/v01_dataset.html)
+

@@ -1,0 +1,6 @@
+# Simulation
+
+Once your trial design is configured, go to the Simulation Tab and the simulation is instantaneously executed.
+
+
+
