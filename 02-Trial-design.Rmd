@@ -1,20 +1,21 @@
 # Trial design
 
 ## Trial design
-Several study arms can be configured.
+Four (free version) to eight (pro version) study arms can be configured.
 
 For each arm tab, the following information can be entered:
 
 * Number of subjects
 * Arm label
-* Administration type
+* Administration type (bolus or infusion)
+* If infusion is selected, you can choose whether the infusion is in the Model or in the Dataset; if the latter, the infusion duration can be entered
 * Dose amount
 * Compartment (in which compartment the dose should be assigned)
 * Dosing interval
 * Add. doses (number of additional doses)
 * Observations (observation time), to be written in R format, e.g. *seq(0,24,by=1)* or *c(seq(0, 5), seq(0, 5)+168, seq(0,5)+336, seq(0,504,6))*. Enable the "as-time-after-dose" box, if you want to replicate the observation schedule after each dose.
 * Covariates; e.g. *BW=70*, *DOSE=1|BW=70*, *WT=NormalDistribution(mean=70, sd=10)*
-* Dose adaptation formula (useful if the dose has to be adapted to the body weight); e.g. _DOSE*BW_
+* Dose adaptation formula (useful if the dose has to be adapted to the body weight); e.g. DOSE*BW.
 
 ## Summary
 

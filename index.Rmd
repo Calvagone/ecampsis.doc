@@ -4,7 +4,7 @@ author: "Calvagone"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 documentclass: book
-bibliography: [book.bib, packages.bib]
+# bibliography: [book.bib, packages.bib]
 # url: your book url like https://bookdown.org/yihui/bookdown
 cover-image: ecampsis_logo.png
 description: |
@@ -21,6 +21,7 @@ The app is built on the R-package [campsis](https://calvagone.github.io/), which
 ## e-Campsis versions
 
 ### e-Campsis free
+*e-Campsis free* included many functionalities to provide intuitive and user-friendly interface for setting up population PK/PD simulations.
 
 ### e-Campsis free+
 *e-Campsis free* has certain limitations regarding the simulation size for unregistered users.
@@ -42,7 +43,7 @@ At **Calvagone** we are currently working on an advanced version of e-Campsis in
 * Efficient generation of forest plots on derived simulation output (e.g. Cmax, AUC, effect@time)
 * Semi-automatic parameter sensitivity analysis
 
-For further information, contact us by clicking the link below: campsis@calvagone.com
+For further information, contact us at the following e-mail address: campsis@calvagone.com
 
 ## Application interface
 

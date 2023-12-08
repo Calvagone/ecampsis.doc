@@ -1,4 +1,3 @@
-eq:binom
 about
 e-campsis-versions
 e-campsis-free
@@ -8,7 +7,7 @@ application-interface
 model-tab
 model-from-library
 campsis-model-import
-nonmem-model-import
+nonmem-model-import-pro-version
 model-code
 parameters
 trial-design
@@ -16,14 +15,10 @@ trial-design-1
 summary
 custom-dataset
 simulation
-footnotes-and-citations
-footnotes
-citations
-blocks
-equations
-theorems-and-proofs
-callout-blocks
-sharing-your-book
-publishing
-pages
-metadata-for-sharing
+scenarios
+simulation-settings
+plot-settings
+post-processing
+download
+feedback-and-help
+disclaimer

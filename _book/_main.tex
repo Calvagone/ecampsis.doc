@@ -36,46 +36,6 @@
   \KOMAoptions{parskip=half}}
 \makeatother
 \usepackage{xcolor}
-\usepackage{color}
-\usepackage{fancyvrb}
-\newcommand{\VerbBar}{|}
-\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
-\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
-% Add ',fontsize=\small' for more characters per line
-\usepackage{framed}
-\definecolor{shadecolor}{RGB}{248,248,248}
-\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
-\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
-\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
-\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
-\newcommand{\BuiltInTok}[1]{#1}
-\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
-\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
-\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
-\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
-\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
-\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
-\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
-\newcommand{\ExtensionTok}[1]{#1}
-\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
-\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
-\newcommand{\ImportTok}[1]{#1}
-\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
-\newcommand{\NormalTok}[1]{#1}
-\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
-\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
-\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
-\newcommand{\RegionMarkerTok}[1]{#1}
-\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
-\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
-\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
-\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
-\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
-\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
 \usepackage{longtable,booktabs,array}
 \usepackage{calc} % for calculating minipage widths
 % Correct order of tables after \paragraph or \subparagraph
@@ -120,25 +80,8 @@
 
 \title{e-Campsis documentation}
 \author{Calvagone}
-\date{2023-11-20}
+\date{2023-12-08}
 
-\usepackage{amsthm}
-\newtheorem{theorem}{Theorem}[chapter]
-\newtheorem{lemma}{Lemma}[chapter]
-\newtheorem{corollary}{Corollary}[chapter]
-\newtheorem{proposition}{Proposition}[chapter]
-\newtheorem{conjecture}{Conjecture}[chapter]
-\theoremstyle{definition}
-\newtheorem{definition}{Definition}[chapter]
-\theoremstyle{definition}
-\newtheorem{example}{Example}[chapter]
-\theoremstyle{definition}
-\newtheorem{exercise}{Exercise}[chapter]
-\theoremstyle{definition}
-\newtheorem{hypothesis}{Hypothesis}[chapter]
-\theoremstyle{remark}
-\newtheorem*{remark}{Remark}
-\newtheorem*{solution}{Solution}
 \begin{document}
 \maketitle
 
@@ -157,6 +100,8 @@ The app is built on the R-package \href{https://calvagone.github.io/}{campsis}, 
 
 \hypertarget{e-campsis-free}{%
 \subsection{e-Campsis free}\label{e-campsis-free}}
+
+\emph{e-Campsis free} included many functionalities to provide intuitive and user-friendly interface for setting up population PK/PD simulations.
 
 \hypertarget{e-campsis-free-1}{%
 \subsection{e-Campsis free+}\label{e-campsis-free-1}}
@@ -194,7 +139,7 @@ At \textbf{Calvagone} we are currently working on an advanced version of e-Camps
   Semi-automatic parameter sensitivity analysis
 \end{itemize}
 
-For further information, contact us by clicking the link below: \href{mailto:campsis@calvagone.com}{\nolinkurl{campsis@calvagone.com}}
+For further information, contact us at the following e-mail address: \href{mailto:campsis@calvagone.com}{\nolinkurl{campsis@calvagone.com}}
 
 \hypertarget{application-interface}{%
 \section{Application interface}\label{application-interface}}
@@ -216,12 +161,6 @@ The app consists of 4 main sections:
 \hypertarget{model-tab}{%
 \chapter{Model tab}\label{model-tab}}
 
-\begin{figure}
-\centering
-\includegraphics{ecampsis_model_tab.png}
-\caption{e-Campis Model tab}
-\end{figure}
-
 \hypertarget{model-from-library}{%
 \section{Model from library}\label{model-from-library}}
 
@@ -234,10 +173,10 @@ A different PK model can be selected from a large library (``Select PK model''),
 
 An existing Campsis model can be uploaded from this box (including files \emph{model.campsis}, \emph{omega.csv}, \emph{theta.csv} and \emph{sigma.csv}).
 
-\hypertarget{nonmem-model-import}{%
-\section{NONMEM model import}\label{nonmem-model-import}}
+\hypertarget{nonmem-model-import-pro-version}{%
+\section{NONMEM model import (pro-version)}\label{nonmem-model-import-pro-version}}
 
-In the pro version, an existing NONMEM model can be uploaded from this box (including files \emph{.mod} and \emph{.ext}).
+In the pro version, an existing NONMEM model can be uploaded from this box (including files \emph{.mod} and \emph{.ext}) and will be automatically translated to Campsis code.
 
 The NONMEM import functionality will be installed, the process can take several minutes. A notification will popup when done.
 
@@ -245,6 +184,8 @@ The NONMEM import functionality will be installed, the process can take several 
 \section{Model code}\label{model-code}}
 
 The model code is shown in the editor window where it can be easily modified. Please note that the code is case sensitive (e.g.~\emph{log}, \emph{exp}, \emph{sqrt} should be used). The power function is \emph{pow(x,d)}, \emph{x} to the power of \emph{d}.
+
+Clicking on the ``Download'' button, Campsis model code will be downloaded as a ZIP folder, including \emph{model.campsis}, \emph{omega.csv}, \emph{theta.csv} and \emph{sigma.csv}.
 
 \hypertarget{parameters}{%
 \section{Parameters}\label{parameters}}
@@ -257,13 +198,15 @@ Correlations between omegas can be added by right-clicking on a cell in the OMEG
 
 Clicking on ``Get parameter names from code'', the code will be scanned for the \#THETA, \#OMEGA and \#SIGMA and the names will be extracted and added to the table.
 
+Tables can be edited.
+
 \hypertarget{trial-design}{%
 \chapter{Trial design}\label{trial-design}}
 
 \hypertarget{trial-design-1}{%
 \section{Trial design}\label{trial-design-1}}
 
-Several study arms can be configured.
+Four (free version) to eight (pro version) study arms can be configured.
 
 For each arm tab, the following information can be entered:
 
@@ -274,7 +217,9 @@ For each arm tab, the following information can be entered:
 \item
   Arm label
 \item
-  Administration type
+  Administration type (bolus or infusion)
+\item
+  If infusion is selected, you can choose whether the infusion is in the Model or in the Dataset; if the latter, the infusion duration can be entered
 \item
   Dose amount
 \item
@@ -288,7 +233,7 @@ For each arm tab, the following information can be entered:
 \item
   Covariates; e.g.~\emph{BW=70}, \emph{DOSE=1\textbar BW=70}, \emph{WT=NormalDistribution(mean=70, sd=10)}
 \item
-  Dose adaptation formula (useful if the dose has to be adapted to the body weight); e.g.~\_DOSE*BW\_
+  Dose adaptation formula (useful if the dose has to be adapted to the body weight); e.g.~DOSE*BW.
 \end{itemize}
 
 \hypertarget{summary}{%
@@ -308,92 +253,136 @@ The simulation dataset (arms) can be further edited by clicking ``Edit dataset''
 
 Once your trial design is configured, go to the Simulation Tab and the simulation is instantaneously executed.
 
-\hypertarget{footnotes-and-citations}{%
-\chapter{Footnotes and citations}\label{footnotes-and-citations}}
+\hypertarget{scenarios}{%
+\section{Scenarios}\label{scenarios}}
 
-\hypertarget{footnotes}{%
-\section{Footnotes}\label{footnotes}}
+Make several scenarios you want to compare. For each scenario, parameter values can be changed.
 
-Footnotes are put inside the square brackets after a caret \texttt{\^{}{[}{]}}. Like this one \footnote{This is a footnote.}.
+\hypertarget{simulation-settings}{%
+\section{Simulation settings}\label{simulation-settings}}
 
-\hypertarget{citations}{%
-\section{Citations}\label{citations}}
+\begin{itemize}
+\tightlist
+\item
+  IIV/RUV: Should the inter-individual and residual variability be taken into account in the simulations? Check IIV or RUV boxes accordingly.
+\item
+  Seed: a seed number can be used.
+\item
+  Select output(s): select one or several outputs you would like to look at.
+\item
+  Select engine: choose one of the two simulation packages rxode2 or mrgsolve.
+\item
+  Execution/Manual: check the box to make any changes without updating the plot and, when all is configured, click the ``play'' button \(\vartriangleright\)
+\end{itemize}
 
-Reference items in your bibliography file(s) using \texttt{@key}.
+\hypertarget{plot-settings}{%
+\section{Plot settings}\label{plot-settings}}
 
-For example, we are using the \textbf{bookdown} package \citep{R-bookdown} (check out the last code chunk in index.Rmd to see how this citation key was added) in this sample book, which was built on top of R Markdown and \textbf{knitr} \citep{xie2015} (this citation was added manually in an external file book.bib).
-Note that the \texttt{.bib} files need to be listed in the index.Rmd with the YAML \texttt{bibliography} key.
+Click ``+'' to pull the tab down.
 
-The RStudio Visual Markdown Editor can also make it easier to insert citations: \url{https://rstudio.github.io/visual-markdown-editing/\#/citations}
+\begin{itemize}
+\item
+  Three plot options can be chosen:
 
-\hypertarget{blocks}{%
-\chapter{Blocks}\label{blocks}}
+  \begin{itemize}
+  \tightlist
+  \item
+    spaghetti plot: overlay of the individual profiles of the selected output(s) versus time
+  \item
+    shaded plot: median of the simulated output(s) versus time with 5th and 95th percentiles of the simulations
+  \item
+    scatter plot: relationship between two selected outputs
+  \end{itemize}
+\item
+  Colour-group by: profiles will have different colors by ARM or SCENARIO
+\item
+  Stratify-group by: split the plots by ARM or SCENARIO
+\item
+  X-axis or Y-axis in log: select to show the X- or Y-axis on log scale
+\item
+  Interactive plot: when checked, more options on plots are available (from Plotly)
+\item
+  Plot height: adjust the height of the figure
+\item
+  More annotation options: allows to customize the plot
 
-\hypertarget{equations}{%
-\section{Equations}\label{equations}}
+  \begin{itemize}
+  \tightlist
+  \item
+    Plot title
+  \item
+    X-axis label, limits, breaks
+  \item
+    Y-axis label, limits, breaks
+  \item
+    Footnote
+  \item
+    Horizontal/Vertical line(s): add one or several horizontal or vertical line(s) to the plot, and select colours and type
+  \item
+    Facet scales: scales for facet can be fixed, free, or free in one dimension
+  \item
+    Facet nrow: number of facets per row
+  \item
+    Facet scaled: include or not the facet variable name
+  \end{itemize}
+\item
+  Custom plot (pro version): code can be edited to directly customize the plot, then check ``enable custom plot'' to update the plot after editing the code. Click ``Generate code from GUI'' to update the code from the plot.
+\end{itemize}
 
-Here is an equation.
+\hypertarget{post-processing}{%
+\chapter{Post-processing}\label{post-processing}}
 
-\begin{equation} 
-  f\left(k\right) = \binom{n}{k} p^k\left(1-p\right)^{n-k}
-  \label{eq:binom}
-\end{equation}
+Perform post-processing calculations, for example apply non-compartmental methods to derive key PK parameters.
 
-You may refer to using \texttt{\textbackslash{}@ref(eq:binom)}, like see Equation \eqref{eq:binom}.
+The steps are:
 
-\hypertarget{theorems-and-proofs}{%
-\section{Theorems and proofs}\label{theorems-and-proofs}}
+\begin{itemize}
+\tightlist
+\item
+  add the metrics you are interested in (e.g., AUC, Cmax and tmax),
+\item
+  if relevant, stratify by SCENARIO, ARM and/or PERIOD
+\item
+  click refresh grid
+\item
+  click the button `Apply to all panels'
+\item
+  click on the Calculate button !
+\end{itemize}
 
-Labeled theorems can be referenced in text using \texttt{\textbackslash{}@ref(thm:tri)}, for example, check out this smart theorem \ref{thm:tri}.
+Description of the options:
 
-\begin{theorem}
-\protect\hypertarget{thm:tri}{}\label{thm:tri}For a right triangle, if \(c\) denotes the \emph{length} of the hypotenuse
-and \(a\) and \(b\) denote the lengths of the \textbf{other} two sides, we have
-\[a^2 + b^2 = c^2\]
-\end{theorem}
+\begin{itemize}
+\tightlist
+\item
+  Periods: define the periods to select the time range included for calculation of the metrics
+\item
+  New metric: select the metric and the output to which the metric should be calculated on, define the time range or select one of the periods defined. A label can be defined. If period is selected, PERIOD has to be selected as a stratification factor
+\item
+  Available metrics: the metrics created are shown in this box
+\item
+  Edit zone: click on a metric and dragged it to this zone to edit it
+\item
+  Drop zone: if a metric had to be remove from one of the stratification, click-and-drop to this zone
+\item
+  Refresh grid: to reset boxes (on the right)
+\end{itemize}
 
-Read more here \url{https://bookdown.org/yihui/bookdown/markdown-extensions-by-bookdown.html}.
+\hypertarget{download}{%
+\chapter{Download}\label{download}}
 
-\hypertarget{callout-blocks}{%
-\section{Callout blocks}\label{callout-blocks}}
+Click the Download button to download the full Campsis script. This script can be used locally on your laptop using the R-package \textbf{Campsis}, available on CRAN. Or the script can be uploaded on e-Campsis later.
 
-The R Markdown Cookbook provides more help on how to use custom blocks to design your own callouts: \url{https://bookdown.org/yihui/rmarkdown-cookbook/custom-blocks.html}
+\hypertarget{feedback-and-help}{%
+\chapter{Feedback and help}\label{feedback-and-help}}
 
-\hypertarget{sharing-your-book}{%
-\chapter{Sharing your book}\label{sharing-your-book}}
+On the \href{https://calvagone.github.io/}{\textbf{Campsis}} website, you will find extensive information about the open-source Campsis simulation platform. There you will also find a section on e-Campsis, including example use cases.
 
-\hypertarget{publishing}{%
-\section{Publishing}\label{publishing}}
+If you run into problems using \textbf{e-Campsis}, please provide your feedback here: \url{https://github.com/Calvagone/ecampsis.feedback/issues}
 
-HTML books can be published online, see: \url{https://bookdown.org/yihui/bookdown/publishing.html}
+\hypertarget{disclaimer}{%
+\chapter{Disclaimer}\label{disclaimer}}
 
-\hypertarget{pages}{%
-\section{404 pages}\label{pages}}
-
-By default, users will be directed to a 404 page if they try to access a webpage that cannot be found. If you'd like to customize your 404 page instead of using the default, you may add either a \texttt{\_404.Rmd} or \texttt{\_404.md} file to your project root and use code and/or Markdown syntax.
-
-\hypertarget{metadata-for-sharing}{%
-\section{Metadata for sharing}\label{metadata-for-sharing}}
-
-Bookdown HTML books will provide HTML metadata for social sharing on platforms like Twitter, Facebook, and LinkedIn, using information you provide in the \texttt{index.Rmd} YAML. To setup, set the \texttt{url} for your book and the path to your \texttt{cover-image} file. Your book's \texttt{title} and \texttt{description} are also used.
-
-This \texttt{gitbook} uses the same social sharing data across all chapters in your book- all links shared will look the same.
-
-Specify your book's source repository on GitHub using the \texttt{edit} key under the configuration options in the \texttt{\_output.yml} file, which allows users to suggest an edit by linking to a chapter's source file.
-
-Read more about the features of this output format here:
-
-\url{https://pkgs.rstudio.com/bookdown/reference/gitbook.html}
-
-Or use:
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{?bookdown}\SpecialCharTok{::}\NormalTok{gitbook}
-\end{Highlighting}
-\end{Shaded}
-
-
-  \bibliography{book.bib,packages.bib}
+\textbf{e-Campsis free} is provided ``as is'', without warranty of any kind, express or implied, including but not limited to the warranties of merchantability, fitness for a particular purpose and noninfringement. In no event shall Calvagone SAS be liable for any claim, damages or other liability, whether in an action of contract, tort or otherwise, arising from, out of or in connection with the software or the use or other dealings with the software. Calvagone reserves the right to discontinue the service at any time.
 
 \end{document}

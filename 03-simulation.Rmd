@@ -2,5 +2,42 @@
 
 Once your trial design is configured, go to the Simulation Tab and the simulation is instantaneously executed.
 
+## Scenarios
+Make several scenarios you want to compare. For each scenario, parameter values can be changed.
 
+## Simulation settings
+* IIV/RUV: Should the inter-individual and residual variability be taken into account in the simulations? Check IIV or RUV boxes accordingly.
+* Seed: a seed number can be used.
+* Select output(s): select one or several outputs you would like to look at.
+* Select engine: choose one of the two simulation packages rxode2 or mrgsolve.
+* Execution/Manual: check the box to make any changes without updating the plot and, when all is configured, click the “play” button $\vartriangleright$
 
+## Plot settings
+Click “+” to pull the tab down.
+
+* Three plot options can be chosen:
+  * spaghetti plot: overlay of the individual profiles of the selected output(s) versus time
+  * shaded plot: median of the simulated output(s) versus time with 5th and 95th percentiles of the simulations
+  *   scatter plot: relationship between two selected outputs
+
+* Colour-group by: profiles will have different colors by ARM or SCENARIO
+
+* Stratify-group by: split the plots by ARM or SCENARIO
+
+* X-axis or Y-axis in log: select to show the X- or Y-axis on log scale
+
+* Interactive plot: when checked, more options on plots are available (from Plotly)
+
+* Plot height: adjust the height of the figure
+
+* More annotation options: allows to customize the plot
+  * Plot title
+  * X-axis label, limits, breaks
+  * Y-axis label, limits, breaks
+  * Footnote
+  * Horizontal/Vertical line(s): add one or several horizontal or vertical line(s) to the plot, and select colours and type
+  * Facet scales: scales for facet can be fixed, free, or free in one dimension
+  * Facet nrow: number of facets per row
+  * Facet scaled: include or not the facet variable name
+
+* Custom plot (pro version): code can be edited to directly customize the plot, then check “enable custom plot” to update the plot after editing the code. Click “Generate code from GUI” to update the code from the plot.
