@@ -4,13 +4,10 @@ author: "Calvagone"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 documentclass: book
-# bibliography: [book.bib, packages.bib]
-# url: your book url like https://bookdown.org/yihui/bookdown
 cover-image: ecampsis_logo.png
-description: |
-  Here you will find a description of the tabs of e-campsis.
+description: "Here you will find a description of the tabs of e-campsis.\n"
 link-citations: yes
-github-repo: rstudio/bookdown-demo
+github-repo: "rstudio/bookdown-demo"
 ---
 
 # About
