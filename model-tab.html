@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 2 Model tab | e-Campsis documentation</title>
+  <meta name="description" content="Here you will find a description of the tabs of e-campsis." />
+  <meta name="generator" content="bookdown 0.34 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 2 Model tab | e-Campsis documentation" />
+  <meta property="og:type" content="book" />
+  <meta property="og:image" content="/ecampsis_logo.png" />
+  <meta property="og:description" content="Here you will find a description of the tabs of e-campsis." />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 2 Model tab | e-Campsis documentation" />
+  
+  <meta name="twitter:description" content="Here you will find a description of the tabs of e-campsis." />
+  <meta name="twitter:image" content="/ecampsis_logo.png" />
+
+<meta name="author" content="Calvagone" />
+
+
+<meta name="date" content="2023-12-21" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="index.html"/>
+<link rel="next" href="trial-design.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">e-Campsis documentation</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> About</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#e-campsis-versions"><i class="fa fa-check"></i><b>1.1</b> e-Campsis versions</a>
+<ul>
+<li class="chapter" data-level="1.1.1" data-path="index.html"><a href="index.html#e-campsis-free"><i class="fa fa-check"></i><b>1.1.1</b> e-Campsis free</a></li>
+<li class="chapter" data-level="1.1.2" data-path="index.html"><a href="index.html#e-campsis-free-1"><i class="fa fa-check"></i><b>1.1.2</b> e-Campsis free+</a></li>
+<li class="chapter" data-level="1.1.3" data-path="index.html"><a href="index.html#e-campsis-pro"><i class="fa fa-check"></i><b>1.1.3</b> e-Campsis pro</a></li>
+</ul></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#application-interface"><i class="fa fa-check"></i><b>1.2</b> Application interface</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="model-tab.html"><a href="model-tab.html"><i class="fa fa-check"></i><b>2</b> Model tab</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="model-tab.html"><a href="model-tab.html#model-from-library"><i class="fa fa-check"></i><b>2.1</b> Model from library</a></li>
+<li class="chapter" data-level="2.2" data-path="model-tab.html"><a href="model-tab.html#campsis-model-import"><i class="fa fa-check"></i><b>2.2</b> Campsis model import</a></li>
+<li class="chapter" data-level="2.3" data-path="model-tab.html"><a href="model-tab.html#nonmem-model-import-pro-version"><i class="fa fa-check"></i><b>2.3</b> NONMEM model import (pro-version)</a></li>
+<li class="chapter" data-level="2.4" data-path="model-tab.html"><a href="model-tab.html#model-code"><i class="fa fa-check"></i><b>2.4</b> Model code</a></li>
+<li class="chapter" data-level="2.5" data-path="model-tab.html"><a href="model-tab.html#parameters"><i class="fa fa-check"></i><b>2.5</b> Parameters</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="trial-design.html"><a href="trial-design.html"><i class="fa fa-check"></i><b>3</b> Trial design</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="trial-design.html"><a href="trial-design.html#trial-design-1"><i class="fa fa-check"></i><b>3.1</b> Trial design</a></li>
+<li class="chapter" data-level="3.2" data-path="trial-design.html"><a href="trial-design.html#summary"><i class="fa fa-check"></i><b>3.2</b> Summary</a></li>
+<li class="chapter" data-level="3.3" data-path="trial-design.html"><a href="trial-design.html#custom-dataset"><i class="fa fa-check"></i><b>3.3</b> Custom dataset</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="simulation.html"><a href="simulation.html"><i class="fa fa-check"></i><b>4</b> Simulation</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="simulation.html"><a href="simulation.html#scenarios"><i class="fa fa-check"></i><b>4.1</b> Scenarios</a></li>
+<li class="chapter" data-level="4.2" data-path="simulation.html"><a href="simulation.html#simulation-settings"><i class="fa fa-check"></i><b>4.2</b> Simulation settings</a></li>
+<li class="chapter" data-level="4.3" data-path="simulation.html"><a href="simulation.html#plot-settings"><i class="fa fa-check"></i><b>4.3</b> Plot settings</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="post-processing.html"><a href="post-processing.html"><i class="fa fa-check"></i><b>5</b> Post-processing</a></li>
+<li class="chapter" data-level="6" data-path="download.html"><a href="download.html"><i class="fa fa-check"></i><b>6</b> Download</a></li>
+<li class="chapter" data-level="7" data-path="feedback-and-help.html"><a href="feedback-and-help.html"><i class="fa fa-check"></i><b>7</b> Feedback and help</a></li>
+<li class="chapter" data-level="8" data-path="disclaimer.html"><a href="disclaimer.html"><i class="fa fa-check"></i><b>8</b> Disclaimer</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">e-Campsis documentation</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="model-tab" class="section level1 hasAnchor" number="2">
+<h1><span class="header-section-number">Chapter 2</span> Model tab<a href="model-tab.html#model-tab" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p><img src="pictures/model_tab2.png" /></p>
+<div id="model-from-library" class="section level2 hasAnchor" number="2.1">
+<h2><span class="header-section-number">2.1</span> Model from library<a href="model-tab.html#model-from-library" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>When entering the app, a simple PK model is already loaded by default.</p>
+<p>A different PK model can be selected from a large library (“Select PK model”).</p>
+<p>In “Select category”, NONMEM models or models for target-mediated drug disposition (TMDD) can be also loaded.</p>
+<p>A PD model can be connected (“Connect PD model”) to the PK model. This done internally via campsismod (see <a href="https://calvagone.github.io/campsismod.doc/articles/v06_append_pd_model.html">here</a>). If you do this you may have to check that the right PK output goes into the PD part of the model.</p>
+</div>
+<div id="campsis-model-import" class="section level2 hasAnchor" number="2.2">
+<h2><span class="header-section-number">2.2</span> Campsis model import<a href="model-tab.html#campsis-model-import" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>An existing Campsis model can be uploaded from this box (including files <em>model.campsis</em>, <em>omega.csv</em>, <em>theta.csv</em> and <em>sigma.csv</em>).</p>
+</div>
+<div id="nonmem-model-import-pro-version" class="section level2 hasAnchor" number="2.3">
+<h2><span class="header-section-number">2.3</span> NONMEM model import (pro-version)<a href="model-tab.html#nonmem-model-import-pro-version" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>In the pro version, an existing NONMEM model can be uploaded from this box (including files <em>.mod</em> and <em>.ext</em>) and will be automatically translated to Campsis code.</p>
+<p>The NONMEM import functionality will be installed, the process can take several minutes. A notification will popup when done.</p>
+</div>
+<div id="model-code" class="section level2 hasAnchor" number="2.4">
+<h2><span class="header-section-number">2.4</span> Model code<a href="model-tab.html#model-code" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The model code is shown in the editor window where it can be easily modified. Please note that the code is case sensitive (e.g. <em>log</em>, <em>exp</em>, <em>sqrt</em> should be used). The power function is <em>pow(x,d)</em>, <em>x</em> to the power of <em>d</em>.</p>
+<p>Clicking on the “Download” button, Campsis model code will be downloaded as a ZIP folder, including <em>model.campsis</em>, <em>omega.csv</em>, <em>theta.csv</em> and <em>sigma.csv</em>.</p>
+</div>
+<div id="parameters" class="section level2 hasAnchor" number="2.5">
+<h2><span class="header-section-number">2.5</span> Parameters<a href="model-tab.html#parameters" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The list of parameters for THETA, OMEGA and SIGMA is given in this box. Their values and labels can be changed. Comments can be added.</p>
+<p>The type for OMEGA and SIGMA can be changed: sd, var, covar, cv, cv%, cor, for standard deviation, variance, covariance, coefficient of variation, coefficient of variation (as %) or correlation, respectively.</p>
+<p>Correlations between omegas can be added by right-clicking on a cell in the OMEGA table. For example, enter “KA, VC” as name, 1 and 2 in index and index2, and add the correlation value.</p>
+<p>Clicking on “Get parameter names from code”, the code will be scanned for the strings <em>THETA_name</em>, <em>ETA_name</em> and <em>EPS_name</em> and the names will be extracted and added to the table.</p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="trial-design.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/01-Model.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["_main.pdf", "_main.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

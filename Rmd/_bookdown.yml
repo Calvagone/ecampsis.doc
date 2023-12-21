@@ -1,0 +1,6 @@
+delete_merged_file: true
+output_dir: "../"
+rmd_files: ["index.Rmd", "01-Model.Rmd", "02-Trial-design.Rmd", "03-simulation.Rmd", "04-post-processing.Rmd", "05-download.Rmd", "06-Info.Rmd"]
+language:
+  ui:
+    chapter_name: "Chapter "
