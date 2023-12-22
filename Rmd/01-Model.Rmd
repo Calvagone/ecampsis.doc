@@ -10,7 +10,7 @@ A different PK model can be selected from a large library ("Select PK model").
 
 In "Select category", NONMEM models or models for target-mediated drug disposition (TMDD) can be also loaded.
 
-A PD model can be connected ("Connect PD model") to the PK model. This done internally via campsismod (see [here](https://calvagone.github.io/campsismod.doc/articles/v06_append_pd_model.html)). If you do this you may have to check that the right PK output goes into the PD part of the model.
+A PD model can be connected ("Connect PD model") to the PK model. This is done internally via campsismod (see [here](https://calvagone.github.io/campsismod.doc/articles/v06_append_pd_model.html)). If you do this you may have to check that the right PK output goes into the PD part of the model.
 
 ## Campsis model import
 
