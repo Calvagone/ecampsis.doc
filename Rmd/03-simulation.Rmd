@@ -4,7 +4,7 @@
 
 ## Scenarios
 
-Make several scenarios you want to compare. For each scenario, parameter values can be changed. If you use scenarios, make sure to apply the appropriate stratification or color-grouping in the Plot settings.
+Make several scenarios that you want to compare. For each scenario, parameter values can be changed. If you use scenarios, make sure to apply the appropriate stratification or color-grouping in the Plot settings.
 
 ## Simulation settings
 
