@@ -18,9 +18,9 @@ github-repo: "rstudio/bookdown-demo"
 
 ### e-Campsis free
 
-*e-Campsis free* is, as the name suggests freely accessible to everyone without registration at <https://ecampsis.shinyapps.io/free/>.
+*e-Campsis free* is, as the name suggests, freely accessible to everyone without registration at <https://ecampsis.shinyapps.io/free/>.
 
-It comes with certain limitations regarding the size of the simulation and misses some functionality of pro-version.
+It comes with certain limitations regarding the size of the simulation and misses some functionality of the pro-version.
 
 ### e-Campsis free+
 
