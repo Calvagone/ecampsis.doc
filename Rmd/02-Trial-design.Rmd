@@ -11,7 +11,7 @@ For each arm tab, the following information can be entered:
 -   Number of subjects
     -   When set to 0 this arm is switched off.
 -   Arm label
-    -   Enter here the text that should appear on plots and tables identify the study arm
+    -   Enter here the text that should appear on plots and tables identifying the study arm
 -   Administration type (bolus or infusion)
     -   If infusion is selected, you can choose whether the infusion is in the Model or in the Dataset; if the latter, the infusion duration can be entered
     -   Infusion into the Model means that the infusion duration is controlled by a parameter in the model. This is useful in cases where the infusion is actually not a real infusion but rather a 0-order input and you may have variability or covariates associate with it (e.g. a slow release formulation). See [here](https://calvagone.github.io/campsis.doc/articles/v06_infusions.html) for more information:
@@ -43,10 +43,10 @@ Here you will see a summary of your trial design. Especially when you have multi
 
 ## Custom dataset
 
-When you click on "Edit dataset" a window will pop-up that allows you specify complex dosing schedules usingn the Campsis functions.
+When you click on "Edit dataset" a window will pop-up that allows you to specify complex dosing schedules using the Campsis functions.
 
 ![](pictures/custom_design.png){width="470"}
 
-You can enter here for example loading doses or specific titration schemes etc.
+Here you can enter for example loading doses or specific titration schemes etc.
 
 [See the Campsis help](https://calvagone.github.io/campsis.doc/articles/v01_dataset.html) for details on how to enter complex trial designs.
