@@ -1,6 +1,6 @@
 # Post-processing
 
-After a simulation has completed, you can apply post-processing calculations to the simulation results. This way you can for example calculate non-compartmental PK parameters. The post-processing calculation will be performed for each individual separately. But the results can then be easily summarized in a table.
+After a simulation has completed, you can apply post-processing calculations to the simulation results. This way you can for example calculate non-compartmental PK parameters. The post-processing calculation will be performed for each individual separately, but the results can easily be summarized in a table.
 
 ![](pictures/Post_processing1.png){width="628"}
 
@@ -21,7 +21,7 @@ The steps are:
         -   Cavg: the average concentration derived as: AUC/length_time_interval
         -   thalf: the half-life derived from the slope of the log-transformed variable values against time. **IMPORTANT:** all time points in the interval are used for the calculation. You need to check if this makes sense in your case, since most often you may actually be interested in the terminal part of the curve only.
     -   The default time interval is 0 to the last time point. You can also select previously defined and labelled periods. By default day 1 and day 7 (i.e. 0-24 and 144-168 hours) are available, but you can easily change this by clicking on the "Periods" button on the main screen.
-    -   In the label field you can add your specific label. <METRIC> and <PERIOD> are placeholders that will be automatically filled in.
+    -   In the label field you can add your specific label. METRIC and PERIOD are placeholders that will be automatically filled in.
 
 2.  Back on the main screen you can (and should) stratify the post-processing by SCENARIO, ARM and/or PERIOD (if it was defined)
 
@@ -41,6 +41,6 @@ The steps are:
 
 Description of the options:
 
--   Edit zone: click on a metric and dragged it to this zone to edit it
+-   Edit zone: click on a metric and drag it to this zone to edit it
 -   Drop zone: if a metric had to be remove from one of the stratification, drag-and-drop to this zone
 -   Refresh grid: to reset boxes
