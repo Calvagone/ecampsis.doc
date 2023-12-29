@@ -23,7 +23,7 @@
 <meta name="author" content="Calvagone" />
 
 
-<meta name="date" content="2023-12-21" />
+<meta name="date" content="2023-12-29" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -138,7 +138,7 @@
 <p>When entering the app, a simple PK model is already loaded by default.</p>
 <p>A different PK model can be selected from a large library (“Select PK model”).</p>
 <p>In “Select category”, NONMEM models or models for target-mediated drug disposition (TMDD) can be also loaded.</p>
-<p>A PD model can be connected (“Connect PD model”) to the PK model. This done internally via campsismod (see <a href="https://calvagone.github.io/campsismod.doc/articles/v06_append_pd_model.html">here</a>). If you do this you may have to check that the right PK output goes into the PD part of the model.</p>
+<p>A PD model can be connected (“Connect PD model”) to the PK model. This is done internally via campsismod (see <a href="https://calvagone.github.io/campsismod.doc/articles/v06_append_pd_model.html">here</a>). If you do this you may have to check that the right PK output goes into the PD part of the model.</p>
 </div>
 <div id="campsis-model-import" class="section level2 hasAnchor" number="2.2">
 <h2><span class="header-section-number">2.2</span> Campsis model import<a href="model-tab.html#campsis-model-import" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -146,12 +146,16 @@
 </div>
 <div id="nonmem-model-import-pro-version" class="section level2 hasAnchor" number="2.3">
 <h2><span class="header-section-number">2.3</span> NONMEM model import (pro-version)<a href="model-tab.html#nonmem-model-import-pro-version" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>In the pro version, an existing NONMEM model can be uploaded from this box (including files <em>.mod</em> and <em>.ext</em>) and will be automatically translated to Campsis code.</p>
-<p>The NONMEM import functionality will be installed, the process can take several minutes. A notification will popup when done.</p>
+<p>In the pro version, an existing NONMEM control file (extension <em>.mod</em> and <em>.ctl</em> ) can be uploaded from this box. The parameter estimates will be extracted from the NONMEM control file unless you also select the corresponding <em>.ext</em> file. In this case the final parameter estimates will be used.</p>
+<p>When you start the import for the first time it may take a short while (2-3 minutes) for the functionality to be available. A notification will popup when done and you may need to select the NONMEM files you want ot import again.</p>
+<p>We have tested the translation of NONMEM models to Campsis for a number of models, but it is possible that some models are not correctly translated or fail. If you encounter such a model, please let us know and we will try to fix it.</p>
+<p>In many cases you model will not run immediately after import. This is because you likely have variables (e.g. covariates or flagging variables) in your model that are not defined.
+You can either edit the model code directly in the editor window (e.g. TRT = 1) or you can define the variables in the “Trial design” as a covariate.</p>
 </div>
 <div id="model-code" class="section level2 hasAnchor" number="2.4">
 <h2><span class="header-section-number">2.4</span> Model code<a href="model-tab.html#model-code" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>The model code is shown in the editor window where it can be easily modified. Please note that the code is case sensitive (e.g. <em>log</em>, <em>exp</em>, <em>sqrt</em> should be used). The power function is <em>pow(x,d)</em>, <em>x</em> to the power of <em>d</em>.</p>
+<p>The model code is shown in the editor window where it can be easily modified. Please note that the code is case sensitive (e.g. <em>log</em>, <em>exp</em>, <em>sqrt</em> should be used). The power function is <em>pow(x,d)</em>, <em>x</em> to the power of <em>d</em>.
+You can add comments using the # symbol.</p>
 <p>Clicking on the “Download” button, Campsis model code will be downloaded as a ZIP folder, including <em>model.campsis</em>, <em>omega.csv</em>, <em>theta.csv</em> and <em>sigma.csv</em>.</p>
 </div>
 <div id="parameters" class="section level2 hasAnchor" number="2.5">
