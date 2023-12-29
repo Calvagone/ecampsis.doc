@@ -48,6 +48,8 @@ The professional version of e-Campsis is available as a yearly subscription and 
 -   Import rxode2 and mrgsolve simulation code\*
 -   Personalized support via email
 
+\**Under development. Will be ready in Spring 2024.*
+
 For further information, contact us at the following e-mail address: [campsis\@calvagone.com](mailto:campsis@calvagone.com){.email}
 
 ## Application interface

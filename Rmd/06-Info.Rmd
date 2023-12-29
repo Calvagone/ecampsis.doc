@@ -5,5 +5,5 @@ On the [**Campsis**](https://calvagone.github.io/) website, you will find extens
 If you run into problems using **e-Campsis**, please provide your feedback here: https://github.com/Calvagone/ecampsis.feedback/issues
 
 # Disclaimer 
-**e-Campsis free** is provided "as is", without warranty of any kind, express or implied, including but not limited to the warranties of merchantability, fitness for a particular purpose and noninfringement. In no event shall Calvagone SAS be liable for any claim, damages or other liability, whether in an action of contract, tort or otherwise, arising from, out of or in connection with the software or the use or other dealings with the software. Calvagone reserves the right to discontinue the service at any time.
+**e-Campsis** is provided "as is", without warranty of any kind, express or implied, including but not limited to the warranties of merchantability, fitness for a particular purpose and noninfringement. In no event shall Calvagone SAS be liable for any claim, damages or other liability, whether in an action of contract, tort or otherwise, arising from, out of or in connection with the software or the use or other dealings with the software. Calvagone reserves the right to discontinue the service at any time.
 

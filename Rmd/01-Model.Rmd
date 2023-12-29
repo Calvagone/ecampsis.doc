@@ -18,13 +18,20 @@ An existing Campsis model can be uploaded from this box (including files *model.
 
 ## NONMEM model import (pro-version)
 
-In the pro version, an existing NONMEM model can be uploaded from this box (including files *.mod* and *.ext*) and will be automatically translated to Campsis code.
+In the pro version, an existing NONMEM control file (extension *.mod* and *.ctl* ) can be uploaded from this box. The parameter estimates will be extracted from the NONMEM control file unless you also select the corresponding *.ext* file. In this case the final parameter estimates will be used.
 
-The NONMEM import functionality will be installed, the process can take several minutes. A notification will popup when done.
+When you start the import for the first time it may take a short while (2-3 minutes) for the functionality to be available. A notification will popup when done and you may need to select the NONMEM files you want ot import again. 
+
+We have tested the translation of NONMEM models to Campsis for a number of models, but it is possible that some models are not correctly translated or fail. If you encounter such a model, please let us know and we will try to fix it.
+
+In many cases you model will not run immediately after import. This is because you likely have variables (e.g. covariates or flagging variables) in your model that are not defined.
+You can either edit the model code directly in the editor window (e.g. TRT = 1) or you can define the variables in the "Trial design" as a covariate.
+
 
 ## Model code
 
 The model code is shown in the editor window where it can be easily modified. Please note that the code is case sensitive (e.g. *log*, *exp*, *sqrt* should be used). The power function is *pow(x,d)*, *x* to the power of *d*.
+You can add comments using the # symbol.
 
 Clicking on the "Download" button, Campsis model code will be downloaded as a ZIP folder, including *model.campsis*, *omega.csv*, *theta.csv* and *sigma.csv*.
 
