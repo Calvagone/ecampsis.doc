@@ -1,6 +1,6 @@
 # Model tab
 
-![](pictures/model_tab2.png)
+![](pictures/model-tab-new.png)
 
 ## Model from library
 
