@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 5 Post-processing | e-Campsis documentation</title>
   <meta name="description" content="Here you will find a description of the tabs of e-campsis." />
-  <meta name="generator" content="bookdown 0.34 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.39 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 5 Post-processing | e-Campsis documentation" />
   <meta property="og:type" content="book" />
@@ -23,7 +23,7 @@
 <meta name="author" content="Calvagone" />
 
 
-<meta name="date" content="2023-12-21" />
+<meta name="date" content="2024-05-30" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -106,10 +106,23 @@
 <li class="chapter" data-level="4.2" data-path="simulation.html"><a href="simulation.html#simulation-settings"><i class="fa fa-check"></i><b>4.2</b> Simulation settings</a></li>
 <li class="chapter" data-level="4.3" data-path="simulation.html"><a href="simulation.html#plot-settings"><i class="fa fa-check"></i><b>4.3</b> Plot settings</a></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="post-processing.html"><a href="post-processing.html"><i class="fa fa-check"></i><b>5</b> Post-processing</a></li>
+<li class="chapter" data-level="5" data-path="post-processing.html"><a href="post-processing.html"><i class="fa fa-check"></i><b>5</b> Post-processing</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="post-processing.html"><a href="post-processing.html#step-by-step-guide"><i class="fa fa-check"></i><b>5.1</b> Step-by-step guide</a></li>
+<li class="chapter" data-level="5.2" data-path="post-processing.html"><a href="post-processing.html#custom-metrics"><i class="fa fa-check"></i><b>5.2</b> Custom metrics</a>
+<ul>
+<li class="chapter" data-level="5.2.1" data-path="post-processing.html"><a href="post-processing.html#calculated-from-the-vector-of-the-output-variable"><i class="fa fa-check"></i><b>5.2.1</b> Calculated from the vector of the output variable</a></li>
+<li class="chapter" data-level="5.2.2" data-path="post-processing.html"><a href="post-processing.html#calculated-from-a-combination-of-variables-in-the-dataset"><i class="fa fa-check"></i><b>5.2.2</b> Calculated from a combination of variables in the dataset</a></li>
+</ul></li>
+</ul></li>
 <li class="chapter" data-level="6" data-path="download.html"><a href="download.html"><i class="fa fa-check"></i><b>6</b> Download</a></li>
-<li class="chapter" data-level="7" data-path="feedback-and-help.html"><a href="feedback-and-help.html"><i class="fa fa-check"></i><b>7</b> Feedback and help</a></li>
-<li class="chapter" data-level="8" data-path="disclaimer.html"><a href="disclaimer.html"><i class="fa fa-check"></i><b>8</b> Disclaimer</a></li>
+<li class="chapter" data-level="7" data-path="settings.html"><a href="settings.html"><i class="fa fa-check"></i><b>7</b> Settings</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="settings.html"><a href="settings.html#time-units"><i class="fa fa-check"></i><b>7.1</b> Time units</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="feedback-and-help.html"><a href="feedback-and-help.html"><i class="fa fa-check"></i><b>8</b> Feedback and help</a></li>
+<li class="chapter" data-level="9" data-path="disclaimer.html"><a href="disclaimer.html"><i class="fa fa-check"></i><b>9</b> Disclaimer</a></li>
+<li class="chapter" data-level="10" data-path="terms-and-conditions.html"><a href="terms-and-conditions.html"><i class="fa fa-check"></i><b>10</b> Terms and Conditions</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -132,14 +145,16 @@
             <section class="normal" id="section-">
 <div id="post-processing" class="section level1 hasAnchor" number="5">
 <h1><span class="header-section-number">Chapter 5</span> Post-processing<a href="post-processing.html#post-processing" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>After a simulation has completed, you can apply post-processing calculations to the simulation results. This way you can for example calculate non-compartmental PK parameters. The post-processing calculation will be performed for each individual separately. But the results can then be easily summarized in a table.</p>
+<div id="step-by-step-guide" class="section level2 hasAnchor" number="5.1">
+<h2><span class="header-section-number">5.1</span> Step-by-step guide<a href="post-processing.html#step-by-step-guide" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>After a simulation has completed, you can apply post-processing calculations to the simulation results. This way you can for example calculate non-compartmental PK parameters. The post-processing calculation will be performed for each individual separately, but the results can easily be summarized in a table.</p>
 <p><img src="pictures/Post_processing1.png" width="628" /></p>
 <p>The steps are:</p>
 <ol style="list-style-type: decimal">
 <li><p>Add the metrics you are interested in</p>
-<p><img src="pictures/post_processing_metrics.png" width="462" /></p>
+<p><img src="pictures/post_processing_new1.png" width="462" /></p>
 <ul>
-<li>Select the output variable that a metric should be derived from (e.g. concentration)</li>
+<li>Select the output variable that a metric should be derived from (e.g. concentration; must be defined in the [ERROR] section of the model code)</li>
 <li>All metrics are computed within a specified time interval</li>
 <li>Currently the following NCA metrics are available:
 <ul>
@@ -150,11 +165,19 @@
 <li>Ctrough: the last value in the interval</li>
 <li>Cavg: the average concentration derived as: AUC/length_time_interval</li>
 <li>thalf: the half-life derived from the slope of the log-transformed variable values against time. <strong>IMPORTANT:</strong> all time points in the interval are used for the calculation. You need to check if this makes sense in your case, since most often you may actually be interested in the terminal part of the curve only.</li>
+<li>Max: the maximum value of the selected output variable</li>
+<li>Min: the minimum value of the selected output variable</li>
+<li>Last:the last value of the selected output variable in the interval</li>
+<li>Avg: the average value of the selected output variable in the interval</li>
+<li>Custom: a custom metric defined as a function of the selected output variable (see below).</li>
+<li>Custom(tbl): a custom metric defined as a function of any other variable available in the dataset (see below).</li>
 </ul></li>
-<li>The default time interval is 0 to the last time point. You can also select previously defined and labelled periods. By default day 1 and day 7 (i.e. 0-24 and 144-168 hours) are available, but you can easily change this by clicking on the “Periods” button on the main screen.</li>
-<li>In the label field you can add your specific label. <METRIC> and <PERIOD> are placeholders that will be automatically filled in.</li>
+<li>The default time interval is 0 to the <strong><em>last</em></strong> time point. You can also select previously defined and labelled periods. By default day 1 and day 7 (i.e. 0-24 and 144-168 hours) are available, but you can easily change this by clicking on the “Periods” button on the main screen.</li>
+<li>In the label field you can add your specific label. METRIC and PERIOD are placeholders that will be automatically filled in.</li>
+<li>Select the summary statistics that you wnat to use, e.g. mean and CV% or median and interquartile range. It is possible to provide a function for calculating a custom summary statistic.</li>
+<li>Choose the desired rounding method and the precision level.</li>
 </ul></li>
-<li><p>Back on the main screen you can (and should) stratify the post-processing by SCENARIO, ARM and/or PERIOD (if it was defined)</p></li>
+<li><p>Back on the main screen you can (and should) stratify the post-processing by SCENARIO, ARM, PERIOD (if it was defined), or by the OUTPUT variable if you choose different ones.</p></li>
 <li><p>Click “Refresh grid”</p>
 <ul>
 <li>Boxes for the different strata will appear.</li>
@@ -166,15 +189,69 @@
 <li><video src="pictures/drag_drop.mp4" width="400" controls=""><a href="pictures/drag_drop.mp4">Video</a></video></li>
 </ul></li>
 <li><p>Click on the Calculate button !</p>
-<p><img src="pictures/html_table.png" width="494" /></p></li>
+<p><img src="pictures/htmltable2.png" width="494" /></p></li>
+<li><p>You can then download the table as pdf, png or html file</p></li>
 </ol>
 <p>Description of the options:</p>
 <ul>
-<li>Edit zone: click on a metric and dragged it to this zone to edit it</li>
+<li>Edit zone: click on a metric and drag it to this zone to edit it</li>
 <li>Drop zone: if a metric had to be remove from one of the stratification, drag-and-drop to this zone</li>
 <li>Refresh grid: to reset boxes</li>
 </ul>
+</div>
+<div id="custom-metrics" class="section level2 hasAnchor" number="5.2">
+<h2><span class="header-section-number">5.2</span> Custom metrics<a href="post-processing.html#custom-metrics" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>It is possible to define custom metrics. This can be done in two ways:</p>
+<div id="calculated-from-the-vector-of-the-output-variable" class="section level3 hasAnchor" number="5.2.1">
+<h3><span class="header-section-number">5.2.1</span> Calculated from the vector of the output variable<a href="post-processing.html#calculated-from-the-vector-of-the-output-variable" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>If you select “Custom” as the metric type, you can define a custom metric as a function of the output variable. For example, you can derive the percentage of patients with the output variable (or derived metric thereof) exceeds a certain threshold for that individual. The function should be defined in R syntax and entered in the appropriate field:</p>
+<p><img src="pictures/custom-metric1.png" width="462" /></p>
+<p>You can access the vector of the output variable by using <code>.y</code> and the vector of the time points by using <code>.x</code>. For example, the following custom function returns the maximum value of the output variable:</p>
+<p><code>~ max(.y)</code></p>
+<p>or use just the shortcut function:</p>
+<p><code>~ Max</code></p>
+<div id="some-examples" class="section level4 hasAnchor" number="5.2.1.1">
+<h4><span class="header-section-number">5.2.1.1</span> Some Examples<a href="post-processing.html#some-examples" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><strong>Return categorical endpoint</strong></p>
+<p>To check if the value of output variable (e.g. concentration) at the end of the interval is above 10 simply write:</p>
+<p><code>~ Last &gt; 10</code></p>
+<p>This will evaluate to TRUE if the last concentration in the interval is above 10, and FALSE otherwise. You would need to check “Categorical endpoint” in this case.</p>
+<p>In fact you can use standard R syntax as well as dplyr commands and return a text string instead of TRUE/FALSE:</p>
+<p><code>~case_when(Cmax &lt; 50 ~ "P(&lt; 50 ng/mL)", Cmax &gt;= 50 &amp; Cmax &lt;= 60 ~ "P(50-60 ng/mL)", Cmax &gt; 60 ~ "P(&gt; 60 ng/mL)")</code></p>
+<p><strong>Calculate the maximum change from baseline</strong>, assuming that the baseline value is the first value of the output variable in our observation interval:</p>
+<p><code>~ max(.y) - .y[1]</code></p>
+<p>or</p>
+<p><code>~ Max - first(.y)</code></p>
+<p>To <strong>return the value of the output variable at a specific time point</strong> within the interval, you can use the following syntax:</p>
+<p><code>~ .y[.x == 4]</code></p>
+<p>Remember <code>.y</code> is the selected output variable and <code>.x</code> is the time vector. The above example will return the value of the output variable at time = 4. However, this of course only works if the time point you specify actually exists in the dataset.</p>
+<p>For advanced users:</p>
+<p>There is a special function <code>iValue</code> that works together with the campsisnca metric objects, e.g.:</p>
+<p><code>~ AUC() %&gt;% iValue(.x,.y)</code></p>
+</div>
+</div>
+<div id="calculated-from-a-combination-of-variables-in-the-dataset" class="section level3 hasAnchor" number="5.2.2">
+<h3><span class="header-section-number">5.2.2</span> Calculated from a combination of variables in the dataset<a href="post-processing.html#calculated-from-a-combination-of-variables-in-the-dataset" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>If you select “Custom(tbl)” as the metric type, you can define a custom metric as a function of any other variable available in the dataset. For example, you can calculate the ratio of two variables. The function should be defined in R syntax and entered in the appropriate field:</p>
+<p><img src="pictures/custom-metric2.png" width="462" /> You can access the temporary dataframe of an individual for which the metric is to be calulated within the specified interval as a tibble object using <code>.x</code>. For example, the following custom function returns the ratio of two variables:</p>
+<p><code>~ .x$VAR1 / .x$VAR2</code></p>
+<div id="examples" class="section level4 hasAnchor" number="5.2.2.1">
+<h4><span class="header-section-number">5.2.2.1</span> Examples<a href="post-processing.html#examples" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><strong>Alternative to calculate the change from baseline</strong>,</p>
+<p>for a biomarker (called BIOMARKER). We assume that BASELINE is a variable coming from the model and available in the dataset (i.e. it was defined in the [ERROR] section of the model codel)</p>
+<p><code>~ max(.x$BIOMARKER) - .x$BASELINE[1]</code></p>
+<p>Since BASELINE is not time-varying in our model we just use the first value in the vector. Remember</p>
+<p><strong>Calculate the dose-normalized AUC.</strong></p>
+<p>You need to output the current dose in the dataset. For this add the following lines to the [ERROR] section of the model code:</p>
+<pre><code>if(EVID==1){
+DOSE = self.amt
+}</code></pre>
+<p>Note, this works only with mrgsolve as simulation engine.</p>
+<p>Then you can calculate the dose-normalized AUC as follows using the special iValue functions: <code>~(AUC() %&gt;% iValue(.x$TIME,.x$CONC)) / (Last() %&gt;% iValue(.x$TIME,.x$DOSE))</code></p>
 
+</div>
+</div>
+</div>
 </div>
             </section>
 
@@ -236,6 +313,20 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>

@@ -19,7 +19,15 @@ scenarios
 simulation-settings
 plot-settings
 post-processing
+step-by-step-guide
+custom-metrics
+calculated-from-the-vector-of-the-output-variable
+some-examples
+calculated-from-a-combination-of-variables-in-the-dataset
+examples
 download
+settings
+time-units
 feedback-and-help
 disclaimer
 terms-and-conditions

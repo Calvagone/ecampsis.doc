@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 3 Trial design | e-Campsis documentation</title>
+  <title>Chapter 7 Settings | e-Campsis documentation</title>
   <meta name="description" content="Here you will find a description of the tabs of e-campsis." />
   <meta name="generator" content="bookdown 0.39 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 3 Trial design | e-Campsis documentation" />
+  <meta property="og:title" content="Chapter 7 Settings | e-Campsis documentation" />
   <meta property="og:type" content="book" />
   <meta property="og:image" content="/ecampsis_logo.png" />
   <meta property="og:description" content="Here you will find a description of the tabs of e-campsis." />
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 3 Trial design | e-Campsis documentation" />
+  <meta name="twitter:title" content="Chapter 7 Settings | e-Campsis documentation" />
   
   <meta name="twitter:description" content="Here you will find a description of the tabs of e-campsis." />
   <meta name="twitter:image" content="/ecampsis_logo.png" />
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="model-tab.html"/>
-<link rel="next" href="simulation.html"/>
+<link rel="prev" href="download.html"/>
+<link rel="next" href="feedback-and-help.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -143,71 +143,19 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="trial-design" class="section level1 hasAnchor" number="3">
-<h1><span class="header-section-number">Chapter 3</span> Trial design<a href="trial-design.html#trial-design" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div id="trial-design-1" class="section level2 hasAnchor" number="3.1">
-<h2><span class="header-section-number">3.1</span> Trial design<a href="trial-design.html#trial-design-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p><img src="pictures/trial_design.png" width="500" /></p>
-<p>The study arms can be configured here.</p>
-<p>For each arm tab, the following information can be entered:</p>
-<ul>
-<li>Number of subjects
-<ul>
-<li>When set to 0 this arm is switched off.</li>
-</ul></li>
-<li>Arm label
-<ul>
-<li>Enter here the text that should appear on plots and tables identifying the study arm</li>
-</ul></li>
-<li>Administration type (bolus or infusion)
-<ul>
-<li>If infusion is selected, you can choose whether the infusion is in the Model or in the Dataset; if the latter, the infusion duration can be entered</li>
-<li>Infusion into the Model means that the infusion duration is controlled by a parameter in the model. This is useful in cases where the infusion is actually not a real infusion but rather a 0-order input and you may have variability or covariates associate with it (e.g. a slow release formulation). See <a href="https://calvagone.github.io/campsis.doc/articles/v06_infusions.html">here</a> for more information:</li>
-</ul></li>
-<li>Dose amount and compartment
-<ul>
-<li>The amount given into the specified compartment.</li>
-</ul></li>
-<li>Dosing interval and additional doses
-<ul>
-<li>The amount is repeatedly administered at a given interval for N additional doses (i.e. number of dosing events in addition to the first one)</li>
-</ul></li>
-<li>Observations (observation time)
-<ul>
-<li>to be written in R vector notation, e.g. <em><code>seq(0,24,by=1)</code></em><code>or c(seq(0, 5), seq(0, 5)+168, seq(0,5)+336, seq(0,504,6))</code></li>
-<li>Enable the “as-time-after-dose” box, if you want to replicate the observation schedule after each dose</li>
-<li>Be mindful with the number of observations that you choose as they contribute significantly to the size of the simulation and may cause memory issues.</li>
-</ul></li>
-<li>Covariates
-<ul>
-<li>Covariates or indicator variables that are used in the model code</li>
-<li>You can enter a single values: e.g. <code>BW=70|FLAG=1|SEX=1|BW=70</code></li>
-<li>Or use the Campsis distribution functions, e.g:
-<ul>
-<li><code>BW=NormalDistribution(mean=70, sd=10)</code></li>
-<li><code>BW=LogNormalDistribution(meanlog=log(70), sdlog=0.2)</code></li>
-<li><code>HT=UniformDistribution(min=150, max=190)</code></li>
-</ul></li>
-<li>It is also possible to enter a vector of values like so: <code>BW=c(50,60,70,80,90)</code>This is useful if you want to explore only certain specific covariate values. However, in this case you need to make sure that the length of the vector equals the number of subjects in the arm.r</li>
-<li>See <a href="https://calvagone.github.io/campsis.doc/articles/v03_covariates.html">here</a> for more information about covariates:</li>
-</ul></li>
-<li>Dose adaptation formula
-<ul>
-<li>Useful if the dose has to be adapted to the body weight; e.g. <code>AMT*BW</code></li>
-</ul></li>
-</ul>
-</div>
-<div id="summary" class="section level2 hasAnchor" number="3.2">
-<h2><span class="header-section-number">3.2</span> Summary<a href="trial-design.html#summary" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p><img src="pictures/design_summary.png" width="484" /></p>
-<p>Here you will see a summary of your trial design. Especially when you have multiple arms with different schedules it is useful to have a look here and check if the design was correctly specified.</p>
-</div>
-<div id="custom-dataset" class="section level2 hasAnchor" number="3.3">
-<h2><span class="header-section-number">3.3</span> Custom dataset<a href="trial-design.html#custom-dataset" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>When you click on “Edit dataset” a window will pop-up that allows you to specify complex dosing schedules using the Campsis functions.</p>
-<p><img src="pictures/custom_design.png" width="470" /></p>
-<p>Here you can enter for example loading doses or specific titration schemes etc.</p>
-<p><a href="https://calvagone.github.io/campsis.doc/articles/v01_dataset.html">See the Campsis help</a> for details on how to enter complex trial designs.</p>
+<div id="settings" class="section level1 hasAnchor" number="7">
+<h1><span class="header-section-number">Chapter 7</span> Settings<a href="settings.html#settings" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="time-units" class="section level2 hasAnchor" number="7.1">
+<h2><span class="header-section-number">7.1</span> Time units<a href="settings.html#time-units" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Campsis includes functions that automatically take care of converting time units. First you need to make sure that the time scale of your model (i.e. your differential equations) is correctly set (hours by defualt). Go back to the model section. Above the parameter tables you will find a dropdown menu where you can select the time unit of your model.</p>
+<p><img src="pictures/model_time.png" width="385" /></p>
+<p>Now go to settings and chose the unit in which you would like to specify the time of dosing, the dosing interval, infusion duration, observation times</p>
+<p><img src="pictures/time-units.png" width="385" /></p>
+<p>Later, when you run the simulation you can specify the time unit to be used in the plots.</p>
+<p><img src="pictures/time-units-plot.png" width="385" /></p>
+<p>The following video also shows how to set the units:</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Il3Z56sG34g?si=CQkpb8IvMOdfZwRz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+</iframe>
 
 </div>
 </div>
@@ -216,8 +164,8 @@
           </div>
         </div>
       </div>
-<a href="model-tab.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="simulation.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="download.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="feedback-and-help.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -248,7 +196,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/USERNAME/REPO/edit/BRANCH/02-Trial-design.Rmd",
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/06-Settings.Rmd",
 "text": "Edit"
 },
 "history": {

@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 2 Model tab | e-Campsis documentation</title>
   <meta name="description" content="Here you will find a description of the tabs of e-campsis." />
-  <meta name="generator" content="bookdown 0.34 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.39 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 2 Model tab | e-Campsis documentation" />
   <meta property="og:type" content="book" />
@@ -23,7 +23,7 @@
 <meta name="author" content="Calvagone" />
 
 
-<meta name="date" content="2023-12-29" />
+<meta name="date" content="2024-05-30" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -106,10 +106,23 @@
 <li class="chapter" data-level="4.2" data-path="simulation.html"><a href="simulation.html#simulation-settings"><i class="fa fa-check"></i><b>4.2</b> Simulation settings</a></li>
 <li class="chapter" data-level="4.3" data-path="simulation.html"><a href="simulation.html#plot-settings"><i class="fa fa-check"></i><b>4.3</b> Plot settings</a></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="post-processing.html"><a href="post-processing.html"><i class="fa fa-check"></i><b>5</b> Post-processing</a></li>
+<li class="chapter" data-level="5" data-path="post-processing.html"><a href="post-processing.html"><i class="fa fa-check"></i><b>5</b> Post-processing</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="post-processing.html"><a href="post-processing.html#step-by-step-guide"><i class="fa fa-check"></i><b>5.1</b> Step-by-step guide</a></li>
+<li class="chapter" data-level="5.2" data-path="post-processing.html"><a href="post-processing.html#custom-metrics"><i class="fa fa-check"></i><b>5.2</b> Custom metrics</a>
+<ul>
+<li class="chapter" data-level="5.2.1" data-path="post-processing.html"><a href="post-processing.html#calculated-from-the-vector-of-the-output-variable"><i class="fa fa-check"></i><b>5.2.1</b> Calculated from the vector of the output variable</a></li>
+<li class="chapter" data-level="5.2.2" data-path="post-processing.html"><a href="post-processing.html#calculated-from-a-combination-of-variables-in-the-dataset"><i class="fa fa-check"></i><b>5.2.2</b> Calculated from a combination of variables in the dataset</a></li>
+</ul></li>
+</ul></li>
 <li class="chapter" data-level="6" data-path="download.html"><a href="download.html"><i class="fa fa-check"></i><b>6</b> Download</a></li>
-<li class="chapter" data-level="7" data-path="feedback-and-help.html"><a href="feedback-and-help.html"><i class="fa fa-check"></i><b>7</b> Feedback and help</a></li>
-<li class="chapter" data-level="8" data-path="disclaimer.html"><a href="disclaimer.html"><i class="fa fa-check"></i><b>8</b> Disclaimer</a></li>
+<li class="chapter" data-level="7" data-path="settings.html"><a href="settings.html"><i class="fa fa-check"></i><b>7</b> Settings</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="settings.html"><a href="settings.html#time-units"><i class="fa fa-check"></i><b>7.1</b> Time units</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="feedback-and-help.html"><a href="feedback-and-help.html"><i class="fa fa-check"></i><b>8</b> Feedback and help</a></li>
+<li class="chapter" data-level="9" data-path="disclaimer.html"><a href="disclaimer.html"><i class="fa fa-check"></i><b>9</b> Disclaimer</a></li>
+<li class="chapter" data-level="10" data-path="terms-and-conditions.html"><a href="terms-and-conditions.html"><i class="fa fa-check"></i><b>10</b> Terms and Conditions</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -132,7 +145,7 @@
             <section class="normal" id="section-">
 <div id="model-tab" class="section level1 hasAnchor" number="2">
 <h1><span class="header-section-number">Chapter 2</span> Model tab<a href="model-tab.html#model-tab" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p><img src="pictures/model_tab2.png" /></p>
+<p><img src="pictures/model-tab-new.png" /></p>
 <div id="model-from-library" class="section level2 hasAnchor" number="2.1">
 <h2><span class="header-section-number">2.1</span> Model from library<a href="model-tab.html#model-from-library" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>When entering the app, a simple PK model is already loaded by default.</p>
@@ -147,7 +160,7 @@
 <div id="nonmem-model-import-pro-version" class="section level2 hasAnchor" number="2.3">
 <h2><span class="header-section-number">2.3</span> NONMEM model import (pro-version)<a href="model-tab.html#nonmem-model-import-pro-version" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>In the pro version, an existing NONMEM control file (extension <em>.mod</em> and <em>.ctl</em> ) can be uploaded from this box. The parameter estimates will be extracted from the NONMEM control file unless you also select the corresponding <em>.ext</em> file. In this case the final parameter estimates will be used.</p>
-<p>When you start the import for the first time it may take a short while (2-3 minutes) for the functionality to be available. A notification will popup when done and you may need to select the NONMEM files you want ot import again.</p>
+<p>When you start the import for the first time it may take a short while (2-3 minutes) for the functionality to be available. A notification will popup when done and you may need to select the NONMEM files you want to import again.</p>
 <p>We have tested the translation of NONMEM models to Campsis for a number of models, but it is possible that some models are not correctly translated or fail. If you encounter such a model, please let us know and we will try to fix it.</p>
 <p>In many cases you model will not run immediately after import. This is because you likely have variables (e.g. covariates or flagging variables) in your model that are not defined.
 You can either edit the model code directly in the editor window (e.g. TRT = 1) or you can define the variables in the “Trial design” as a covariate.</p>
@@ -227,6 +240,20 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>
