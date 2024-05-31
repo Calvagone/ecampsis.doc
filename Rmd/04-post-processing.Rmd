@@ -17,7 +17,7 @@ The steps are:
     -   Currently the following NCA metrics are available:
         -   AUC: area under the curve, calculated with the trapezoidal method
         -   Cmax: the maximum value of the selected output variable
-        -   Tmax: the time at whjch the maximum value occurred
+        -   Tmax: the time at which the maximum value occurred
         -   Cmin: the lowest value in the interval
         -   Ctrough: the last value in the interval
         -   Cavg: the average concentration derived as: AUC/length_time_interval
@@ -27,13 +27,13 @@ The steps are:
         -   Last:the last value of the selected output variable in the interval
         -   Avg: the average value of the selected output variable in the interval
         -   Custom: a custom metric defined as a function of the selected output variable (see below).
-        -   Custom(tbl): a custom metric defined as a function of any other variable available in the dataset (see below).
+        -   Custom (tbl): a custom metric defined as a function of any other variable available in the dataset (see below).
     -   The default time interval is 0 to the ***last*** time point. You can also select previously defined and labelled periods. By default day 1 and day 7 (i.e. 0-24 and 144-168 hours) are available, but you can easily change this by clicking on the "Periods" button on the main screen.
-    -   In the label field you can add your specific label. METRIC and PERIOD are placeholders that will be automatically filled in.
-    -   Select the summary statistics that you wnat to use, e.g. mean and CV% or median and interquartile range. It is possible to provide a function for calculating a custom summary statistic.
+    -   In the label field you can add your specific label. <METRIC>, <PERIOD> and <OUTPUT> are placeholders that will be automatically filled in.
+    -   Select the summary statistics that you want to use, e.g. mean and CV% or median and interquartile range. It is possible to provide a function for calculating a custom summary statistic.
     -   Choose the desired rounding method and the precision level.
 
-2.  Back on the main screen you can (and should) stratify the post-processing by SCENARIO, ARM, PERIOD (if it was defined), or by the OUTPUT variable if you choose different ones.
+2.  Back on the main screen you can (and should) stratify the post-processing by SCENARIO, ARM, PERIOD (if it was defined), or by the OUTPUT variable if you choose different ones. Categorical covariates may also be used as stratification variables.
 
 3.  Click "Refresh grid"
 
@@ -54,8 +54,8 @@ The steps are:
 Description of the options:
 
 -   Edit zone: click on a metric and drag it to this zone to edit it
--   Drop zone: if a metric had to be remove from one of the stratification, drag-and-drop to this zone
--   Refresh grid: to reset boxes
+-   Drop zone: if a metric had to be remove from one of the stratification, drag-and-drop to this zone. If you want to delete a metric once for all, edit the metric and click the "Delete" button in the dialog box. 
+-   Refresh grid: to reset boxes according to the given stratification variables and corresponding values in the simulated results
 
 ## Custom metrics
 
@@ -97,7 +97,7 @@ or
 
 `~ Max - first(.y)`
 
-To **return the value of the output variable at a specific time point** within the interval, you can use the following syntax:
+**Return the value of the output variable at a specific time point** within the interval, you can use the following syntax:
 
 `~ .y[.x == 4]`
 
@@ -111,11 +111,11 @@ There is a special function `iValue` that works together with the campsisnca met
 
 ### Calculated from a combination of variables in the dataset
 
-If you select "Custom(tbl)" as the metric type, you can define a custom metric as a function of any other variable available in the dataset. For example, you can calculate the ratio of two variables. The function should be defined in R syntax and entered in the appropriate field:
+If you select "Custom (tbl)" as the metric type, you can define a custom metric as a function of any other variable available in the dataset. For example, you can calculate the ratio of two variables at a specific time. The function should be defined in R syntax and entered in the appropriate field:
 
-![](pictures/custom-metric2.png){width="462"} You can access the temporary dataframe of an individual for which the metric is to be calulated within the specified interval as a tibble object using `.x`. For example, the following custom function returns the ratio of two variables:
+![](pictures/custom-metric2.png){width="462"} You can access the temporary dataframe of an individual for which the metric is to be calculated within the specified interval as a tibble object using `.x`. For example, the following custom function returns the ratio of two variables at baseline:
 
-`~ .x$VAR1 / .x$VAR2`
+`~ .x$VAR1[1] / .x$VAR2[1]`
 
 #### Examples
 
@@ -140,3 +140,11 @@ DOSE = self.amt
 Note, this works only with mrgsolve as simulation engine.
 
 Then you can calculate the dose-normalized AUC as follows using the special iValue functions: `~(AUC() %>% iValue(.x$TIME,.x$CONC)) / (Last() %>% iValue(.x$TIME,.x$DOSE))`
+
+**Calculate the ratio of 2 NCA metrics.**
+
+Suppose you want to calculate the ratio of 24-hour AUCs on day 7 and day 1, this can be done as follows:
+
+`~(AUC() %>% iValue(.x %>% timerange(144, 168) %>% pull(TIME), .x %>% timerange(144, 168) %>% pull(CONC))) / (AUC() %>% iValue(.x %>% timerange(0, 24) %>% pull(TIME), .x %>% timerange(0, 24) %>% pull(CONC)))`
+
+Note that the function `timerange` is available in package `campsisnca`. Doing `.x %>% timerange(0, 24)` is equivalent to `.x %>% filter(TIME >=0 & TIME <= 24)` with dplyr.
