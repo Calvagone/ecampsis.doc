@@ -246,7 +246,7 @@ are placeholders that will be automatically filled in.</li>
 <p><strong>Calculate the dose-normalized AUC.</strong></p>
 <p>You need to output the current dose in the dataset. For this add the following lines to the [ERROR] section of the model code:</p>
 <pre><code>if(EVID==1){
-DOSE = self.amt
+DOSE = AMT
 }</code></pre>
 <p>Note, this works only with mrgsolve as simulation engine.</p>
 <p>Then you can calculate the dose-normalized AUC as follows using the special iValue functions: <code>~(AUC() %&gt;% iValue(.x$TIME,.x$CONC)) / (Last() %&gt;% iValue(.x$TIME,.x$DOSE))</code></p>
