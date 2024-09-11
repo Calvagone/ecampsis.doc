@@ -170,13 +170,13 @@
 <li><p>Add the metrics you are interested in</p>
 <p><img src="pictures/post_processing_new1.png" width="462" /></p>
 <ul>
-<li>Select the output variable that a metric should be derived from (e.g. concentration; must be defined in the [ERROR] section of the model code)</li>
-<li>All metrics are computed within a specified time interval</li>
-<li>Currently the following NCA metrics are available:
+<li><p>Select the output variable that a metric should be derived from (e.g. concentration; must be defined in the [ERROR] section of the model code)</p></li>
+<li><p>All metrics are computed within a specified time interval</p></li>
+<li><p>Currently the following NCA metrics are available:</p>
 <ul>
 <li>AUC: area under the curve, calculated with the trapezoidal method</li>
 <li>Cmax: the maximum value of the selected output variable</li>
-<li>Tmax: the time at whjch the maximum value occurred</li>
+<li>Tmax: the time at which the maximum value occurred</li>
 <li>Cmin: the lowest value in the interval</li>
 <li>Ctrough: the last value in the interval</li>
 <li>Cavg: the average concentration derived as: AUC/length_time_interval</li>
@@ -186,14 +186,16 @@
 <li>Last:the last value of the selected output variable in the interval</li>
 <li>Avg: the average value of the selected output variable in the interval</li>
 <li>Custom: a custom metric defined as a function of the selected output variable (see below).</li>
-<li>Custom(tbl): a custom metric defined as a function of any other variable available in the dataset (see below).</li>
+<li>Custom (tbl): a custom metric defined as a function of any other variable available in the dataset (see below).</li>
 </ul></li>
-<li>The default time interval is 0 to the <strong><em>last</em></strong> time point. You can also select previously defined and labelled periods. By default day 1 and day 7 (i.e. 0-24 and 144-168 hours) are available, but you can easily change this by clicking on the “Periods” button on the main screen.</li>
-<li>In the label field you can add your specific label. METRIC and PERIOD are placeholders that will be automatically filled in.</li>
-<li>Select the summary statistics that you wnat to use, e.g. mean and CV% or median and interquartile range. It is possible to provide a function for calculating a custom summary statistic.</li>
-<li>Choose the desired rounding method and the precision level.</li>
+<li><p>The default time interval is 0 to the <strong><em>last</em></strong> time point. You can also select previously defined and labelled periods. By default day 1 and day 7 (i.e. 0-24 and 144-168 hours) are available, but you can easily change this by clicking on the “Periods” button on the main screen.</p></li>
+<li><p>In the label field you can add your specific label. <METRIC>, <PERIOD> and</p>
+<OUTPUT>
+<p>are placeholders that will be automatically filled in.</p></li>
+<li><p>Select the summary statistics that you want to use, e.g. mean and CV% or median and interquartile range. It is possible to provide a function for calculating a custom summary statistic.</p></li>
+<li><p>Choose the desired rounding method and the precision level.</p></li>
 </ul></li>
-<li><p>Back on the main screen you can (and should) stratify the post-processing by SCENARIO, ARM, PERIOD (if it was defined), or by the OUTPUT variable if you choose different ones.</p></li>
+<li><p>Back on the main screen you can (and should) stratify the post-processing by SCENARIO, ARM, PERIOD (if it was defined), or by the OUTPUT variable if you choose different ones. Categorical covariates may also be used as stratification variables.</p></li>
 <li><p>Click “Refresh grid”</p>
 <ul>
 <li>Boxes for the different strata will appear.</li>
@@ -211,8 +213,8 @@
 <p>Description of the options:</p>
 <ul>
 <li>Edit zone: click on a metric and drag it to this zone to edit it</li>
-<li>Drop zone: if a metric had to be remove from one of the stratification, drag-and-drop to this zone</li>
-<li>Refresh grid: to reset boxes</li>
+<li>Drop zone: if a metric had to be remove from one of the stratification, drag-and-drop to this zone. If you want to delete a metric once for all, edit the metric and click the “Delete” button in the dialog box.</li>
+<li>Refresh grid: to reset boxes according to the given stratification variables and corresponding values in the simulated results</li>
 </ul>
 </div>
 <div id="custom-metrics" class="section level2 hasAnchor" number="5.2">
@@ -238,7 +240,7 @@
 <p><code>~ max(.y) - .y[1]</code></p>
 <p>or</p>
 <p><code>~ Max - first(.y)</code></p>
-<p>To <strong>return the value of the output variable at a specific time point</strong> within the interval, you can use the following syntax:</p>
+<p><strong>Return the value of the output variable at a specific time point</strong> within the interval, you can use the following syntax:</p>
 <p><code>~ .y[.x == 4]</code></p>
 <p>Remember <code>.y</code> is the selected output variable and <code>.x</code> is the time vector. The above example will return the value of the output variable at time = 4. However, this of course only works if the time point you specify actually exists in the dataset.</p>
 <p>For advanced users:</p>
@@ -248,9 +250,9 @@
 </div>
 <div id="calculated-from-a-combination-of-variables-in-the-dataset" class="section level3 hasAnchor" number="5.2.2">
 <h3><span class="header-section-number">5.2.2</span> Calculated from a combination of variables in the dataset<a href="post-processing-pro-version-only.html#calculated-from-a-combination-of-variables-in-the-dataset" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>If you select “Custom(tbl)” as the metric type, you can define a custom metric as a function of any other variable available in the dataset. For example, you can calculate the ratio of two variables. The function should be defined in R syntax and entered in the appropriate field:</p>
-<p><img src="pictures/custom-metric2.png" width="462" /> You can access the temporary dataframe of an individual for which the metric is to be calulated within the specified interval as a tibble object using <code>.x</code>. For example, the following custom function returns the ratio of two variables:</p>
-<p><code>~ .x$VAR1 / .x$VAR2</code></p>
+<p>If you select “Custom (tbl)” as the metric type, you can define a custom metric as a function of any other variable available in the dataset. For example, you can calculate the ratio of two variables at a specific time. The function should be defined in R syntax and entered in the appropriate field:</p>
+<p><img src="pictures/custom-metric2.png" width="462" /> You can access the temporary dataframe of an individual for which the metric is to be calculated within the specified interval as a tibble object using <code>.x</code>. For example, the following custom function returns the ratio of two variables at baseline:</p>
+<p><code>~ .x$VAR1[1] / .x$VAR2[1]</code></p>
 <div id="examples" class="section level4 hasAnchor" number="5.2.2.1">
 <h4><span class="header-section-number">5.2.2.1</span> Examples<a href="post-processing-pro-version-only.html#examples" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p><strong>Alternative to calculate the change from baseline</strong>,</p>
@@ -264,6 +266,10 @@ DOSE = self.amt
 }</code></pre>
 <p>Note, this works only with mrgsolve as simulation engine.</p>
 <p>Then you can calculate the dose-normalized AUC as follows using the special iValue functions: <code>~(AUC() %&gt;% iValue(.x$TIME,.x$CONC)) / (Last() %&gt;% iValue(.x$TIME,.x$DOSE))</code></p>
+<p><strong>Calculate the ratio of 2 NCA metrics.</strong></p>
+<p>Suppose you want to calculate the ratio of 24-hour AUCs on day 7 and day 1, this can be done as follows:</p>
+<p><code>~(AUC() %&gt;% iValue(.x %&gt;% timerange(144, 168) %&gt;% pull(TIME), .x %&gt;% timerange(144, 168) %&gt;% pull(CONC))) / (AUC() %&gt;% iValue(.x %&gt;% timerange(0, 24) %&gt;% pull(TIME), .x %&gt;% timerange(0, 24) %&gt;% pull(CONC)))</code></p>
+<p>Note that the function <code>timerange</code> is available in package <code>campsisnca</code>. Doing <code>.x %&gt;% timerange(0, 24)</code> is equivalent to <code>.x %&gt;% filter(TIME &gt;=0 &amp; TIME &lt;= 24)</code> with dplyr.</p>
 
 </div>
 </div>

@@ -422,7 +422,6 @@ The steps are:
   \includegraphics[width=4.8125in,height=\textheight]{pictures/post_processing_new1.png}
 
   \begin{itemize}
-  \tightlist
   \item
     Select the output variable that a metric should be derived from (e.g.~concentration; must be defined in the {[}ERROR{]} section of the model code)
   \item
@@ -437,7 +436,7 @@ The steps are:
     \item
       Cmax: the maximum value of the selected output variable
     \item
-      Tmax: the time at whjch the maximum value occurred
+      Tmax: the time at which the maximum value occurred
     \item
       Cmin: the lowest value in the interval
     \item
@@ -457,19 +456,21 @@ The steps are:
     \item
       Custom: a custom metric defined as a function of the selected output variable (see below).
     \item
-      Custom(tbl): a custom metric defined as a function of any other variable available in the dataset (see below).
+      Custom (tbl): a custom metric defined as a function of any other variable available in the dataset (see below).
     \end{itemize}
   \item
     The default time interval is 0 to the \textbf{\emph{last}} time point. You can also select previously defined and labelled periods. By default day 1 and day 7 (i.e.~0-24 and 144-168 hours) are available, but you can easily change this by clicking on the ``Periods'' button on the main screen.
   \item
-    In the label field you can add your specific label. METRIC and PERIOD are placeholders that will be automatically filled in.
+    In the label field you can add your specific label. , and
+
+    are placeholders that will be automatically filled in.
   \item
-    Select the summary statistics that you wnat to use, e.g.~mean and CV\% or median and interquartile range. It is possible to provide a function for calculating a custom summary statistic.
+    Select the summary statistics that you want to use, e.g.~mean and CV\% or median and interquartile range. It is possible to provide a function for calculating a custom summary statistic.
   \item
     Choose the desired rounding method and the precision level.
   \end{itemize}
 \item
-  Back on the main screen you can (and should) stratify the post-processing by SCENARIO, ARM, PERIOD (if it was defined), or by the OUTPUT variable if you choose different ones.
+  Back on the main screen you can (and should) stratify the post-processing by SCENARIO, ARM, PERIOD (if it was defined), or by the OUTPUT variable if you choose different ones. Categorical covariates may also be used as stratification variables.
 \item
   Click ``Refresh grid''
 
@@ -505,9 +506,9 @@ Description of the options:
 \item
   Edit zone: click on a metric and drag it to this zone to edit it
 \item
-  Drop zone: if a metric had to be remove from one of the stratification, drag-and-drop to this zone
+  Drop zone: if a metric had to be remove from one of the stratification, drag-and-drop to this zone. If you want to delete a metric once for all, edit the metric and click the ``Delete'' button in the dialog box.
 \item
-  Refresh grid: to reset boxes
+  Refresh grid: to reset boxes according to the given stratification variables and corresponding values in the simulated results
 \end{itemize}
 
 \section{Custom metrics}\label{custom-metrics}
@@ -550,7 +551,7 @@ or
 
 \texttt{\textasciitilde{}\ Max\ -\ first(.y)}
 
-To \textbf{return the value of the output variable at a specific time point} within the interval, you can use the following syntax:
+\textbf{Return the value of the output variable at a specific time point} within the interval, you can use the following syntax:
 
 \texttt{\textasciitilde{}\ .y{[}.x\ ==\ 4{]}}
 
@@ -564,11 +565,11 @@ There is a special function \texttt{iValue} that works together with the campsis
 
 \subsection{Calculated from a combination of variables in the dataset}\label{calculated-from-a-combination-of-variables-in-the-dataset}
 
-If you select ``Custom(tbl)'' as the metric type, you can define a custom metric as a function of any other variable available in the dataset. For example, you can calculate the ratio of two variables. The function should be defined in R syntax and entered in the appropriate field:
+If you select ``Custom (tbl)'' as the metric type, you can define a custom metric as a function of any other variable available in the dataset. For example, you can calculate the ratio of two variables at a specific time. The function should be defined in R syntax and entered in the appropriate field:
 
-\includegraphics[width=4.8125in,height=\textheight]{pictures/custom-metric2.png} You can access the temporary dataframe of an individual for which the metric is to be calulated within the specified interval as a tibble object using \texttt{.x}. For example, the following custom function returns the ratio of two variables:
+\includegraphics[width=4.8125in,height=\textheight]{pictures/custom-metric2.png} You can access the temporary dataframe of an individual for which the metric is to be calculated within the specified interval as a tibble object using \texttt{.x}. For example, the following custom function returns the ratio of two variables at baseline:
 
-\texttt{\textasciitilde{}\ .x\$VAR1\ /\ .x\$VAR2}
+\texttt{\textasciitilde{}\ .x\$VAR1{[}1{]}\ /\ .x\$VAR2{[}1{]}}
 
 \subsubsection{Examples}\label{examples}
 
@@ -593,6 +594,14 @@ DOSE = self.amt
 Note, this works only with mrgsolve as simulation engine.
 
 Then you can calculate the dose-normalized AUC as follows using the special iValue functions: \texttt{\textasciitilde{}(AUC()\ \%\textgreater{}\%\ iValue(.x\$TIME,.x\$CONC))\ /\ (Last()\ \%\textgreater{}\%\ iValue(.x\$TIME,.x\$DOSE))}
+
+\textbf{Calculate the ratio of 2 NCA metrics.}
+
+Suppose you want to calculate the ratio of 24-hour AUCs on day 7 and day 1, this can be done as follows:
+
+\texttt{\textasciitilde{}(AUC()\ \%\textgreater{}\%\ iValue(.x\ \%\textgreater{}\%\ timerange(144,\ 168)\ \%\textgreater{}\%\ pull(TIME),\ .x\ \%\textgreater{}\%\ timerange(144,\ 168)\ \%\textgreater{}\%\ pull(CONC)))\ /\ (AUC()\ \%\textgreater{}\%\ iValue(.x\ \%\textgreater{}\%\ timerange(0,\ 24)\ \%\textgreater{}\%\ pull(TIME),\ .x\ \%\textgreater{}\%\ timerange(0,\ 24)\ \%\textgreater{}\%\ pull(CONC)))}
+
+Note that the function \texttt{timerange} is available in package \texttt{campsisnca}. Doing \texttt{.x\ \%\textgreater{}\%\ timerange(0,\ 24)} is equivalent to \texttt{.x\ \%\textgreater{}\%\ filter(TIME\ \textgreater{}=0\ \&\ TIME\ \textless{}=\ 24)} with dplyr.
 
 \chapter{Forest plots (pro version only)}\label{forest-plots-pro-version-only}
 
