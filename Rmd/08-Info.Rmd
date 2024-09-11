@@ -10,4 +10,4 @@ e-Campsis is provided "as is", without warranty of any kind, express or implied,
 
 # Terms and Conditions
 
-![](pictures/e-Campsis_T&C_v2_231229.pdf){width="21cm" height="29cm"}
+![](pictures/e-Campsis_T&C_v3_240911.pdf){width="21cm" height="29cm"}

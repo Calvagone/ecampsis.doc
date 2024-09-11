@@ -1,0 +1,725 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{book}
+\usepackage{amsmath,amssymb}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{5}
+\usepackage{booktabs}
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\usepackage[]{natbib}
+\bibliographystyle{plainnat}
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdftitle={e-Campsis documentation},
+  pdfauthor={Calvagone},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{e-Campsis documentation}
+\author{Calvagone}
+\date{2024-09-11}
+
+\begin{document}
+\maketitle
+
+{
+\setcounter{tocdepth}{1}
+\tableofcontents
+}
+\chapter{About}\label{about}
+
+\href{https://ecampsis.shinyapps.io/free/}{e-Campsis} is a free web application developed by \href{https://www.calvagone.com/}{Calvagone} that provides an intuitive and user-friendly interface for setting up population PK/PD simulations. The app is built on the R-package \href{https://calvagone.github.io/}{campsis}, which serves as a powerful frontend for running model-based simulations using \emph{mrgsolve} or \emph{rxode2}.
+
+\section{e-Campsis versions}\label{e-campsis-versions}
+
+\subsection{e-Campsis free}\label{e-campsis-free}
+
+\emph{e-Campsis free} is, as the name suggests, freely accessible to everyone without registration at \url{https://ecampsis.shinyapps.io/free/}.
+
+It comes with certain limitations regarding the size of the simulation and misses some functionality of the pro-version.
+
+\subsection{e-Campsis free+}\label{e-campsis-free-1}
+
+If you want to simulate up to 16 arms or scenarios, 100 subjects/arm and 250 observations/arm we invite you to become an authorized user of \emph{e-Campsis free+}.
+
+Please send us the pre-filled email below and you will get an invitation to register as soon as possible:
+
+\subsection{e-Campsis pro}\label{e-campsis-pro}
+
+The professional version of e-Campsis is available as a yearly subscription and includes the following additional functionality:
+
+\begin{itemize}
+\tightlist
+\item
+  Save/load e-campsis projects
+\item
+  NONMEM code import
+\item
+  Number of arms, scenarios, subjects, observations only limited by memory
+\item
+  Advanced customization of plots
+\item
+  NCA \& summary statistics
+\item
+  Sensitivity analysis*
+\item
+  Forest plots
+\item
+  Upload of external data for plotting*
+\item
+  Bootstrap covariates from external file or NHANES*
+\item
+  Replicate simulation with parameter uncertainty
+\item
+  Import rxode2 and mrgsolve simulation code*
+\item
+  Personalized support via email
+\end{itemize}
+
+*\emph{Under development.}
+
+For further information, contact us at the following e-mail address: \href{mailto:campsis@calvagone.com}{\nolinkurl{campsis@calvagone.com}}
+
+\section{Application interface}\label{application-interface}
+
+The app consists of 5 main sections:
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Model}: a powerful model editor to edit your Campsis model online. Try out one of the numerous models available from the library and adapt it to your needs.
+\item
+  \textbf{Trial design}: an easy-to-use interface to quickly set-up the dosing regimen, observation times and covariates.
+\item
+  \textbf{Simulation}: a single screen dedicated to the simulation configuration and visualization of the results. Explore different scenarios of parameter settings quickly and interactively.
+\item
+  \textbf{Post-processing}: here you can define summary variables such as non-compartmental PK parameters that you want to derive from your simulation results and show them in a table.
+\item
+  \textbf{Forest plots}: Easily define and generate nice-looking forest plots and explore the impact of covariates on any outcome parameter.
+\item
+  \textbf{Download}: last but not least, download the model, parameters and the whole code of the simulation to reproduce what you see in the app on your computer using the open-source package campsis.
+\end{itemize}
+
+\chapter{Model tab}\label{model-tab}
+
+\includegraphics{pictures/model-tab-new.png}
+
+\section{Model from library}\label{model-from-library}
+
+When entering the app, a simple PK model is already loaded by default.
+
+A different PK model can be selected from a large library (``Select PK model'').
+
+In ``Select category'', NONMEM models or models for target-mediated drug disposition (TMDD) can be also loaded.
+
+A PD model can be connected (``Connect PD model'') to the PK model. This is done internally via campsismod (see \href{https://calvagone.github.io/campsismod.doc/articles/v06_append_pd_model.html}{here}). If you do this you may have to check that the right PK output goes into the PD part of the model.
+
+\section{Campsis model import}\label{campsis-model-import}
+
+An existing Campsis model can be uploaded from this box (including files \emph{model.campsis}, \emph{omega.csv}, \emph{theta.csv} and \emph{sigma.csv}).
+
+\section{NONMEM model import (pro-version)}\label{nonmem-model-import-pro-version}
+
+In the pro version, an existing NONMEM control file (extension \emph{.mod} and \emph{.ctl} ) can be uploaded from this box. The parameter estimates will be extracted from the NONMEM control file unless you also select the corresponding \emph{.ext} file. In this case the final parameter estimates will be used.
+
+When you start the import for the first time it may take a short while (2-3 minutes) for the functionality to be available. A notification will popup when done and you may need to select the NONMEM files you want to import again.
+
+We have tested the translation of NONMEM models to Campsis for a number of models, but it is possible that some models are not correctly translated or fail. If you encounter such a model, please let us know and we will try to fix it.
+
+In many cases you model will not run immediately after import. This is because you likely have variables (e.g.~covariates or flagging variables) in your model that are not defined.
+You can either edit the model code directly in the editor window (e.g.~TRT = 1) or you can define the variables in the ``Trial design'' as a covariate.
+
+\section{Model code}\label{model-code}
+
+The model code is shown in the editor window where it can be easily modified. Please note that the code is case sensitive (e.g.~\emph{log}, \emph{exp}, \emph{sqrt} should be used). The power function is \emph{pow(x,d)}, \emph{x} to the power of \emph{d}.
+You can add comments using the \# symbol.
+
+Clicking on the ``Download'' button, Campsis model code will be downloaded as a ZIP folder, including \emph{model.campsis}, \emph{omega.csv}, \emph{theta.csv} and \emph{sigma.csv}.
+
+\section{Parameters}\label{parameters}
+
+The list of parameters for THETA, OMEGA and SIGMA is given in this box. Their values and labels can be changed. Comments can be added.
+
+The type for OMEGA and SIGMA can be changed: sd, var, covar, cv, cv\%, cor, for standard deviation, variance, covariance, coefficient of variation, coefficient of variation (as \%) or correlation, respectively.
+
+Correlations between omegas can be added by right-clicking on a cell in the OMEGA table. For example, enter ``KA, VC'' as name, 1 and 2 in index and index2, and add the correlation value.
+
+Clicking on ``Get parameter names from code'', the code will be scanned for the strings \emph{THETA\_name}, \emph{ETA\_name} and \emph{EPS\_name} and the names will be extracted and added to the table.
+
+\chapter{Trial design}\label{trial-design}
+
+\section{Trial design}\label{trial-design-1}
+
+\includegraphics[width=5.20833in,height=\textheight]{pictures/trial_design.png}
+
+The study arms can be configured here.
+
+For each arm tab, the following information can be entered:
+
+\begin{itemize}
+\tightlist
+\item
+  Number of subjects
+
+  \begin{itemize}
+  \tightlist
+  \item
+    When set to 0 this arm is switched off.
+  \end{itemize}
+\item
+  Arm label
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Enter here the text that should appear on plots and tables identifying the study arm
+  \end{itemize}
+\item
+  Administration type (bolus or infusion)
+
+  \begin{itemize}
+  \tightlist
+  \item
+    If infusion is selected, you can choose whether the infusion is in the Model or in the Dataset; if the latter, the infusion duration can be entered
+  \item
+    Infusion into the Model means that the infusion duration is controlled by a parameter in the model. This is useful in cases where the infusion is actually not a real infusion but rather a 0-order input and you may have variability or covariates associate with it (e.g.~a slow release formulation). See \href{https://calvagone.github.io/campsis.doc/articles/v06_infusions.html}{here} for more information:
+  \end{itemize}
+\item
+  Dose amount and compartment
+
+  \begin{itemize}
+  \tightlist
+  \item
+    The amount given into the specified compartment.
+  \end{itemize}
+\item
+  Dosing interval and additional doses
+
+  \begin{itemize}
+  \tightlist
+  \item
+    The amount is repeatedly administered at a given interval for N additional doses (i.e.~number of dosing events in addition to the first one)
+  \end{itemize}
+\item
+  Observations (observation time)
+
+  \begin{itemize}
+  \tightlist
+  \item
+    to be written in R vector notation, e.g.~\emph{\texttt{seq(0,24,by=1)}}\texttt{or\ c(seq(0,\ 5),\ seq(0,\ 5)+168,\ seq(0,5)+336,\ seq(0,504,6))}
+  \item
+    Enable the ``as-time-after-dose'' box, if you want to replicate the observation schedule after each dose
+  \item
+    Be mindful with the number of observations that you choose as they contribute significantly to the size of the simulation and may cause memory issues.
+  \end{itemize}
+\item
+  Covariates
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Covariates or indicator variables that are used in the model code
+  \item
+    You can enter a single values: e.g.~\texttt{BW=70\textbar{}FLAG=1\textbar{}SEX=1\textbar{}BW=70}
+  \item
+    Or use the Campsis distribution functions, e.g:
+
+    \begin{itemize}
+    \tightlist
+    \item
+      \texttt{BW=NormalDistribution(mean=70,\ sd=10)}
+    \item
+      \texttt{BW=LogNormalDistribution(meanlog=log(70),\ sdlog=0.2)}
+    \item
+      \texttt{HT=UniformDistribution(min=150,\ max=190)}
+    \end{itemize}
+  \item
+    It is also possible to enter a vector of values like so: \texttt{BW=c(50,60,70,80,90)}This is useful if you want to explore only certain specific covariate values. However, in this case you need to make sure that the length of the vector equals the number of subjects in the arm.r
+  \item
+    See \href{https://calvagone.github.io/campsis.doc/articles/v03_covariates.html}{here} for more information about covariates:
+  \end{itemize}
+\item
+  Dose adaptation formula
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Useful if the dose has to be adapted to the body weight; e.g.~\texttt{AMT*BW}
+  \end{itemize}
+\end{itemize}
+
+\section{Summary}\label{summary}
+
+\includegraphics[width=5.04167in,height=\textheight]{pictures/design_summary.png}
+
+Here you will see a summary of your trial design. Especially when you have multiple arms with different schedules it is useful to have a look here and check if the design was correctly specified.
+
+\section{Custom dataset}\label{custom-dataset}
+
+When you click on ``Edit dataset'' a window will pop-up that allows you to specify complex dosing schedules using the Campsis functions.
+
+\includegraphics[width=4.89583in,height=\textheight]{pictures/custom_design.png}
+
+Here you can enter for example loading doses or specific titration schemes etc.
+
+\href{https://calvagone.github.io/campsis.doc/articles/v01_dataset.html}{See the Campsis help} for details on how to enter complex trial designs.
+
+\chapter{Simulation}\label{simulation}
+
+\includegraphics[width=5.84375in,height=\textheight]{pictures/simulation_tab.png}
+
+\section{Scenarios}\label{scenarios}
+
+Make several scenarios that you want to compare. For each scenario, parameter values can be changed. If you use scenarios, make sure to apply the appropriate stratification or color-grouping in the Plot settings.
+
+\section{Simulation settings}\label{simulation-settings}
+
+\begin{itemize}
+\tightlist
+\item
+  IIV/RUV: Should the inter-individual and residual variability be taken into account in the simulations? Check IIV or RUV boxes accordingly. \textbf{IMPORTANT:} If you simulate only 1 subject with the intention of simulating a typical profile, make sure that IIV is switch off!
+\item
+  Seed: a seed number can be used.
+\item
+  Select output(s): select one or several outputs you would like to look at.
+\item
+  Select engine: choose one of the two simulation packages rxode2 or mrgsolve.
+\item
+  Execution/Manual: check the box to make any changes without updating the plot and, when all is configured, click the ``play'' button \(\vartriangleright\)
+\end{itemize}
+
+\section{Plot settings}\label{plot-settings}
+
+Click ``+'' to pull the tab down.
+
+\begin{itemize}
+\item
+  Three plot options can be chosen:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    spaghetti plot: overlay of the individual profiles of the selected output(s) versus time
+  \item
+    shaded plot: median of the simulated output(s) versus time with 5th and 95th percentiles of the simulations
+  \item
+    scatter plot: relationship between two selected outputs
+  \end{itemize}
+\item
+  Colour-group by: profiles will have different colors by ARM or SCENARIO
+\item
+  Stratify-group by: split the plots by ARM or SCENARIO
+\item
+  X-axis or Y-axis in log: select to show the X- or Y-axis on log scale
+\item
+  Interactive plot: when checked, more options on plots are available (from Plotly)
+\item
+  Plot height: adjust the height of the figure
+\item
+  More annotation options: allows to customize the plot
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Plot title
+  \item
+    X-axis label, limits, breaks
+  \item
+    Y-axis label, limits, breaks
+  \item
+    Footnote
+  \item
+    Horizontal/Vertical line(s): add one or several horizontal or vertical line(s) to the plot, and select colours and type
+  \item
+    Facet scales: scales for facet can be fixed, free, or free in one dimension
+  \item
+    Facet nrow: number of facets per row
+  \item
+    Facet scaled: include or not the facet variable name
+  \end{itemize}
+\item
+  Custom plot (pro version): R-code can be edited to directly customize the plot, then check ``enable custom plot'' to update the plot after editing the code. Click ``Generate code from GUI'' to update the code from the plot.
+\end{itemize}
+
+\chapter{Post-processing (pro version only)}\label{post-processing-pro-version-only}
+
+\section{Step-by-step guide}\label{step-by-step-guide}
+
+After a simulation has completed, you can apply post-processing calculations to the simulation results. This way you can for example calculate non-compartmental PK parameters. The post-processing calculation will be performed for each individual separately, but the results can easily be summarized in a table.
+
+\includegraphics[width=6.54167in,height=\textheight]{pictures/Post_processing1.png}
+
+The steps are:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Add the metrics you are interested in
+
+  \includegraphics[width=4.8125in,height=\textheight]{pictures/post_processing_new1.png}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Select the output variable that a metric should be derived from (e.g.~concentration; must be defined in the {[}ERROR{]} section of the model code)
+  \item
+    All metrics are computed within a specified time interval
+  \item
+    Currently the following NCA metrics are available:
+
+    \begin{itemize}
+    \tightlist
+    \item
+      AUC: area under the curve, calculated with the trapezoidal method
+    \item
+      Cmax: the maximum value of the selected output variable
+    \item
+      Tmax: the time at whjch the maximum value occurred
+    \item
+      Cmin: the lowest value in the interval
+    \item
+      Ctrough: the last value in the interval
+    \item
+      Cavg: the average concentration derived as: AUC/length\_time\_interval
+    \item
+      thalf: the half-life derived from the slope of the log-transformed variable values against time. \textbf{IMPORTANT:} all time points in the interval are used for the calculation. You need to check if this makes sense in your case, since most often you may actually be interested in the terminal part of the curve only.
+    \item
+      Max: the maximum value of the selected output variable
+    \item
+      Min: the minimum value of the selected output variable
+    \item
+      Last:the last value of the selected output variable in the interval
+    \item
+      Avg: the average value of the selected output variable in the interval
+    \item
+      Custom: a custom metric defined as a function of the selected output variable (see below).
+    \item
+      Custom(tbl): a custom metric defined as a function of any other variable available in the dataset (see below).
+    \end{itemize}
+  \item
+    The default time interval is 0 to the \textbf{\emph{last}} time point. You can also select previously defined and labelled periods. By default day 1 and day 7 (i.e.~0-24 and 144-168 hours) are available, but you can easily change this by clicking on the ``Periods'' button on the main screen.
+  \item
+    In the label field you can add your specific label. METRIC and PERIOD are placeholders that will be automatically filled in.
+  \item
+    Select the summary statistics that you wnat to use, e.g.~mean and CV\% or median and interquartile range. It is possible to provide a function for calculating a custom summary statistic.
+  \item
+    Choose the desired rounding method and the precision level.
+  \end{itemize}
+\item
+  Back on the main screen you can (and should) stratify the post-processing by SCENARIO, ARM, PERIOD (if it was defined), or by the OUTPUT variable if you choose different ones.
+\item
+  Click ``Refresh grid''
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Boxes for the different strata will appear.
+  \end{itemize}
+\item
+  Click the button `Apply to all panels'
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Most often you want to calculate the same metrics in all strata
+  \item
+    However, it is also possible to apply different metrics to different strata. In this case simple drag-and-drop the metric to the strata box you want
+  \item
+    \includegraphics[width=4.16667in,height=\textheight]{pictures/drag_drop.mp4}
+  \end{itemize}
+\item
+  Click on the Calculate button !
+
+  \includegraphics[width=5.14583in,height=\textheight]{pictures/htmltable2.png}
+\item
+  You can then download the table as pdf, png or html file
+\end{enumerate}
+
+Description of the options:
+
+\begin{itemize}
+\tightlist
+\item
+  Edit zone: click on a metric and drag it to this zone to edit it
+\item
+  Drop zone: if a metric had to be remove from one of the stratification, drag-and-drop to this zone
+\item
+  Refresh grid: to reset boxes
+\end{itemize}
+
+\section{Custom metrics}\label{custom-metrics}
+
+It is possible to define custom metrics. This can be done in two ways:
+
+\subsection{Calculated from the vector of the output variable}\label{calculated-from-the-vector-of-the-output-variable}
+
+If you select ``Custom'' as the metric type, you can define a custom metric as a function of the output variable. For example, you can derive the percentage of patients with the output variable (or derived metric thereof) exceeds a certain threshold for that individual. The function should be defined in R syntax and entered in the appropriate field:
+
+\includegraphics[width=4.8125in,height=\textheight]{pictures/custom-metric1.png}
+
+You can access the vector of the output variable by using \texttt{.y} and the vector of the time points by using \texttt{.x}. For example, the following custom function returns the maximum value of the output variable:
+
+\texttt{\textasciitilde{}\ max(.y)}
+
+or use just the shortcut function:
+
+\texttt{\textasciitilde{}\ Max}
+
+\subsubsection{Some Examples}\label{some-examples}
+
+\textbf{Return categorical endpoint}
+
+To check if the value of output variable (e.g.~concentration) at the end of the interval is above 10 simply write:
+
+\texttt{\textasciitilde{}\ Last\ \textgreater{}\ 10}
+
+This will evaluate to TRUE if the last concentration in the interval is above 10, and FALSE otherwise. You would need to check ``Categorical endpoint'' in this case.
+
+In fact you can use standard R syntax as well as dplyr commands and return a text string instead of TRUE/FALSE:
+
+\texttt{\textasciitilde{}case\_when(Cmax\ \textless{}\ 50\ \textasciitilde{}\ "P(\textless{}\ 50\ ng/mL)",\ Cmax\ \textgreater{}=\ 50\ \&\ Cmax\ \textless{}=\ 60\ \textasciitilde{}\ "P(50-60\ ng/mL)",\ Cmax\ \textgreater{}\ 60\ \textasciitilde{}\ "P(\textgreater{}\ 60\ ng/mL)")}
+
+\textbf{Calculate the maximum change from baseline}, assuming that the baseline value is the first value of the output variable in our observation interval:
+
+\texttt{\textasciitilde{}\ max(.y)\ -\ .y{[}1{]}}
+
+or
+
+\texttt{\textasciitilde{}\ Max\ -\ first(.y)}
+
+To \textbf{return the value of the output variable at a specific time point} within the interval, you can use the following syntax:
+
+\texttt{\textasciitilde{}\ .y{[}.x\ ==\ 4{]}}
+
+Remember \texttt{.y} is the selected output variable and \texttt{.x} is the time vector. The above example will return the value of the output variable at time = 4. However, this of course only works if the time point you specify actually exists in the dataset.
+
+For advanced users:
+
+There is a special function \texttt{iValue} that works together with the campsisnca metric objects, e.g.:
+
+\texttt{\textasciitilde{}\ AUC()\ \%\textgreater{}\%\ iValue(.x,.y)}
+
+\subsection{Calculated from a combination of variables in the dataset}\label{calculated-from-a-combination-of-variables-in-the-dataset}
+
+If you select ``Custom(tbl)'' as the metric type, you can define a custom metric as a function of any other variable available in the dataset. For example, you can calculate the ratio of two variables. The function should be defined in R syntax and entered in the appropriate field:
+
+\includegraphics[width=4.8125in,height=\textheight]{pictures/custom-metric2.png} You can access the temporary dataframe of an individual for which the metric is to be calulated within the specified interval as a tibble object using \texttt{.x}. For example, the following custom function returns the ratio of two variables:
+
+\texttt{\textasciitilde{}\ .x\$VAR1\ /\ .x\$VAR2}
+
+\subsubsection{Examples}\label{examples}
+
+\textbf{Alternative to calculate the change from baseline},
+
+for a biomarker (called BIOMARKER). We assume that BASELINE is a variable coming from the model and available in the dataset (i.e.~it was defined in the {[}ERROR{]} section of the model codel)
+
+\texttt{\textasciitilde{}\ max(.x\$BIOMARKER)\ -\ .x\$BASELINE{[}1{]}}
+
+Since BASELINE is not time-varying in our model we just use the first value in the vector. Remember
+
+\textbf{Calculate the dose-normalized AUC.}
+
+You need to output the current dose in the dataset. For this add the following lines to the {[}ERROR{]} section of the model code:
+
+\begin{verbatim}
+if(EVID==1){
+DOSE = self.amt
+}
+\end{verbatim}
+
+Note, this works only with mrgsolve as simulation engine.
+
+Then you can calculate the dose-normalized AUC as follows using the special iValue functions: \texttt{\textasciitilde{}(AUC()\ \%\textgreater{}\%\ iValue(.x\$TIME,.x\$CONC))\ /\ (Last()\ \%\textgreater{}\%\ iValue(.x\$TIME,.x\$DOSE))}
+
+\chapter{Forest plots (pro version only)}\label{forest-plots-pro-version-only}
+
+\section{Pre-requisites}\label{pre-requisites}
+
+\subsection{variance-covariance matrix}\label{variance-covariance-matrix}
+
+For a proper forest plot with error bars of uncertainty you will need to import a NONMEM model with a successful covariance step. So when importing a NONMEM model into e-Campsis make sure to select also the .cov file.
+
+\includegraphics{pictures/import_cov_file.png}
+
+A massage below the parameter tables will show if the variance-covariance matrix was properly loaded from the .cov file.
+
+\includegraphics[width=4.86458in,height=\textheight]{pictures/cov_message.png}
+
+Since the variance-covariance matrix is dependent on the parameter estimates, any change you now make manually to the parameter tables would invalidate the variance-covariance matrix and it won't be available for the forest plot simulations (or replicate simulations with uncertainty).
+
+You still can create the forest plots as described below, however, they would not include error bars of uncertainty and just show you the mean covariate impact.
+
+\subsection{Study design}\label{study-design}
+
+You need to setup a trial arm first with dosing and sampling scheme, before you can run a forest plot. As you will see below, you will be able to use practically any derived variable for a forest plot, including design-sensitive NCA parameters, like half-life or Cmax, so be sure to choose apropriate sampling times.
+
+Although not strictly required to run the forest plot, it is a good idea to enter the default covariate values here in the covariates field. This way you can check in the simulation tab that the profile for a typical or reference subject looks correct.
+
+\includegraphics{pictures/design_forest_plot.png}
+
+\subsection{Define outcome variables}\label{define-outcome-variables}
+
+You can create forest plots on any outcome variable you defined in the post-processing screen. So have a look at the post-processing section of this document.
+
+Note that in order to use model parameters in the post-processing like CL or V, they need to appear in the {[}ERROR{]} block of the code - possibly with a different name to avoid conflicts.
+
+\section{Select outcome variables and study arm}\label{select-outcome-variables-and-study-arm}
+
+Once you have done the pre-work, you can go to the forest plot screen and choose the study arm that should be used for the simulations. In the same box you also select the outcome variables that you want to use.
+
+\includegraphics{pictures/forest_plots_arms.png}
+
+\section{Select the covariates and define the values to explore}\label{select-the-covariates-and-define-the-values-to-explore}
+
+In the box on the top-right you define the covariate that you want to include in your forest plot simulations. Can can enter useful labels and add the units.
+
+\includegraphics{pictures/forest_plot_covar_definition.png}
+
+For continuous covariates you enter the default value, i.e.~the value of the reference subject, as well as the lower and upper value to simulate. This could be, for example, the 5th and 95th percentile of that covariate's distribution, or any other value you deem appropriate to show.
+
+For categorical covariates, you would enter the levels and map the numeric values to strings.
+
+\section{Set the forest plot items}\label{set-the-forest-plot-items}
+
+Now you can choose how many forest plot scenarios or items you want to simulate. Each items corresponds to a an error bar in the plot.
+
+You can also select several covariate values to simulate the effect of several covariates together.
+
+\includegraphics[width=2.42708in,height=\textheight]{pictures/forest_plot_items.png}
+
+\section{Run the simulation}\label{run-the-simulation}
+
+If you are ready click on ``Run simulation''.
+
+The confidence intervals in a forest plot will be generated by replicate simulations with random sampling from the variance-covariance matrix.
+
+Since this is quite coputationally intensive and may take a while, we suggest you only run a few replicates online and if you are satisfied with the plots you download the automatically generated R-code and execute the big simulation on your computer offline (see section `download').
+
+The check-box `parallel' execution and `number of cores' have currently no effect for online execution. However, the corresponding code for running the simulation in parallel will be included in the downloadable R-script.
+
+Once the simulation is finished you can change some plot settings to adjust the axis limits and breaks as well as the reference range and click through the results - one plot per outcome variable.
+
+\includegraphics{pictures/forest_plot_plot.png}
+
+\chapter{Download}\label{download}
+
+In the download section you can see the full R-code to run the simulation on your local machine. There are checkboxes that allow to include/remove certain sections that may not be needed.
+
+\includegraphics{pictures/Download_section_renv.png}
+
+Of course, post-processing or forest plot code can only be included in the script if you have run that simulation before.
+
+Click the Download button to download zip file containing the full Campsis script as well as the model code and parameter tables. The script can be run locally with the open-source packages \textbf{campsis, campsismod, campsismisc and campsisnca.}
+
+\section{Renv for total reproduceability (pro version only)}\label{renv-for-total-reproduceability-pro-version-only}
+
+Simulations with e-Campsis depend on many R packages and it is quite likely that a script that runs today on your computer with the current versions of dependencies may not run without issues in a year or so when you update your R-installation the next time. To overcome this R-specific challenge you can include a \texttt{renv::use} block in your simulation script.
+
+When you then execute the script on your computer a temporary renv-package library will be generated and all dependencies will be downloaded and installed with the exact same version as indicated. This will allow you to reproduce your simulations also 5 years from now without issues.
+
+There are only two requirements for this to work:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi})}
+\item
+  renv must be installed in your R-environment first (read more about renv \href{https://rstudio.github.io/renv/articles/renv.html}{here}.
+\item
+  you need a C++ compiler to run \texttt{mrgsolve}. For Windows you simply need to install \href{https://cran.r-project.org/bin/windows/Rtools/rtools44/rtools.html}{Rtools} first (currently version 4.4) . For mac and linux you need to install a fortran compiler (see \href{https://github.com/metrumresearchgroup/mrgsolve/wiki/mrgsolve-Installation\#compilers-buid-tools}{here} for instructions).
+\end{enumerate}
+
+\chapter{Settings}\label{settings}
+
+\section{Time units}\label{time-units}
+
+Campsis includes functions that automatically take care of converting time units. First you need to make sure that the time scale of your model (i.e.~your differential equations) is correctly set (hours by defualt). Go back to the model section. Above the parameter tables you will find a dropdown menu where you can select the time unit of your model.
+
+\includegraphics[width=4.01042in,height=\textheight]{pictures/model_time.png}
+
+Now go to settings and chose the unit in which you would like to specify the time of dosing, the dosing interval, infusion duration, observation times
+
+\includegraphics[width=4.01042in,height=\textheight]{pictures/time-units.png}
+
+Later, when you run the simulation you can specify the time unit to be used in the plots.
+
+\includegraphics[width=4.01042in,height=\textheight]{pictures/time-units-plot.png}
+
+The following video also shows how to set the units:
+
+\chapter{Feedback and help}\label{feedback-and-help}
+
+On the \href{https://calvagone.github.io/}{\textbf{Campsis}} website, you will find extensive information about the open-source Campsis simulation platform. There you will also find a section on e-Campsis, including example use cases.
+
+If you run into problems using e-Campsis, please provide your feedback here: \url{https://github.com/Calvagone/ecampsis.feedback/issues}
+
+\chapter{Disclaimer}\label{disclaimer}
+
+e-Campsis is provided ``as is'', without warranty of any kind, express or implied, including but not limited to the warranties of merchantability, fitness for a particular purpose and noninfringement. In no event shall Calvagone SAS be liable for any claim, damages or other liability, whether in an action of contract, tort or otherwise, arising from, out of or in connection with the software or the use or other dealings with the software. Calvagone reserves the right to discontinue the service at any time.
+
+\chapter{Terms and Conditions}\label{terms-and-conditions}
+
+\includegraphics[width=21cm,height=29cm]{pictures/e-Campsis_T&C_v3_240911.pdf}
+
+\end{document}

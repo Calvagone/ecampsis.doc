@@ -41,23 +41,24 @@ The professional version of e-Campsis is available as a yearly subscription and 
 -   Advanced customization of plots
 -   NCA & summary statistics
 -   Sensitivity analysis\*
--   Forest plots\*
+-   Forest plots
 -   Upload of external data for plotting\*
 -   Bootstrap covariates from external file or NHANES\*
--   Replicate simulation with parameter uncertainty\*
+-   Replicate simulation with parameter uncertainty
 -   Import rxode2 and mrgsolve simulation code\*
 -   Personalized support via email
 
-\**Under development. Will be ready in Spring 2024.*
+\**Under development.*
 
 For further information, contact us at the following e-mail address: [campsis\@calvagone.com](mailto:campsis@calvagone.com){.email}
 
 ## Application interface
 
-The app consists of 4 main sections:
+The app consists of 5 main sections:
 
 -   **Model**: a powerful model editor to edit your Campsis model online. Try out one of the numerous models available from the library and adapt it to your needs.
 -   **Trial design**: an easy-to-use interface to quickly set-up the dosing regimen, observation times and covariates.
--   **Simulation**: a single screen dedicated to the simulation configuration and visualisation of the results. Explore different scenarios of parameter settings quickly and interactively.
+-   **Simulation**: a single screen dedicated to the simulation configuration and visualization of the results. Explore different scenarios of parameter settings quickly and interactively.
 -   **Post-processing**: here you can define summary variables such as non-compartmental PK parameters that you want to derive from your simulation results and show them in a table.
+-   **Forest plots**: Easily define and generate nice-looking forest plots and explore the impact of covariates on any outcome parameter.
 -   **Download**: last but not least, download the model, parameters and the whole code of the simulation to reproduce what you see in the app on your computer using the open-source package campsis.

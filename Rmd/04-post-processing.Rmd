@@ -1,4 +1,4 @@
-# Post-processing
+# Post-processing (pro version only)
 
 ## Step-by-step guide
 

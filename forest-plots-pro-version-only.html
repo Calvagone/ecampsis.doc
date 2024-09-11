@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 9 Feedback and help | e-Campsis documentation</title>
+  <title>Chapter 6 Forest plots (pro version only) | e-Campsis documentation</title>
   <meta name="description" content="Here you will find a description of the tabs of e-campsis." />
   <meta name="generator" content="bookdown 0.38 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 9 Feedback and help | e-Campsis documentation" />
+  <meta property="og:title" content="Chapter 6 Forest plots (pro version only) | e-Campsis documentation" />
   <meta property="og:type" content="book" />
   <meta property="og:image" content="/ecampsis_logo.png" />
   <meta property="og:description" content="Here you will find a description of the tabs of e-campsis." />
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 9 Feedback and help | e-Campsis documentation" />
+  <meta name="twitter:title" content="Chapter 6 Forest plots (pro version only) | e-Campsis documentation" />
   
   <meta name="twitter:description" content="Here you will find a description of the tabs of e-campsis." />
   <meta name="twitter:image" content="/ecampsis_logo.png" />
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="settings.html"/>
-<link rel="next" href="disclaimer.html"/>
+<link rel="prev" href="post-processing-pro-version-only.html"/>
+<link rel="next" href="download.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -159,18 +159,67 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="feedback-and-help" class="section level1 hasAnchor" number="9">
-<h1><span class="header-section-number">Chapter 9</span> Feedback and help<a href="feedback-and-help.html#feedback-and-help" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>On the <a href="https://calvagone.github.io/"><strong>Campsis</strong></a> website, you will find extensive information about the open-source Campsis simulation platform. There you will also find a section on e-Campsis, including example use cases.</p>
-<p>If you run into problems using e-Campsis, please provide your feedback here: <a href="https://github.com/Calvagone/ecampsis.feedback/issues" class="uri">https://github.com/Calvagone/ecampsis.feedback/issues</a></p>
+<div id="forest-plots-pro-version-only" class="section level1 hasAnchor" number="6">
+<h1><span class="header-section-number">Chapter 6</span> Forest plots (pro version only)<a href="forest-plots-pro-version-only.html#forest-plots-pro-version-only" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="pre-requisites" class="section level2 hasAnchor" number="6.1">
+<h2><span class="header-section-number">6.1</span> Pre-requisites<a href="forest-plots-pro-version-only.html#pre-requisites" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="variance-covariance-matrix" class="section level3 hasAnchor" number="6.1.1">
+<h3><span class="header-section-number">6.1.1</span> variance-covariance matrix<a href="forest-plots-pro-version-only.html#variance-covariance-matrix" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>For a proper forest plot with error bars of uncertainty you will need to import a NONMEM model with a successful covariance step. So when importing a NONMEM model into e-Campsis make sure to select also the .cov file.</p>
+<p><img src="pictures/import_cov_file.png" /></p>
+<p>A massage below the parameter tables will show if the variance-covariance matrix was properly loaded from the .cov file.</p>
+<p><img src="pictures/cov_message.png" width="467" /></p>
+<p>Since the variance-covariance matrix is dependent on the parameter estimates, any change you now make manually to the parameter tables would invalidate the variance-covariance matrix and it won’t be available for the forest plot simulations (or replicate simulations with uncertainty).</p>
+<p>You still can create the forest plots as described below, however, they would not include error bars of uncertainty and just show you the mean covariate impact.</p>
+</div>
+<div id="study-design" class="section level3 hasAnchor" number="6.1.2">
+<h3><span class="header-section-number">6.1.2</span> Study design<a href="forest-plots-pro-version-only.html#study-design" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>You need to setup a trial arm first with dosing and sampling scheme, before you can run a forest plot. As you will see below, you will be able to use practically any derived variable for a forest plot, including design-sensitive NCA parameters, like half-life or Cmax, so be sure to choose apropriate sampling times.</p>
+<p>Although not strictly required to run the forest plot, it is a good idea to enter the default covariate values here in the covariates field. This way you can check in the simulation tab that the profile for a typical or reference subject looks correct.</p>
+<p><img src="pictures/design_forest_plot.png" /></p>
+</div>
+<div id="define-outcome-variables" class="section level3 hasAnchor" number="6.1.3">
+<h3><span class="header-section-number">6.1.3</span> Define outcome variables<a href="forest-plots-pro-version-only.html#define-outcome-variables" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>You can create forest plots on any outcome variable you defined in the post-processing screen. So have a look at the post-processing section of this document.</p>
+<p>Note that in order to use model parameters in the post-processing like CL or V, they need to appear in the [ERROR] block of the code - possibly with a different name to avoid conflicts.</p>
+</div>
+</div>
+<div id="select-outcome-variables-and-study-arm" class="section level2 hasAnchor" number="6.2">
+<h2><span class="header-section-number">6.2</span> Select outcome variables and study arm<a href="forest-plots-pro-version-only.html#select-outcome-variables-and-study-arm" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Once you have done the pre-work, you can go to the forest plot screen and choose the study arm that should be used for the simulations. In the same box you also select the outcome variables that you want to use.</p>
+<p><img src="pictures/forest_plots_arms.png" /></p>
+</div>
+<div id="select-the-covariates-and-define-the-values-to-explore" class="section level2 hasAnchor" number="6.3">
+<h2><span class="header-section-number">6.3</span> Select the covariates and define the values to explore<a href="forest-plots-pro-version-only.html#select-the-covariates-and-define-the-values-to-explore" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>In the box on the top-right you define the covariate that you want to include in your forest plot simulations. Can can enter useful labels and add the units.</p>
+<p><img src="pictures/forest_plot_covar_definition.png" /></p>
+<p>For continuous covariates you enter the default value, i.e. the value of the reference subject, as well as the lower and upper value to simulate. This could be, for example, the 5th and 95th percentile of that covariate’s distribution, or any other value you deem appropriate to show.</p>
+<p>For categorical covariates, you would enter the levels and map the numeric values to strings.</p>
+</div>
+<div id="set-the-forest-plot-items" class="section level2 hasAnchor" number="6.4">
+<h2><span class="header-section-number">6.4</span> Set the forest plot items<a href="forest-plots-pro-version-only.html#set-the-forest-plot-items" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Now you can choose how many forest plot scenarios or items you want to simulate. Each items corresponds to a an error bar in the plot.</p>
+<p>You can also select several covariate values to simulate the effect of several covariates together.</p>
+<p><img src="pictures/forest_plot_items.png" width="233" /></p>
+</div>
+<div id="run-the-simulation" class="section level2 hasAnchor" number="6.5">
+<h2><span class="header-section-number">6.5</span> Run the simulation<a href="forest-plots-pro-version-only.html#run-the-simulation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>If you are ready click on “Run simulation”.</p>
+<p>The confidence intervals in a forest plot will be generated by replicate simulations with random sampling from the variance-covariance matrix.</p>
+<p>Since this is quite coputationally intensive and may take a while, we suggest you only run a few replicates online and if you are satisfied with the plots you download the automatically generated R-code and execute the big simulation on your computer offline (see section ‘download’).</p>
+<p>The check-box ‘parallel’ execution and ‘number of cores’ have currently no effect for online execution. However, the corresponding code for running the simulation in parallel will be included in the downloadable R-script.</p>
+<p>Once the simulation is finished you can change some plot settings to adjust the axis limits and breaks as well as the reference range and click through the results - one plot per outcome variable.</p>
+<p><img src="pictures/forest_plot_plot.png" /></p>
+
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="settings.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="disclaimer.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="post-processing-pro-version-only.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="download.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -201,7 +250,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/USERNAME/REPO/edit/BRANCH/08-Info.Rmd",
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/05-forest-plots.Rmd",
 "text": "Edit"
 },
 "history": {
