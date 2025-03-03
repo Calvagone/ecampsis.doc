@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 9 Settings | e-Campsis documentation</title>
+  <title>Chapter 6 Sensitivity analysis | e-Campsis documentation</title>
   <meta name="description" content="Here you will find a description of the tabs of e-campsis." />
   <meta name="generator" content="bookdown 0.42 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 9 Settings | e-Campsis documentation" />
+  <meta property="og:title" content="Chapter 6 Sensitivity analysis | e-Campsis documentation" />
   <meta property="og:type" content="book" />
   <meta property="og:image" content="/ecampsis_logo.png" />
   <meta property="og:description" content="Here you will find a description of the tabs of e-campsis." />
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 9 Settings | e-Campsis documentation" />
+  <meta name="twitter:title" content="Chapter 6 Sensitivity analysis | e-Campsis documentation" />
   
   <meta name="twitter:description" content="Here you will find a description of the tabs of e-campsis." />
   <meta name="twitter:image" content="/ecampsis_logo.png" />
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="download.html"/>
-<link rel="next" href="feedback-and-help.html"/>
+<link rel="prev" href="post-processing-pro-version-only.html"/>
+<link rel="next" href="forest-plots-pro-version-only.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -168,19 +168,28 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="settings" class="section level1 hasAnchor" number="9">
-<h1><span class="header-section-number">Chapter 9</span> Settings<a href="settings.html#settings" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div id="time-units" class="section level2 hasAnchor" number="9.1">
-<h2><span class="header-section-number">9.1</span> Time units<a href="settings.html#time-units" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Campsis includes functions that automatically take care of converting time units. First you need to make sure that the time scale of your model (i.e. your differential equations) is correctly set (hours by defualt). Go back to the model section. Above the parameter tables you will find a dropdown menu where you can select the time unit of your model.</p>
-<p><img src="pictures/model_time.png" width="385" /></p>
-<p>Now go to settings and chose the unit in which you would like to specify the time of dosing, the dosing interval, infusion duration, observation times</p>
-<p><img src="pictures/time-units.png" width="385" /></p>
-<p>Later, when you run the simulation you can specify the time unit to be used in the plots.</p>
-<p><img src="pictures/time-units-plot.png" width="385" /></p>
-<p>The following video also shows how to set the units:</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Il3Z56sG34g?si=CQkpb8IvMOdfZwRz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-</iframe>
+<div id="sensitivity-analysis" class="section level1 hasAnchor" number="6">
+<h1><span class="header-section-number">Chapter 6</span> Sensitivity analysis<a href="sensitivity-analysis.html#sensitivity-analysis" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="pre-requisites" class="section level2 hasAnchor" number="6.1">
+<h2><span class="header-section-number">6.1</span> Pre-requisites<a href="sensitivity-analysis.html#pre-requisites" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="define-outcome-variables" class="section level3 hasAnchor" number="6.1.1">
+<h3><span class="header-section-number">6.1.1</span> Define outcome variables<a href="sensitivity-analysis.html#define-outcome-variables" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>You can create a sensitivity analysis on any outcome variable you defined in the post-processing screen. So have a look at the post-processing section of this document.</p>
+</div>
+</div>
+<div id="select-outcome-variables-and-study-arm" class="section level2 hasAnchor" number="6.2">
+<h2><span class="header-section-number">6.2</span> Select outcome variables and study arm<a href="sensitivity-analysis.html#select-outcome-variables-and-study-arm" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Once you have defined outcome variables, you can go to the sensitivity analysis screen and choose the study arm that should be used for the simulations. In the same box you also select the outcome variables that you want to compute.</p>
+<p><img src="pictures/sensitivity_analysis_arms.png" /></p>
+</div>
+<div id="select-the-parameters-to-adapt" class="section level2 hasAnchor" number="6.3">
+<h2><span class="header-section-number">6.3</span> Select the parameters to adapt<a href="sensitivity-analysis.html#select-the-parameters-to-adapt" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>In the top-right box you define the parameters that you want to adapt in your sensitivity analysis simulation. For each parameter to adapt, you have 2 possibilities:</p>
+<ul>
+<li>either your specify the factors by which you want to respectively, divide and multiply, the parameter value. Default value is 2 in both directions (i.e. parameter value will be decreased by 50% and will be increased by 100%).</li>
+<li>or you specify the lower and upper value to simulate. This could be, for example, the 5th and 95th percentile of that parameter’s distribution, or any other value you deem appropriate to test. In this case, please replace <code>no</code> by <code>yes</code> in the <code>Use absolute value</code> column.</li>
+</ul>
+<p><img src="pictures/sensitivity_analysis_param_selection.png" /></p>
 
 </div>
 </div>
@@ -189,8 +198,8 @@
           </div>
         </div>
       </div>
-<a href="download.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="feedback-and-help.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="post-processing-pro-version-only.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="forest-plots-pro-version-only.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -221,7 +230,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/USERNAME/REPO/edit/BRANCH/Settings.Rmd",
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/Sensitivity-analysis.Rmd",
 "text": "Edit"
 },
 "history": {

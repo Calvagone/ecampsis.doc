@@ -1,0 +1,22 @@
+# Sensitivity analysis
+
+## Pre-requisites
+
+### Define outcome variables
+
+You can create a sensitivity analysis on any outcome variable you defined in the post-processing screen. So have a look at the post-processing section of this document.
+
+## Select outcome variables and study arm
+
+Once you have defined outcome variables, you can go to the sensitivity analysis screen and choose the study arm that should be used for the simulations. In the same box you also select the outcome variables that you want to compute.
+
+![](pictures/sensitivity_analysis_arms.png)
+
+## Select the parameters to adapt
+
+In the top-right box you define the parameters that you want to adapt in your sensitivity analysis simulation. For each parameter to adapt, you have 2 possibilities:
+
+- either your specify the factors by which you want to respectively, divide and multiply, the parameter value. Default value is 2 in both directions (i.e. parameter value will be decreased by 50% and will be increased by 100%).
+- or you specify the lower and upper value to simulate. This could be, for example, the 5th and 95th percentile of that parameter's distribution, or any other value you deem appropriate to test. In this case, please replace `no` by `yes` in the `Use absolute value` column.
+
+![](pictures/sensitivity_analysis_param_selection.png)

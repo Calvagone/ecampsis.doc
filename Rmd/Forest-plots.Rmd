@@ -2,13 +2,13 @@
 
 ## Pre-requisites
 
-### variance-covariance matrix
+### Variance-covariance matrix
 
 For a proper forest plot with error bars of uncertainty you will need to import a NONMEM model with a successful covariance step. So when importing a NONMEM model into e-Campsis make sure to select also the .cov file.
 
 ![](pictures/import_cov_file.png)
 
-A massage below the parameter tables will show if the variance-covariance matrix was properly loaded from the .cov file.
+A message below the parameter tables will show if the variance-covariance matrix was properly loaded from the .cov file.
 
 ![](pictures/cov_message.png){width="467"}
 
