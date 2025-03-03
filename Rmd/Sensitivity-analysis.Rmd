@@ -1,10 +1,8 @@
-# Sensitivity analysis
+# Sensitivity analysis (pro version only)
 
 ## Pre-requisites
 
-### Define outcome variables
-
-You can create a sensitivity analysis on any outcome variable you defined in the post-processing screen. So have a look at the post-processing section of this document.
+You can create a sensitivity analysis on any outcome variable you defined in the post-processing screen. So have a look at the [post-processing](post-processing-pro-version-only.html) section of this document.
 
 ## Select outcome variables and study arm
 
@@ -20,3 +18,20 @@ In the top-right box you define the parameters that you want to adapt in your se
 - or you specify the lower and upper value to simulate. This could be, for example, the 5th and 95th percentile of that parameter's distribution, or any other value you deem appropriate to test. In this case, please replace `no` by `yes` in the `Use absolute value` column.
 
 ![](pictures/sensitivity_analysis_param_selection.png)
+Note: to edit the table, please double click on any cell. To finish editing, hit `Ctrl + Enter`, or `Esc` to cancel.
+
+## Run sensitivity analysis simulation
+
+If you are ready click on "Run simulation". Use the `Previous` and `Next` buttons to navigate through the different metrics you chose.
+
+For instance, the plot below shows what happens on AUC if the clearance, the volume of distribution and the infusion duration are respectively divided by 2 and multiplied by 2. Since the model is linear, we see that only the clearance affects the AUC.
+
+![](pictures/sensitivity_analysis_auc_metric.png)
+
+The second plot shows the same sensitivity analysis but on Cmax. As expected, the volume of distribution drives the Cmax. The infusion duration and the clearance both play a minor role.
+
+![](pictures/sensitivity_analysis_cmax_metric.png)
+
+Always remember that your metrics are calculated on the simulated data, which depends on your design. So, be careful about the sampling you use or to the observation window you look at.
+
+Enjoy the sensitivity analysis tab. Don't hesitate to reproduce your results offline thanks to our package `campsismisc`.
