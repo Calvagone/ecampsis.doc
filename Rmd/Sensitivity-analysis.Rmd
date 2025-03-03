@@ -18,6 +18,7 @@ In the top-right box you define the parameters that you want to adapt in your se
 - or you specify the lower and upper value to simulate. This could be, for example, the 5th and 95th percentile of that parameter's distribution, or any other value you deem appropriate to test. In this case, please replace `no` by `yes` in the `Use absolute value` column.
 
 ![](pictures/sensitivity_analysis_param_selection.png)
+
 Note: to edit the table, please double click on any cell. To finish editing, hit `Ctrl + Enter`, or `Esc` to cancel.
 
 ## Run sensitivity analysis simulation

@@ -45,4 +45,18 @@ Click "+" to pull the tab down.
     -   Facet nrow: number of facets per row
     -   Facet scaled: include or not the facet variable name
 
+
+-   Data overlay (pro version): Overlay the observed data on the simulated data. See specific section below on how to overlay your external data.
+
 -   Custom plot (pro version): R-code can be edited to directly customize the plot, then check "enable custom plot" to update the plot after editing the code. Click "Generate code from GUI" to update the code from the plot.
+
+## Data overlay
+
+e-Campsis offers a very powerful interface to overlay external data on the simulated data. This feature, reserved to pro users only, can be useful to:
+
+- compare the simulated data with observed data or with summarized observed data (like median, percentiles, etc.)
+- show data from literature (e.g. PK profiles from a publication or confidence intervals at some specific points of the profile, etc.) on top of your plot
+- more generally, add any ggplot layer to annotate your plot (e.g. add a label, some text, a line, a cross bar, etc.)
+
+This section will explain you how to use the functionality.
+

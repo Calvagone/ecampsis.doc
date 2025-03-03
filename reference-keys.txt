@@ -18,6 +18,7 @@ simulation
 scenarios
 simulation-settings
 plot-settings
+data-overlay
 post-processing-pro-version-only
 step-by-step-guide
 custom-metrics
