@@ -62,3 +62,73 @@ e-Campsis offers a very powerful interface to overlay external data on the simul
 
 This section will explain you how to use the functionality.
 
+### Data overlay interface
+
+In the plot settings, click on the "Edit layers" button to open the interface that will allow you to edit up to 8 layers.
+
+![](pictures/data_overlay_interface.png){width=60%}
+
+Three actions can be performed on each layer:
+
+- Edit: opens a window where you can edit the layer.
+- Clear: removes the layer from the plot. The entered data for this layer will be lost.
+- Show: shows or hides the layer on the plot.
+
+### Edit a layer
+
+Click on the "Edit" button to open the layer editor window.
+
+![](pictures/layer_editor_window.png){width=60%}
+
+Here are the steps to follow:
+
+- **Select type of layer**: the following types can be selected: `Point`, `Line`, `Horizontal line`, `Vertical line`, `Point range`, `Step`, `Error bar`, `Cross bar`, `Text` and `Label`. Based on your selection, the required column names (aesthetics in the ggplot2 terminology) will be displayed in the table and will have to be filled in with your data.
+- **Add specific columns**:
+  - ID: needed if your external data refers to individuals
+  - ARM: may be needed if you have more than 1 arm in your simulation
+  - SCENARIO: may be needed if you have more than 1 scenario in your simulation
+- **Time unit**: select the time unit of your data. This is important to ensure that the data is correctly overlaid on the plot.
+- **Table**: enter your data in the table. The table content can be edited directly in the interface. You can also copy-paste your data from an external source (e.g. a CSV or Excel file).
+- **Add/Delete rows**: use these buttons to add or delete 50 rows at once in the table.
+- **Delete unused rows**: delete empty/unused rows.
+- **Source reference**: add a reference to the source of your data. This will be shown in the generated R code.
+- **Related output**: 
+    - Non-specific: the data will be overlaid on all outputs.
+    - Specific: the data will be overlaid on the selected output(s).
+- **Colour**:
+    - Manual: in that case, specify the colour string to use (name or hex code).
+    - Colour-group based: the data will be coloured based on stratification variable used for colouring the plot.
+- **Alpha level**: indicate the transparency level of the layer, a number between 0 and 1.
+
+Once your data is entered and your layer is configured, click on the "Save" button to save the layer. The layer will be added to the plot.
+
+### Example: overlay summarised observed data on simulated data
+
+Let's say you have rich observed data for the median and 5th and 95th percentiles of the concentrations at Day 1 and Day 13, and trough concentrations for all days in between (your drug is given once daily). You have in your dataset slow metabolisers and fast metabolisers. You want to overlay this data on the simulated concentration profiles.
+
+In your trial design, you do also simulate two arms, the first one with slow metabolisers and the second one with fast metabolisers.
+
+Here is how you can proceed:
+
+- Prepare your data in a CSV/Excel file with the following columns: `ARM`, `TIME`, `MEDIAN`, `P5`, `P95`
+- Column arm should be mapped to the ARM column in e-Campsis. E.g. use 'Slow' and 'Fast' as values, which are the same as in your trial design.
+- Edit the first layer and enter the median. Select `Line` as the type of layer. Select `dotted` as the line type. Select the `ARM` checkbox. Fill in the required columns `ARM`, `x` (=`TIME`) and `y` (=`MEDIAN`) by copy pasting the data from your CSV/Excel file. Select the time unit of your data and click save.
+
+As an example, you could have the following data:
+
+![](pictures/data_overlay_layer_example.png){width=60%}
+
+- Add a second layer for the 5th percentile and provide the corresponding data. Select `longdash` as the line type.
+- Add a third layer for the 95th percentile and provide the corresponding data. Select `longdash` as the line type.
+
+Your layers should look like this:
+
+![](pictures/data_overlay_layer_example_3layers.png){width=60%}
+
+That's it. Your plot will now show the simulated profiles with the median, 5th and 95th percentiles overlaid on top.
+
+![](pictures/data_overlay_example_plot.png){width=60%}
+
+
+
+

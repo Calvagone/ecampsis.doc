@@ -105,7 +105,12 @@
 <li class="chapter" data-level="4.1" data-path="simulation.html"><a href="simulation.html#scenarios"><i class="fa fa-check"></i><b>4.1</b> Scenarios</a></li>
 <li class="chapter" data-level="4.2" data-path="simulation.html"><a href="simulation.html#simulation-settings"><i class="fa fa-check"></i><b>4.2</b> Simulation settings</a></li>
 <li class="chapter" data-level="4.3" data-path="simulation.html"><a href="simulation.html#plot-settings"><i class="fa fa-check"></i><b>4.3</b> Plot settings</a></li>
-<li class="chapter" data-level="4.4" data-path="simulation.html"><a href="simulation.html#data-overlay"><i class="fa fa-check"></i><b>4.4</b> Data overlay</a></li>
+<li class="chapter" data-level="4.4" data-path="simulation.html"><a href="simulation.html#data-overlay"><i class="fa fa-check"></i><b>4.4</b> Data overlay</a>
+<ul>
+<li class="chapter" data-level="4.4.1" data-path="simulation.html"><a href="simulation.html#data-overlay-interface"><i class="fa fa-check"></i><b>4.4.1</b> Data overlay interface</a></li>
+<li class="chapter" data-level="4.4.2" data-path="simulation.html"><a href="simulation.html#edit-a-layer"><i class="fa fa-check"></i><b>4.4.2</b> Edit a layer</a></li>
+<li class="chapter" data-level="4.4.3" data-path="simulation.html"><a href="simulation.html#example-overlay-summarised-observed-data-on-simulated-data"><i class="fa fa-check"></i><b>4.4.3</b> Example: overlay summarised observed data on simulated data</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="post-processing.html"><a href="post-processing.html"><i class="fa fa-check"></i><b>5</b> Post-processing</a>
 <ul>
@@ -224,7 +229,71 @@
 <li>More generally, add any ggplot layer to annotate your plot (e.g. add a label, some text, lines or points, cross bars, etc.)</li>
 </ul>
 <p>This section will explain you how to use the functionality.</p>
+<div id="data-overlay-interface" class="section level3 hasAnchor" number="4.4.1">
+<h3><span class="header-section-number">4.4.1</span> Data overlay interface<a href="simulation.html#data-overlay-interface" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>In the plot settings, click on the “Edit layers” button to open the interface that will allow you to edit up to 8 layers.</p>
+<p><img src="pictures/data_overlay_interface.png" style="width:60.0%" /></p>
+<p>Three actions can be performed on each layer:</p>
+<ul>
+<li>Edit: opens a window where you can edit the layer.</li>
+<li>Clear: removes the layer from the plot. The entered data for this layer will be lost.</li>
+<li>Show: shows or hides the layer on the plot.</li>
+</ul>
+</div>
+<div id="edit-a-layer" class="section level3 hasAnchor" number="4.4.2">
+<h3><span class="header-section-number">4.4.2</span> Edit a layer<a href="simulation.html#edit-a-layer" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Click on the “Edit” button to open the layer editor window.</p>
+<p><img src="pictures/layer_editor_window.png" style="width:60.0%" /></p>
+<p>Here are the steps to follow:</p>
+<ul>
+<li><strong>Select type of layer</strong>: the following types can be selected: <code>Point</code>, <code>Line</code>, <code>Horizontal line</code>, <code>Vertical line</code>, <code>Point range</code>, <code>Step</code>, <code>Error bar</code>, <code>Cross bar</code>, <code>Text</code> and <code>Label</code>. Based on your selection, the required column names (aesthetics in the ggplot2 terminology) will be displayed in the table and will have to be filled in with your data.</li>
+<li><strong>Add specific columns</strong>:
+<ul>
+<li>ID: needed if your external data refers to individuals</li>
+<li>ARM: may be needed if you have more than 1 arm in your simulation</li>
+<li>SCENARIO: may be needed if you have more than 1 scenario in your simulation</li>
+</ul></li>
+<li><strong>Time unit</strong>: select the time unit of your data. This is important to ensure that the data is correctly overlaid on the plot.</li>
+<li><strong>Table</strong>: enter your data in the table. The table content can be edited directly in the interface. You can also copy-paste your data from an external source (e.g. a CSV or Excel file).</li>
+<li><strong>Add/Delete rows</strong>: use these buttons to add or delete 50 rows at once in the table.</li>
+<li><strong>Delete unused rows</strong>: delete empty/unused rows.</li>
+<li><strong>Source reference</strong>: add a reference to the source of your data. This will be shown in the generated R code.</li>
+<li><strong>Related output</strong>:
+<ul>
+<li>Non-specific: the data will be overlaid on all outputs.</li>
+<li>Specific: the data will be overlaid on the selected output(s).</li>
+</ul></li>
+<li><strong>Colour</strong>:
+<ul>
+<li>Manual: in that case, specify the colour string to use (name or hex code).</li>
+<li>Colour-group based: the data will be coloured based on stratification variable used for colouring the plot.</li>
+</ul></li>
+<li><strong>Alpha level</strong>: indicate the transparency level of the layer, a number between 0 and 1.</li>
+</ul>
+<p>Once your data is entered and your layer is configured, click on the “Save” button to save the layer. The layer will be added to the plot.</p>
+</div>
+<div id="example-overlay-summarised-observed-data-on-simulated-data" class="section level3 hasAnchor" number="4.4.3">
+<h3><span class="header-section-number">4.4.3</span> Example: overlay summarised observed data on simulated data<a href="simulation.html#example-overlay-summarised-observed-data-on-simulated-data" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Let’s say you have rich observed data for the median and 5th and 95th percentiles of the concentrations at Day 1 and Day 13, and trough concentrations for all days in between (your drug is given once daily). You have in your dataset slow metabolisers and fast metabolisers. You want to overlay this data on the simulated concentration profiles.</p>
+<p>In your trial design, you do also simulate two arms, the first one with slow metabolisers and the second one with fast metabolisers.</p>
+<p>Here is how you can proceed:</p>
+<ul>
+<li>Prepare your data in a CSV/Excel file with the following columns: <code>ARM</code>, <code>TIME</code>, <code>MEDIAN</code>, <code>P5</code>, <code>P95</code></li>
+<li>Column arm should be mapped to the ARM column in e-Campsis. E.g. use ‘Slow’ and ‘Fast’ as values, which are the same as in your trial design.</li>
+<li>Edit the first layer and enter the median. Select <code>Line</code> as the type of layer. Select <code>dotted</code> as the line type. Select the <code>ARM</code> checkbox. Fill in the required columns <code>ARM</code>, <code>x</code> (=<code>TIME</code>) and <code>y</code> (=<code>MEDIAN</code>) by copy pasting the data from your CSV/Excel file. Select the time unit of your data and click save.</li>
+</ul>
+<p>As an example, you could have the following data:</p>
+<p><img src="pictures/data_overlay_layer_example.png" style="width:60.0%" /></p>
+<ul>
+<li>Add a second layer for the 5th percentile and provide the corresponding data. Select <code>longdash</code> as the line type.</li>
+<li>Add a third layer for the 95th percentile and provide the corresponding data. Select <code>longdash</code> as the line type.</li>
+</ul>
+<p>Your layers should look like this:</p>
+<p><img src="pictures/data_overlay_layer_example_3layers.png" style="width:60.0%" /></p>
+<p>That’s it. Your plot will now show the simulated profiles with the median, 5th and 95th percentiles overlaid on top.</p>
+<p><img src="pictures/data_overlay_example_plot.png" style="width:60.0%" /></p>
 
+</div>
 </div>
 </div>
             </section>

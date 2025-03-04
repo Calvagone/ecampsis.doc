@@ -19,6 +19,9 @@ scenarios
 simulation-settings
 plot-settings
 data-overlay
+data-overlay-interface
+edit-a-layer
+example-overlay-summarised-observed-data-on-simulated-data
 post-processing
 step-by-step-guide
 custom-metrics
