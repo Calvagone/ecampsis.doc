@@ -31,7 +31,6 @@ calculated-from-a-combination-of-variables-in-the-dataset
 examples
 post-processing-replication
 basic-example
-advanced-example-with-pos
 sensitivity-analysis
 pre-requisites
 select-outcome-variables-and-study-arm

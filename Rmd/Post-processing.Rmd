@@ -196,5 +196,3 @@ Now, go to the post-processing replication box. Select 25 replicates, select the
 These results show that the confidence interval on the geometric mean of AUC is quite large, which is expected given the small number of subjects in the trial. The same applies to the geometric CV on AUC.
 
 As an exercise, you can increase the number of subjects (e.g. set 250 subjects instead of 10) in the trial design and re-run the post-processing setup and the replication process. You should see that the confidence intervals on the NCA metrics become narrower.
-
-### Advanced example with PoS
