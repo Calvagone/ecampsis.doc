@@ -90,7 +90,7 @@
 <ul>
 <li class="chapter" data-level="2.1" data-path="model-tab.html"><a href="model-tab.html#model-from-library"><i class="fa fa-check"></i><b>2.1</b> Model from library</a></li>
 <li class="chapter" data-level="2.2" data-path="model-tab.html"><a href="model-tab.html#campsis-model-import"><i class="fa fa-check"></i><b>2.2</b> Campsis model import</a></li>
-<li class="chapter" data-level="2.3" data-path="model-tab.html"><a href="model-tab.html#nonmem-model-import-pro-version"><i class="fa fa-check"></i><b>2.3</b> NONMEM model import (pro-version)</a></li>
+<li class="chapter" data-level="2.3" data-path="model-tab.html"><a href="model-tab.html#nonmem-model-import"><i class="fa fa-check"></i><b>2.3</b> NONMEM model import</a></li>
 <li class="chapter" data-level="2.4" data-path="model-tab.html"><a href="model-tab.html#model-code"><i class="fa fa-check"></i><b>2.4</b> Model code</a></li>
 <li class="chapter" data-level="2.5" data-path="model-tab.html"><a href="model-tab.html#parameters"><i class="fa fa-check"></i><b>2.5</b> Parameters</a></li>
 </ul></li>
@@ -192,14 +192,14 @@
 <h3><span class="header-section-number">1.1.3</span> e-Campsis pro<a href="index.html#e-campsis-pro" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>The professional version of e-Campsis is available as a yearly subscription and includes the following additional functionality:</p>
 <ul>
-<li>Save/load e-campsis projects</li>
+<li>Save/load e-Campsis projects</li>
 <li>NONMEM code import</li>
 <li>Number of arms, scenarios, subjects, observations only limited by memory</li>
 <li>Advanced customization of plots</li>
 <li>NCA &amp; summary statistics</li>
-<li>Sensitivity analysis*</li>
+<li>Sensitivity analysis</li>
 <li>Forest plots</li>
-<li>Upload of external data for plotting*</li>
+<li>Upload of external data for plotting</li>
 <li>Bootstrap covariates from external file or NHANES*</li>
 <li>Replicate simulation with parameter uncertainty</li>
 <li>Import rxode2 and mrgsolve simulation code*</li>
@@ -211,14 +211,16 @@
 </div>
 <div id="application-interface" class="section level2 hasAnchor" number="1.2">
 <h2><span class="header-section-number">1.2</span> Application interface<a href="index.html#application-interface" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>The app consists of 5 main sections:</p>
+<p>The app consists of 8 main sections:</p>
 <ul>
 <li><strong>Model</strong>: a powerful model editor to edit your Campsis model online. Try out one of the numerous models available from the library and adapt it to your needs.</li>
 <li><strong>Trial design</strong>: an easy-to-use interface to quickly set-up the dosing regimen, observation times and covariates.</li>
-<li><strong>Simulation</strong>: a single screen dedicated to the simulation configuration and visualization of the results. Explore different scenarios of parameter settings quickly and interactively.</li>
+<li><strong>Simulation</strong>: a single screen dedicated to the simulation configuration and visualization of the results. Explore different scenarios of parameter settings quickly and interactively. Overlay external data and produce beautiful ggplot2-based plots.</li>
 <li><strong>Post-processing</strong>: here you can define summary variables such as non-compartmental PK parameters that you want to derive from your simulation results and show them in a table.</li>
-<li><strong>Forest plots</strong>: Easily define and generate nice-looking forest plots and explore the impact of covariates on any outcome parameter.</li>
-<li><strong>Download</strong>: last but not least, download the model, parameters and the whole code of the simulation to reproduce what you see in the app on your computer using the open-source package campsis.</li>
+<li><strong>Sensitivity analysis</strong>: explore the effects of changing your model parameters on any outcome parameter (NCA metric) you have defined in the post-processing phase.</li>
+<li><strong>Forest plots</strong>: easily define and generate nice-looking forest plots and explore the impact of covariates on any outcome parameter.</li>
+<li><strong>Settings</strong>: define the time units of the user interface. More settings will come soon.</li>
+<li><strong>Download</strong>: last but not least, download the model, parameters and the whole code of the simulation to reproduce what you see in the app on your computer using the open-source Campsis suite.</li>
 </ul>
 
 </div>

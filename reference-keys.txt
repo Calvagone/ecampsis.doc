@@ -7,7 +7,7 @@ application-interface
 model-tab
 model-from-library
 campsis-model-import
-nonmem-model-import-pro-version
+nonmem-model-import
 model-code
 parameters
 trial-design

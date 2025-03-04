@@ -43,6 +43,8 @@ Here you will see a summary of your trial design. Especially when you have multi
 
 ## Custom dataset
 
+![](pictures/lock_pro.png){width=50px} &nbsp;This feature is reserved for pro users only.
+
 When you click on "Edit dataset" a window will pop-up that allows you to specify complex dosing schedules using the Campsis functions.
 
 ![](pictures/custom_design.png){width="470"}

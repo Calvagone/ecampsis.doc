@@ -52,11 +52,13 @@ Click "+" to pull the tab down.
 
 ## Data overlay
 
-e-Campsis offers a very powerful interface to overlay external data on the simulated data. This feature, reserved to pro users only, can be useful to:
+![](pictures/lock_pro.png){width=50px} &nbsp;This feature is reserved for pro users only.
 
-- compare the simulated data with observed data or with summarized observed data (like median, percentiles, etc.)
-- show data from literature (e.g. PK profiles from a publication or confidence intervals at some specific points of the profile, etc.) on top of your plot
-- more generally, add any ggplot layer to annotate your plot (e.g. add a label, some text, a line, a cross bar, etc.)
+e-Campsis offers a very powerful interface to overlay external data on the simulated data. This feature, can be useful to:
+
+- Compare the simulated data with observed data or with summarized observed data (like median, percentiles, etc.)
+- Show data from literature (e.g. PK profiles from a publication or confidence intervals at some specific points of the profile, etc.) on top of your plot
+- More generally, add any ggplot layer to annotate your plot (e.g. add a label, some text, lines or points, cross bars, etc.)
 
 This section will explain you how to use the functionality.
 

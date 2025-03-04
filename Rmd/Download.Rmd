@@ -1,5 +1,7 @@
 # Download
 
+![](pictures/lock_pro.png){width=50px} &nbsp;This feature is reserved for pro users only.
+
 In the download section you can see the full R-code to run the simulation on your local machine. There are checkboxes that allow to include/remove certain sections that may not be needed.
 
 ![](pictures/Download_section_renv.png)

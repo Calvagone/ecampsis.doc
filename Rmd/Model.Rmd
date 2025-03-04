@@ -16,7 +16,9 @@ A PD model can be connected ("Connect PD model") to the PK model. This is done i
 
 An existing Campsis model can be uploaded from this box (including files *model.campsis*, *omega.csv*, *theta.csv* and *sigma.csv*).
 
-## NONMEM model import (pro-version)
+## NONMEM model import
+
+![](pictures/lock_pro.png){width=50px} &nbsp;This feature is reserved for pro users only.
 
 In the pro version, an existing NONMEM control file (extension *.mod* and *.ctl* ) can be uploaded from this box. The parameter estimates will be extracted from the NONMEM control file unless you also select the corresponding *.ext* file. In this case the final parameter estimates will be used.
 
