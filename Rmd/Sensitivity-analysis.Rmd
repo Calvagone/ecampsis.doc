@@ -1,4 +1,6 @@
-# Sensitivity analysis (pro version only)
+# Sensitivity analysis
+
+![](pictures/lock_pro.png){width=50px} &nbsp;This feature is reserved for pro users only.
 
 ## Pre-requisites
 

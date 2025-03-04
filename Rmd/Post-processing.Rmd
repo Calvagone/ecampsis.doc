@@ -1,4 +1,6 @@
-# Post-processing (pro version only)
+# Post-processing
+
+![](pictures/lock_pro.png){width=50px} &nbsp;This feature is reserved for pro users only.
 
 ## Step-by-step guide
 

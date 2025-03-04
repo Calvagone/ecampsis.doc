@@ -1,4 +1,6 @@
-# Forest plots (pro version only)
+# Forest plots
+
+![](pictures/lock_pro.png){width=50px} &nbsp;This feature is reserved for pro users only.
 
 ## Pre-requisites
 
