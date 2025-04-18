@@ -1,0 +1,97 @@
+# Model library
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo=FALSE, message=FALSE, results="asis")
+```
+
+```{r}
+library(campsis)
+pks <- model_suite$pk
+
+getDescription <- function(x) {
+  structuralModel <- ""
+  if (grepl("1cpt", x=x)) {
+    structuralModel <- "One-compartment PK model"
+  } else if (grepl("2cpt", x=x)) {
+    structuralModel <- "Two-compartment PK model"
+  } else if (grepl("3cpt", x=x)) {
+    structuralModel <- "Three-compartment PK model"
+  }
+  
+  firstOrder <- ""
+  if (grepl("fo", x=x)) {
+    firstOrder <- "with first-order absorption"
+  }
+  
+  zeroOrder <- ""
+  if (grepl("zo", x=x)) {
+    zeroOrder <- "with zero-order absorption"
+  }
+  
+  mmAbs <- ""
+  if (grepl("mmabs", x=x)) {
+    zeroOrder <- "with Michaelis-Menten absorption"
+  }
+  
+  weibull <- ""
+  if (grepl("weibull_double", x=x)) {
+    weibull <- "with double Weibull absorption (GAM1, GAM2)"
+  } else if (grepl("weibull_original", x=x)) {
+    weibull <- "with Weibull absorption (TAU, SH)"
+  } else if (grepl("weibull", x=x)) {
+    weibull <- "with Weibull absorption (GAM)"
+  }
+  
+  lag <- ""
+  if (grepl("lag", x=x)) {
+    lag <- " (+ lag time)"
+  } else if (grepl("transit", x=x)) {
+    lag <- " (+ transit compartments)"
+  }
+  
+  elimination <- ""
+  if (grepl("mixed", x=x)) {
+    elimination <- "and mixed elimination"
+  } else if (grepl("mm", x=x)) {
+    elimination <- "and Michaelis-Menten elimination"
+  } else {
+    elimination <- "and linear elimination"
+  }
+  
+  return(paste0(structuralModel, " ", firstOrder, zeroOrder, weibull, lag, " ", elimination))
+}
+
+getThetas <- function(model) {
+  thetas <- model@parameters@list %>%
+    purrr::keep(~is(.x, "theta")) %>%
+    purrr::map_dfr(~campsismod:::as.data.frame(.x, row.names="", optional=FALSE)) %>%
+    dplyr::select(-c("index", "min", "max", "fix", "comment")) %>%
+    dplyr::rename(Name=name, Value=value, Label=label, Unit=unit) %>%
+    dplyr::mutate(Unit=dplyr::if_else(is.na(Unit), "", Unit))
+  return(thetas)
+}
+```
+
+## PK section
+
+```{r, results='asis'}
+for (name in names(pks)) {
+  model <- pks[[name]]
+  description <- getDescription(name)
+  thetas <- getThetas(model)
+  
+  cat("###", name, "\n")
+  cat("Description:", description, "\n\n")
+  cat("Parameters:", "\n")
+  kableExtra::kbl(thetas, booktabs=T) %>%
+    kableExtra::kable_styling(full_width=F) %>%
+    kableExtra::column_spec(1, width = "2cm") %>%
+    kableExtra::column_spec(2, width = "2cm") %>%
+    kableExtra::column_spec(3, width = "10cm") %>% 
+    kableExtra::column_spec(4, width = "2cm") %>% 
+    print()
+  cat("\n")
+}
+```
+
+## TMDD section
