@@ -8,9 +8,8 @@ options(kableExtra_view_html=FALSE) # Needed otherwise tables appear in Viewer o
 
 ```{r}
 library(campsis)
-pks <- model_suite$pk
 
-getDescription <- function(x) {
+getPKDescription <- function(x) {
   structuralModel <- ""
   if (grepl("1cpt", x=x)) {
     structuralModel <- "One-compartment PK model"
@@ -63,6 +62,46 @@ getDescription <- function(x) {
   return(paste0(structuralModel, " ", firstOrder, zeroOrder, weibull, lag, " ", elimination))
 }
 
+getTMDDDescription <- function(x) {
+  dispoModel <- ""
+  if (grepl("1cpt", x=x)) {
+    dispoModel <- "one compartment disposition model"
+  } else if (grepl("2cpt", x=x)) {
+    dispoModel <- "two-compartment disposition model"
+  } else if (grepl("3cpt", x=x)) {
+    dispoModel <- "three-compartment disposition model"
+  }
+  
+  firstOrder <- ""
+  if (grepl("fo", x=x)) {
+    firstOrder <- "with first-order absorption"
+  }
+  
+  zeroOrder <- ""
+  if (grepl("zo", x=x)) {
+    zeroOrder <- "with zero-order absorption"
+  }
+
+  type <- ""
+  if (grepl("full_cst_rtot_ib", x=x)) {
+    type <- "Full TMDD model with constant receptor concentration and irreversible binding"
+  } else if (grepl("full_cst_rtot", x=x)) {
+    type <- "Full TMDD model with constant receptor concentration"
+  } else if (grepl("full_ib", x=x)) {
+    type <- "Full TMDD model with irreversible binding"
+  } else if (grepl("full", x=x)) {
+    type <- "Full TMDD model"
+  } else if (grepl("qe", x=x)) {
+    type <- "Quasi-Equilibrium (QE) TMDD model"
+  } else if (grepl("qss", x=x)) {
+    type <- "Quasi steady-state (QSS) TMDD model"
+  } else if (grepl("wagner", x=x)) {
+    type <- "Wagner TMDD model"
+  }
+
+  return(paste0(type, " including ", dispoModel, " ", firstOrder, zeroOrder))
+}
+
 getThetas <- function(model) {
   thetas <- model@parameters@list %>%
     purrr::keep(~is(.x, "theta")) %>%
@@ -72,17 +111,9 @@ getThetas <- function(model) {
     dplyr::mutate(Unit=dplyr::if_else(is.na(Unit), "", Unit))
   return(thetas)
 }
-```
 
-## PK section
-
-```{r, results='asis'}
-for (name in names(pks)) {
-  model <- pks[[name]]
-  description <- getDescription(name)
-  thetas <- getThetas(model)
-  odeBlock <- model %>% find(OdeRecord())
-  odeCapture <- gsub(pattern="\\*", replacement="\\\\*", x=paste0(capture.output(print(odeBlock))[-1], collapse="<BR>"))
+printModelSummary <- function(description, thetas, ode) {
+  odeCapture <- gsub(pattern="\\*", replacement="\\\\*", x=paste0(capture.output(print(ode))[-1], collapse="<BR>"))
   
   cat("###", name, "\n")
   cat("**Description**:", description, "\n\n")
@@ -99,6 +130,33 @@ for (name in names(pks)) {
   cat(odeCapture, "\n")
   cat("\n")
 }
+
+```
+
+## PK section
+
+```{r, results='asis'}
+pks <- model_suite$pk
+
+for (name in names(pks)) {
+  model <- pks[[name]]
+  description <- getPKDescription(name)
+  thetas <- getThetas(model)
+  ode <- model %>% find(OdeRecord())
+  printModelSummary(description, thetas, ode)
+}
 ```
 
 ## TMDD section
+
+```{r, results='asis'}
+tmdds <- model_suite$tmdd
+
+for (name in names(tmdds)) {
+  model <- tmdds[[name]]
+  description <- getTMDDDescription(name)
+  thetas <- getThetas(model)
+  ode <- model %>% find(OdeRecord())
+  printModelSummary(description, thetas, ode)
+}
+```
