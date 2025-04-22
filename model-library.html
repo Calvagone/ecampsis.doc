@@ -261,6 +261,23 @@
 <li class="chapter" data-level="10.2.27" data-path="model-library.html"><a href="model-library.html#cpt_zo_tmdd_qss-1"><i class="fa fa-check"></i><b>10.2.27</b> 2cpt_zo_tmdd_qss</a></li>
 <li class="chapter" data-level="10.2.28" data-path="model-library.html"><a href="model-library.html#cpt_zo_tmdd_wagner-1"><i class="fa fa-check"></i><b>10.2.28</b> 2cpt_zo_tmdd_wagner</a></li>
 </ul></li>
+<li class="chapter" data-level="10.3" data-path="model-library.html"><a href="model-library.html#nonmem-section"><i class="fa fa-check"></i><b>10.3</b> NONMEM section</a>
+<ul>
+<li class="chapter" data-level="10.3.1" data-path="model-library.html"><a href="model-library.html#advan1_trans1"><i class="fa fa-check"></i><b>10.3.1</b> advan1_trans1</a></li>
+<li class="chapter" data-level="10.3.2" data-path="model-library.html"><a href="model-library.html#advan1_trans2"><i class="fa fa-check"></i><b>10.3.2</b> advan1_trans2</a></li>
+<li class="chapter" data-level="10.3.3" data-path="model-library.html"><a href="model-library.html#advan11_trans4"><i class="fa fa-check"></i><b>10.3.3</b> advan11_trans4</a></li>
+<li class="chapter" data-level="10.3.4" data-path="model-library.html"><a href="model-library.html#advan12_trans4"><i class="fa fa-check"></i><b>10.3.4</b> advan12_trans4</a></li>
+<li class="chapter" data-level="10.3.5" data-path="model-library.html"><a href="model-library.html#advan2_trans1"><i class="fa fa-check"></i><b>10.3.5</b> advan2_trans1</a></li>
+<li class="chapter" data-level="10.3.6" data-path="model-library.html"><a href="model-library.html#advan2_trans2"><i class="fa fa-check"></i><b>10.3.6</b> advan2_trans2</a></li>
+<li class="chapter" data-level="10.3.7" data-path="model-library.html"><a href="model-library.html#advan3_trans1"><i class="fa fa-check"></i><b>10.3.7</b> advan3_trans1</a></li>
+<li class="chapter" data-level="10.3.8" data-path="model-library.html"><a href="model-library.html#advan3_trans3"><i class="fa fa-check"></i><b>10.3.8</b> advan3_trans3</a></li>
+<li class="chapter" data-level="10.3.9" data-path="model-library.html"><a href="model-library.html#advan3_trans4"><i class="fa fa-check"></i><b>10.3.9</b> advan3_trans4</a></li>
+<li class="chapter" data-level="10.3.10" data-path="model-library.html"><a href="model-library.html#advan3_trans5"><i class="fa fa-check"></i><b>10.3.10</b> advan3_trans5</a></li>
+<li class="chapter" data-level="10.3.11" data-path="model-library.html"><a href="model-library.html#advan4_trans1"><i class="fa fa-check"></i><b>10.3.11</b> advan4_trans1</a></li>
+<li class="chapter" data-level="10.3.12" data-path="model-library.html"><a href="model-library.html#advan4_trans3"><i class="fa fa-check"></i><b>10.3.12</b> advan4_trans3</a></li>
+<li class="chapter" data-level="10.3.13" data-path="model-library.html"><a href="model-library.html#advan4_trans4"><i class="fa fa-check"></i><b>10.3.13</b> advan4_trans4</a></li>
+<li class="chapter" data-level="10.3.14" data-path="model-library.html"><a href="model-library.html#advan4_trans5"><i class="fa fa-check"></i><b>10.3.14</b> advan4_trans5</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="11" data-path="feedback-and-help.html"><a href="feedback-and-help.html"><i class="fa fa-check"></i><b>11</b> Feedback and help</a></li>
 <li class="chapter" data-level="12" data-path="disclaimer.html"><a href="disclaimer.html"><i class="fa fa-check"></i><b>12</b> Disclaimer</a></li>
@@ -10176,7 +10193,7 @@ mg/L
 <h2><span class="header-section-number">10.2</span> TMDD section<a href="model-library.html#tmdd-section" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <div id="cpt_fo_tmdd_full" class="section level3 hasAnchor" number="10.2.1">
 <h3><span class="header-section-number">10.2.1</span> 1cpt_fo_tmdd_full<a href="model-library.html#cpt_fo_tmdd_full" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p><strong>Description</strong>: Full TMDD model including one compartment disposition model with first-order absorption</p>
+<p><strong>Description</strong>: Full TMDD model including one-compartment disposition model with first-order absorption</p>
 <p><strong>Parameter table</strong>:</p>
 <table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <thead>
@@ -10220,7 +10237,7 @@ KA
 Absorption rate
 </td>
 <td style="text-align:left;width: 2cm; ">
-1/h
+1/d
 </td>
 </tr>
 <tr>
@@ -10248,7 +10265,7 @@ CL
 Linear clearance
 </td>
 <td style="text-align:left;width: 2cm; ">
-L/h
+L/d
 </td>
 </tr>
 <tr>
@@ -10290,7 +10307,7 @@ KON
 Association rate
 </td>
 <td style="text-align:left;width: 2cm; ">
-1/nM/day
+1/nM/d
 </td>
 </tr>
 <tr>
@@ -10328,7 +10345,7 @@ Internalization/Degradation rate of drug-target complex
 </div>
 <div id="cpt_fo_tmdd_full_cst_rtot" class="section level3 hasAnchor" number="10.2.2">
 <h3><span class="header-section-number">10.2.2</span> 1cpt_fo_tmdd_full_cst_rtot<a href="model-library.html#cpt_fo_tmdd_full_cst_rtot" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p><strong>Description</strong>: Full TMDD model with constant receptor concentration including one compartment disposition model with first-order absorption</p>
+<p><strong>Description</strong>: Full TMDD model with constant receptor concentration including one-compartment disposition model with first-order absorption</p>
 <p><strong>Parameter table</strong>:</p>
 <table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <thead>
@@ -10372,7 +10389,7 @@ KA
 Absorption rate
 </td>
 <td style="text-align:left;width: 2cm; ">
-1/h
+1/d
 </td>
 </tr>
 <tr>
@@ -10400,7 +10417,7 @@ CL
 Linear clearance
 </td>
 <td style="text-align:left;width: 2cm; ">
-L/h
+L/d
 </td>
 </tr>
 <tr>
@@ -10428,7 +10445,7 @@ KON
 Association rate
 </td>
 <td style="text-align:left;width: 2cm; ">
-1/nM/day
+1/nM/d
 </td>
 </tr>
 <tr>
@@ -10466,7 +10483,7 @@ Internalization/Degradation rate of drug-target complex
 </div>
 <div id="cpt_fo_tmdd_full_cst_rtot_ib" class="section level3 hasAnchor" number="10.2.3">
 <h3><span class="header-section-number">10.2.3</span> 1cpt_fo_tmdd_full_cst_rtot_ib<a href="model-library.html#cpt_fo_tmdd_full_cst_rtot_ib" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p><strong>Description</strong>: Full TMDD model with constant receptor concentration and irreversible binding including one compartment disposition model with first-order absorption</p>
+<p><strong>Description</strong>: Full TMDD model with constant receptor concentration and irreversible binding including one-compartment disposition model with first-order absorption</p>
 <p><strong>Parameter table</strong>:</p>
 <table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <thead>
@@ -10510,7 +10527,7 @@ KA
 Absorption rate
 </td>
 <td style="text-align:left;width: 2cm; ">
-1/h
+1/d
 </td>
 </tr>
 <tr>
@@ -10538,7 +10555,7 @@ CL
 Linear clearance
 </td>
 <td style="text-align:left;width: 2cm; ">
-L/h
+L/d
 </td>
 </tr>
 <tr>
@@ -10566,7 +10583,7 @@ KON
 Association rate
 </td>
 <td style="text-align:left;width: 2cm; ">
-1/nM/day
+1/nM/d
 </td>
 </tr>
 <tr>
@@ -10590,7 +10607,7 @@ Internalization/Degradation rate of drug-target complex
 </div>
 <div id="cpt_fo_tmdd_full_ib" class="section level3 hasAnchor" number="10.2.4">
 <h3><span class="header-section-number">10.2.4</span> 1cpt_fo_tmdd_full_ib<a href="model-library.html#cpt_fo_tmdd_full_ib" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p><strong>Description</strong>: Full TMDD model with irreversible binding including one compartment disposition model with first-order absorption</p>
+<p><strong>Description</strong>: Full TMDD model with irreversible binding including one-compartment disposition model with first-order absorption</p>
 <p><strong>Parameter table</strong>:</p>
 <table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <thead>
@@ -10634,7 +10651,7 @@ KA
 Absorption rate
 </td>
 <td style="text-align:left;width: 2cm; ">
-1/h
+1/d
 </td>
 </tr>
 <tr>
@@ -10662,7 +10679,7 @@ CL
 Linear clearance
 </td>
 <td style="text-align:left;width: 2cm; ">
-L/h
+L/d
 </td>
 </tr>
 <tr>
@@ -10704,7 +10721,7 @@ KON
 Association rate
 </td>
 <td style="text-align:left;width: 2cm; ">
-1/nM/day
+1/nM/d
 </td>
 </tr>
 <tr>
@@ -10728,7 +10745,7 @@ Internalization/Degradation rate of drug-target complex
 </div>
 <div id="cpt_fo_tmdd_qe" class="section level3 hasAnchor" number="10.2.5">
 <h3><span class="header-section-number">10.2.5</span> 1cpt_fo_tmdd_qe<a href="model-library.html#cpt_fo_tmdd_qe" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p><strong>Description</strong>: Quasi-Equilibrium (QE) TMDD model including one compartment disposition model with first-order absorption</p>
+<p><strong>Description</strong>: Quasi-Equilibrium (QE) TMDD model including one-compartment disposition model with first-order absorption</p>
 <p><strong>Parameter table</strong>:</p>
 <table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <thead>
@@ -10772,7 +10789,7 @@ KA
 Absorption rate
 </td>
 <td style="text-align:left;width: 2cm; ">
-1/h
+1/d
 </td>
 </tr>
 <tr>
@@ -10800,7 +10817,7 @@ CL
 Linear clearance
 </td>
 <td style="text-align:left;width: 2cm; ">
-L/h
+L/d
 </td>
 </tr>
 <tr>
@@ -10866,7 +10883,7 @@ Internalization/Degradation rate of drug-target complex
 </div>
 <div id="cpt_fo_tmdd_qss" class="section level3 hasAnchor" number="10.2.6">
 <h3><span class="header-section-number">10.2.6</span> 1cpt_fo_tmdd_qss<a href="model-library.html#cpt_fo_tmdd_qss" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p><strong>Description</strong>: Quasi steady-state (QSS) TMDD model including one compartment disposition model with first-order absorption</p>
+<p><strong>Description</strong>: Quasi steady-state (QSS) TMDD model including one-compartment disposition model with first-order absorption</p>
 <p><strong>Parameter table</strong>:</p>
 <table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <thead>
@@ -10910,7 +10927,7 @@ KA
 Absorption rate
 </td>
 <td style="text-align:left;width: 2cm; ">
-1/h
+1/d
 </td>
 </tr>
 <tr>
@@ -10938,7 +10955,7 @@ CL
 Linear clearance
 </td>
 <td style="text-align:left;width: 2cm; ">
-L/h
+L/d
 </td>
 </tr>
 <tr>
@@ -11004,7 +11021,7 @@ Internalization/Degradation rate of drug-target complex
 </div>
 <div id="cpt_fo_tmdd_wagner" class="section level3 hasAnchor" number="10.2.7">
 <h3><span class="header-section-number">10.2.7</span> 1cpt_fo_tmdd_wagner<a href="model-library.html#cpt_fo_tmdd_wagner" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p><strong>Description</strong>: Wagner TMDD model including one compartment disposition model with first-order absorption</p>
+<p><strong>Description</strong>: Wagner TMDD model including one-compartment disposition model with first-order absorption</p>
 <p><strong>Parameter table</strong>:</p>
 <table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <thead>
@@ -11048,7 +11065,7 @@ KA
 Absorption rate
 </td>
 <td style="text-align:left;width: 2cm; ">
-1/h
+1/d
 </td>
 </tr>
 <tr>
@@ -11076,7 +11093,7 @@ CL
 Linear clearance
 </td>
 <td style="text-align:left;width: 2cm; ">
-L/h
+L/d
 </td>
 </tr>
 <tr>
@@ -11128,7 +11145,7 @@ Internalization/Degradation rate of drug-target complex
 </div>
 <div id="cpt_zo_tmdd_full" class="section level3 hasAnchor" number="10.2.8">
 <h3><span class="header-section-number">10.2.8</span> 1cpt_zo_tmdd_full<a href="model-library.html#cpt_zo_tmdd_full" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p><strong>Description</strong>: Full TMDD model including one compartment disposition model with zero-order absorption</p>
+<p><strong>Description</strong>: Full TMDD model including one-compartment disposition model with zero-order absorption</p>
 <p><strong>Parameter table</strong>:</p>
 <table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <thead>
@@ -11159,7 +11176,7 @@ DUR
 Duration of 0-order input
 </td>
 <td style="text-align:left;width: 2cm; ">
-h
+d
 </td>
 </tr>
 <tr>
@@ -11187,7 +11204,7 @@ CL
 Linear clearance
 </td>
 <td style="text-align:left;width: 2cm; ">
-L/h
+L/d
 </td>
 </tr>
 <tr>
@@ -11229,7 +11246,7 @@ KON
 Association rate
 </td>
 <td style="text-align:left;width: 2cm; ">
-1/nM/day
+1/nM/d
 </td>
 </tr>
 <tr>
@@ -11267,7 +11284,7 @@ Internalization/Degradation rate of drug-target complex
 </div>
 <div id="cpt_zo_tmdd_full_cst_rtot" class="section level3 hasAnchor" number="10.2.9">
 <h3><span class="header-section-number">10.2.9</span> 1cpt_zo_tmdd_full_cst_rtot<a href="model-library.html#cpt_zo_tmdd_full_cst_rtot" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p><strong>Description</strong>: Full TMDD model with constant receptor concentration including one compartment disposition model with zero-order absorption</p>
+<p><strong>Description</strong>: Full TMDD model with constant receptor concentration including one-compartment disposition model with zero-order absorption</p>
 <p><strong>Parameter table</strong>:</p>
 <table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <thead>
@@ -11298,7 +11315,7 @@ DUR
 Duration of 0-order input
 </td>
 <td style="text-align:left;width: 2cm; ">
-h
+d
 </td>
 </tr>
 <tr>
@@ -11326,7 +11343,7 @@ CL
 Linear clearance
 </td>
 <td style="text-align:left;width: 2cm; ">
-L/h
+L/d
 </td>
 </tr>
 <tr>
@@ -11354,7 +11371,7 @@ KON
 Association rate
 </td>
 <td style="text-align:left;width: 2cm; ">
-1/nM/day
+1/nM/d
 </td>
 </tr>
 <tr>
@@ -11392,7 +11409,7 @@ Internalization/Degradation rate of drug-target complex
 </div>
 <div id="cpt_zo_tmdd_full_cst_rtot_ib" class="section level3 hasAnchor" number="10.2.10">
 <h3><span class="header-section-number">10.2.10</span> 1cpt_zo_tmdd_full_cst_rtot_ib<a href="model-library.html#cpt_zo_tmdd_full_cst_rtot_ib" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p><strong>Description</strong>: Full TMDD model with constant receptor concentration and irreversible binding including one compartment disposition model with zero-order absorption</p>
+<p><strong>Description</strong>: Full TMDD model with constant receptor concentration and irreversible binding including one-compartment disposition model with zero-order absorption</p>
 <p><strong>Parameter table</strong>:</p>
 <table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <thead>
@@ -11423,7 +11440,7 @@ DUR
 Duration of 0-order input
 </td>
 <td style="text-align:left;width: 2cm; ">
-h
+d
 </td>
 </tr>
 <tr>
@@ -11451,7 +11468,7 @@ CL
 Linear clearance
 </td>
 <td style="text-align:left;width: 2cm; ">
-L/h
+L/d
 </td>
 </tr>
 <tr>
@@ -11479,7 +11496,7 @@ KON
 Association rate
 </td>
 <td style="text-align:left;width: 2cm; ">
-1/nM/day
+1/nM/d
 </td>
 </tr>
 <tr>
@@ -11503,7 +11520,7 @@ Internalization/Degradation rate of drug-target complex
 </div>
 <div id="cpt_zo_tmdd_full_ib" class="section level3 hasAnchor" number="10.2.11">
 <h3><span class="header-section-number">10.2.11</span> 1cpt_zo_tmdd_full_ib<a href="model-library.html#cpt_zo_tmdd_full_ib" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p><strong>Description</strong>: Full TMDD model with irreversible binding including one compartment disposition model with zero-order absorption</p>
+<p><strong>Description</strong>: Full TMDD model with irreversible binding including one-compartment disposition model with zero-order absorption</p>
 <p><strong>Parameter table</strong>:</p>
 <table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <thead>
@@ -11534,7 +11551,7 @@ DUR
 Duration of 0-order input
 </td>
 <td style="text-align:left;width: 2cm; ">
-h
+d
 </td>
 </tr>
 <tr>
@@ -11562,7 +11579,7 @@ CL
 Linear clearance
 </td>
 <td style="text-align:left;width: 2cm; ">
-L/h
+L/d
 </td>
 </tr>
 <tr>
@@ -11604,7 +11621,7 @@ KON
 Association rate
 </td>
 <td style="text-align:left;width: 2cm; ">
-1/nM/day
+1/nM/d
 </td>
 </tr>
 <tr>
@@ -11628,7 +11645,7 @@ Internalization/Degradation rate of drug-target complex
 </div>
 <div id="cpt_zo_tmdd_qe" class="section level3 hasAnchor" number="10.2.12">
 <h3><span class="header-section-number">10.2.12</span> 1cpt_zo_tmdd_qe<a href="model-library.html#cpt_zo_tmdd_qe" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p><strong>Description</strong>: Quasi-Equilibrium (QE) TMDD model including one compartment disposition model with zero-order absorption</p>
+<p><strong>Description</strong>: Quasi-Equilibrium (QE) TMDD model including one-compartment disposition model with zero-order absorption</p>
 <p><strong>Parameter table</strong>:</p>
 <table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <thead>
@@ -11659,7 +11676,7 @@ DUR
 Duration of 0-order input
 </td>
 <td style="text-align:left;width: 2cm; ">
-h
+d
 </td>
 </tr>
 <tr>
@@ -11687,7 +11704,7 @@ CL
 Linear clearance
 </td>
 <td style="text-align:left;width: 2cm; ">
-L/h
+L/d
 </td>
 </tr>
 <tr>
@@ -11753,7 +11770,7 @@ Internalization/Degradation rate of drug-target complex
 </div>
 <div id="cpt_zo_tmdd_qss" class="section level3 hasAnchor" number="10.2.13">
 <h3><span class="header-section-number">10.2.13</span> 1cpt_zo_tmdd_qss<a href="model-library.html#cpt_zo_tmdd_qss" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p><strong>Description</strong>: Quasi steady-state (QSS) TMDD model including one compartment disposition model with zero-order absorption</p>
+<p><strong>Description</strong>: Quasi steady-state (QSS) TMDD model including one-compartment disposition model with zero-order absorption</p>
 <p><strong>Parameter table</strong>:</p>
 <table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <thead>
@@ -11784,7 +11801,7 @@ DUR
 Duration of 0-order input
 </td>
 <td style="text-align:left;width: 2cm; ">
-h
+d
 </td>
 </tr>
 <tr>
@@ -11812,7 +11829,7 @@ CL
 Linear clearance
 </td>
 <td style="text-align:left;width: 2cm; ">
-L/h
+L/d
 </td>
 </tr>
 <tr>
@@ -11878,7 +11895,7 @@ Internalization/Degradation rate of drug-target complex
 </div>
 <div id="cpt_zo_tmdd_wagner" class="section level3 hasAnchor" number="10.2.14">
 <h3><span class="header-section-number">10.2.14</span> 1cpt_zo_tmdd_wagner<a href="model-library.html#cpt_zo_tmdd_wagner" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p><strong>Description</strong>: Wagner TMDD model including one compartment disposition model with zero-order absorption</p>
+<p><strong>Description</strong>: Wagner TMDD model including one-compartment disposition model with zero-order absorption</p>
 <p><strong>Parameter table</strong>:</p>
 <table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <thead>
@@ -11909,7 +11926,7 @@ DUR
 Duration of 0-order input
 </td>
 <td style="text-align:left;width: 2cm; ">
-h
+d
 </td>
 </tr>
 <tr>
@@ -11937,7 +11954,7 @@ CL
 Linear clearance
 </td>
 <td style="text-align:left;width: 2cm; ">
-L/h
+L/d
 </td>
 </tr>
 <tr>
@@ -12033,7 +12050,7 @@ KA
 Absorption rate
 </td>
 <td style="text-align:left;width: 2cm; ">
-1/h
+1/d
 </td>
 </tr>
 <tr>
@@ -12075,7 +12092,7 @@ Q
 Inter-compartment flow
 </td>
 <td style="text-align:left;width: 2cm; ">
-L/h
+L/d
 </td>
 </tr>
 <tr>
@@ -12089,7 +12106,7 @@ CL
 Linear clearance
 </td>
 <td style="text-align:left;width: 2cm; ">
-L/h
+L/d
 </td>
 </tr>
 <tr>
@@ -12131,7 +12148,7 @@ KON
 Association rate
 </td>
 <td style="text-align:left;width: 2cm; ">
-1/nM/day
+1/nM/d
 </td>
 </tr>
 <tr>
@@ -12213,7 +12230,7 @@ KA
 Absorption rate
 </td>
 <td style="text-align:left;width: 2cm; ">
-1/h
+1/d
 </td>
 </tr>
 <tr>
@@ -12255,7 +12272,7 @@ Q
 Inter-compartment flow
 </td>
 <td style="text-align:left;width: 2cm; ">
-L/h
+L/d
 </td>
 </tr>
 <tr>
@@ -12269,7 +12286,7 @@ CL
 Linear clearance
 </td>
 <td style="text-align:left;width: 2cm; ">
-L/h
+L/d
 </td>
 </tr>
 <tr>
@@ -12297,7 +12314,7 @@ KON
 Association rate
 </td>
 <td style="text-align:left;width: 2cm; ">
-1/nM/day
+1/nM/d
 </td>
 </tr>
 <tr>
@@ -12379,7 +12396,7 @@ KA
 Absorption rate
 </td>
 <td style="text-align:left;width: 2cm; ">
-1/h
+1/d
 </td>
 </tr>
 <tr>
@@ -12421,7 +12438,7 @@ Q
 Inter-compartment flow
 </td>
 <td style="text-align:left;width: 2cm; ">
-L/h
+L/d
 </td>
 </tr>
 <tr>
@@ -12435,7 +12452,7 @@ CL
 Linear clearance
 </td>
 <td style="text-align:left;width: 2cm; ">
-L/h
+L/d
 </td>
 </tr>
 <tr>
@@ -12463,7 +12480,7 @@ KON
 Association rate
 </td>
 <td style="text-align:left;width: 2cm; ">
-1/nM/day
+1/nM/d
 </td>
 </tr>
 <tr>
@@ -12531,7 +12548,7 @@ KA
 Absorption rate
 </td>
 <td style="text-align:left;width: 2cm; ">
-1/h
+1/d
 </td>
 </tr>
 <tr>
@@ -12573,7 +12590,7 @@ Q
 Inter-compartment flow
 </td>
 <td style="text-align:left;width: 2cm; ">
-L/h
+L/d
 </td>
 </tr>
 <tr>
@@ -12587,7 +12604,7 @@ CL
 Linear clearance
 </td>
 <td style="text-align:left;width: 2cm; ">
-L/h
+L/d
 </td>
 </tr>
 <tr>
@@ -12629,7 +12646,7 @@ KON
 Association rate
 </td>
 <td style="text-align:left;width: 2cm; ">
-1/nM/day
+1/nM/d
 </td>
 </tr>
 <tr>
@@ -12697,7 +12714,7 @@ KA
 Absorption rate
 </td>
 <td style="text-align:left;width: 2cm; ">
-1/h
+1/d
 </td>
 </tr>
 <tr>
@@ -12739,7 +12756,7 @@ Q
 Inter-compartment flow
 </td>
 <td style="text-align:left;width: 2cm; ">
-L/h
+L/d
 </td>
 </tr>
 <tr>
@@ -12753,7 +12770,7 @@ CL
 Linear clearance
 </td>
 <td style="text-align:left;width: 2cm; ">
-L/h
+L/d
 </td>
 </tr>
 <tr>
@@ -12863,7 +12880,7 @@ KA
 Absorption rate
 </td>
 <td style="text-align:left;width: 2cm; ">
-1/h
+1/d
 </td>
 </tr>
 <tr>
@@ -12905,7 +12922,7 @@ Q
 Inter-compartment flow
 </td>
 <td style="text-align:left;width: 2cm; ">
-L/h
+L/d
 </td>
 </tr>
 <tr>
@@ -12919,7 +12936,7 @@ CL
 Linear clearance
 </td>
 <td style="text-align:left;width: 2cm; ">
-L/h
+L/d
 </td>
 </tr>
 <tr>
@@ -13029,7 +13046,7 @@ KA
 Absorption rate
 </td>
 <td style="text-align:left;width: 2cm; ">
-1/h
+1/d
 </td>
 </tr>
 <tr>
@@ -13071,7 +13088,7 @@ Q
 Inter-compartment flow
 </td>
 <td style="text-align:left;width: 2cm; ">
-L/h
+L/d
 </td>
 </tr>
 <tr>
@@ -13085,7 +13102,7 @@ CL
 Linear clearance
 </td>
 <td style="text-align:left;width: 2cm; ">
-L/h
+L/d
 </td>
 </tr>
 <tr>
@@ -13168,7 +13185,7 @@ DUR
 Duration of 0-order input
 </td>
 <td style="text-align:left;width: 2cm; ">
-h
+d
 </td>
 </tr>
 <tr>
@@ -13210,7 +13227,7 @@ Q
 Inter-compartment flow
 </td>
 <td style="text-align:left;width: 2cm; ">
-L/h
+L/d
 </td>
 </tr>
 <tr>
@@ -13224,7 +13241,7 @@ CL
 Linear clearance
 </td>
 <td style="text-align:left;width: 2cm; ">
-L/h
+L/d
 </td>
 </tr>
 <tr>
@@ -13266,7 +13283,7 @@ KON
 Association rate
 </td>
 <td style="text-align:left;width: 2cm; ">
-1/nM/day
+1/nM/d
 </td>
 </tr>
 <tr>
@@ -13335,7 +13352,7 @@ DUR
 Duration of 0-order input
 </td>
 <td style="text-align:left;width: 2cm; ">
-h
+d
 </td>
 </tr>
 <tr>
@@ -13377,7 +13394,7 @@ Q
 Inter-compartment flow
 </td>
 <td style="text-align:left;width: 2cm; ">
-L/h
+L/d
 </td>
 </tr>
 <tr>
@@ -13391,7 +13408,7 @@ CL
 Linear clearance
 </td>
 <td style="text-align:left;width: 2cm; ">
-L/h
+L/d
 </td>
 </tr>
 <tr>
@@ -13419,7 +13436,7 @@ KON
 Association rate
 </td>
 <td style="text-align:left;width: 2cm; ">
-1/nM/day
+1/nM/d
 </td>
 </tr>
 <tr>
@@ -13488,7 +13505,7 @@ DUR
 Duration of 0-order input
 </td>
 <td style="text-align:left;width: 2cm; ">
-h
+d
 </td>
 </tr>
 <tr>
@@ -13530,7 +13547,7 @@ Q
 Inter-compartment flow
 </td>
 <td style="text-align:left;width: 2cm; ">
-L/h
+L/d
 </td>
 </tr>
 <tr>
@@ -13544,7 +13561,7 @@ CL
 Linear clearance
 </td>
 <td style="text-align:left;width: 2cm; ">
-L/h
+L/d
 </td>
 </tr>
 <tr>
@@ -13572,7 +13589,7 @@ KON
 Association rate
 </td>
 <td style="text-align:left;width: 2cm; ">
-1/nM/day
+1/nM/d
 </td>
 </tr>
 <tr>
@@ -13627,7 +13644,7 @@ DUR
 Duration of 0-order input
 </td>
 <td style="text-align:left;width: 2cm; ">
-h
+d
 </td>
 </tr>
 <tr>
@@ -13669,7 +13686,7 @@ Q
 Inter-compartment flow
 </td>
 <td style="text-align:left;width: 2cm; ">
-L/h
+L/d
 </td>
 </tr>
 <tr>
@@ -13683,7 +13700,7 @@ CL
 Linear clearance
 </td>
 <td style="text-align:left;width: 2cm; ">
-L/h
+L/d
 </td>
 </tr>
 <tr>
@@ -13725,7 +13742,7 @@ KON
 Association rate
 </td>
 <td style="text-align:left;width: 2cm; ">
-1/nM/day
+1/nM/d
 </td>
 </tr>
 <tr>
@@ -13780,7 +13797,7 @@ DUR
 Duration of 0-order input
 </td>
 <td style="text-align:left;width: 2cm; ">
-h
+d
 </td>
 </tr>
 <tr>
@@ -13822,7 +13839,7 @@ Q
 Inter-compartment flow
 </td>
 <td style="text-align:left;width: 2cm; ">
-L/h
+L/d
 </td>
 </tr>
 <tr>
@@ -13836,7 +13853,7 @@ CL
 Linear clearance
 </td>
 <td style="text-align:left;width: 2cm; ">
-L/h
+L/d
 </td>
 </tr>
 <tr>
@@ -13933,7 +13950,7 @@ DUR
 Duration of 0-order input
 </td>
 <td style="text-align:left;width: 2cm; ">
-h
+d
 </td>
 </tr>
 <tr>
@@ -13975,7 +13992,7 @@ Q
 Inter-compartment flow
 </td>
 <td style="text-align:left;width: 2cm; ">
-L/h
+L/d
 </td>
 </tr>
 <tr>
@@ -13989,7 +14006,7 @@ CL
 Linear clearance
 </td>
 <td style="text-align:left;width: 2cm; ">
-L/h
+L/d
 </td>
 </tr>
 <tr>
@@ -14086,7 +14103,7 @@ DUR
 Duration of 0-order input
 </td>
 <td style="text-align:left;width: 2cm; ">
-h
+d
 </td>
 </tr>
 <tr>
@@ -14128,7 +14145,7 @@ Q
 Inter-compartment flow
 </td>
 <td style="text-align:left;width: 2cm; ">
-L/h
+L/d
 </td>
 </tr>
 <tr>
@@ -14142,7 +14159,7 @@ CL
 Linear clearance
 </td>
 <td style="text-align:left;width: 2cm; ">
-L/h
+L/d
 </td>
 </tr>
 <tr>
@@ -14191,6 +14208,759 @@ Internalization/Degradation rate of drug-target complex
 </table>
 <p><strong>ODEs</strong>:</p>
 <p>DELTA=pow(A_CENTRAL - RTOT - KD, 2) + 4*KD*A_CENTRAL<BR>L=0.5*(A_CENTRAL - RTOT - KD + sqrt(DELTA))<BR>d/dt(A_CENTRAL)=Q/VP*A_PERIPHERAL - Q/VC*L - (CL/VC - KINT)*L - KINT*A_CENTRAL<BR>d/dt(A_PERIPHERAL)=Q/VC*L - Q/VP*A_PERIPHERAL<BR>COMPLEX=A_CENTRAL - L<BR>R=RTOT - COMPLEX<BR>RO=1-R/RTOT<BR>RR=R/R0</p>
+</div>
+</div>
+<div id="nonmem-section" class="section level2 hasAnchor" number="10.3">
+<h2><span class="header-section-number">10.3</span> NONMEM section<a href="model-library.html#nonmem-section" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="advan1_trans1" class="section level3 hasAnchor" number="10.3.1">
+<h3><span class="header-section-number">10.3.1</span> advan1_trans1<a href="model-library.html#advan1_trans1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>Description</strong>: One-compartment PK model with zero-order absorption (K, V)</p>
+<p><strong>Parameter table</strong>:</p>
+<table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Name
+</th>
+<th style="text-align:right;">
+Value
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;width: 2cm; ">
+K
+</td>
+<td style="text-align:right;width: 2cm; ">
+0.0625
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 2cm; ">
+V
+</td>
+<td style="text-align:right;width: 2cm; ">
+80.0000
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong>ODEs</strong>:</p>
+<p>d/dt(A_CENTRAL)=-K*A_CENTRAL<BR>d/dt(A_OUTPUT)=K*A_CENTRAL<BR>F=A_CENTRAL/S1</p>
+</div>
+<div id="advan1_trans2" class="section level3 hasAnchor" number="10.3.2">
+<h3><span class="header-section-number">10.3.2</span> advan1_trans2<a href="model-library.html#advan1_trans2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>Description</strong>: One-compartment PK model with zero-order absorption (CL, V)</p>
+<p><strong>Parameter table</strong>:</p>
+<table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Name
+</th>
+<th style="text-align:right;">
+Value
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;width: 2cm; ">
+CL
+</td>
+<td style="text-align:right;width: 2cm; ">
+5
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 2cm; ">
+V
+</td>
+<td style="text-align:right;width: 2cm; ">
+80
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong>ODEs</strong>:</p>
+<p>d/dt(A_CENTRAL)=-CL*A_CENTRAL/V<BR>d/dt(A_OUTPUT)=CL*A_CENTRAL/V<BR>F=A_CENTRAL/S1</p>
+</div>
+<div id="advan11_trans4" class="section level3 hasAnchor" number="10.3.3">
+<h3><span class="header-section-number">10.3.3</span> advan11_trans4<a href="model-library.html#advan11_trans4" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>Description</strong>: Three-compartment PK model with zero-order absorption (CL, V1, V2, V3, Q2, Q3)</p>
+<p><strong>Parameter table</strong>:</p>
+<table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Name
+</th>
+<th style="text-align:right;">
+Value
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;width: 2cm; ">
+CL
+</td>
+<td style="text-align:right;width: 2cm; ">
+5.0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 2cm; ">
+V1
+</td>
+<td style="text-align:right;width: 2cm; ">
+80.0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 2cm; ">
+V2
+</td>
+<td style="text-align:right;width: 2cm; ">
+225.0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 2cm; ">
+V3
+</td>
+<td style="text-align:right;width: 2cm; ">
+1225.0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 2cm; ">
+Q2
+</td>
+<td style="text-align:right;width: 2cm; ">
+5.0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 2cm; ">
+Q3
+</td>
+<td style="text-align:right;width: 2cm; ">
+1.5
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong>ODEs</strong>:</p>
+<p>d/dt(A_CENTRAL)=Q2*A_PERIPHERAL1/V2 + Q3*A_PERIPHERAL2/V3 + (-CL/V1 - Q2/V1 - Q3/V1)*A_CENTRAL<BR>d/dt(A_PERIPHERAL1)=-Q2*A_PERIPHERAL1/V2 + Q2*A_CENTRAL/V1<BR>d/dt(A_PERIPHERAL2)=-Q3*A_PERIPHERAL2/V3 + Q3*A_CENTRAL/V1<BR>d/dt(A_OUTPUT)=CL*A_CENTRAL/V1<BR>F=A_CENTRAL/S1</p>
+</div>
+<div id="advan12_trans4" class="section level3 hasAnchor" number="10.3.4">
+<h3><span class="header-section-number">10.3.4</span> advan12_trans4<a href="model-library.html#advan12_trans4" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>Description</strong>: Three-compartment PK model with first-order absorption (KA, CL, V1, V2, V3, Q2, Q3)</p>
+<p><strong>Parameter table</strong>:</p>
+<table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Name
+</th>
+<th style="text-align:right;">
+Value
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;width: 2cm; ">
+KA
+</td>
+<td style="text-align:right;width: 2cm; ">
+1.0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 2cm; ">
+CL
+</td>
+<td style="text-align:right;width: 2cm; ">
+5.0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 2cm; ">
+V1
+</td>
+<td style="text-align:right;width: 2cm; ">
+80.0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 2cm; ">
+V2
+</td>
+<td style="text-align:right;width: 2cm; ">
+225.0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 2cm; ">
+V3
+</td>
+<td style="text-align:right;width: 2cm; ">
+1225.0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 2cm; ">
+Q2
+</td>
+<td style="text-align:right;width: 2cm; ">
+5.0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 2cm; ">
+Q3
+</td>
+<td style="text-align:right;width: 2cm; ">
+1.5
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong>ODEs</strong>:</p>
+<p>d/dt(A_DEPOT)=-KA*A_DEPOT<BR>d/dt(A_CENTRAL)=KA*A_DEPOT + Q3*A_PERIPHERAL1/V3 + Q4*A_PERIPHERAL2/V4 + (-CL/V2 - Q3/V2 - Q4/V2)*A_CENTRAL<BR>d/dt(A_PERIPHERAL1)=-Q3*A_PERIPHERAL1/V3 + Q3*A_CENTRAL/V2<BR>d/dt(A_PERIPHERAL2)=-Q4*A_PERIPHERAL2/V4 + Q4*A_CENTRAL/V2<BR>d/dt(A_OUTPUT)=CL*A_CENTRAL/V2<BR>F=A_CENTRAL/S2</p>
+</div>
+<div id="advan2_trans1" class="section level3 hasAnchor" number="10.3.5">
+<h3><span class="header-section-number">10.3.5</span> advan2_trans1<a href="model-library.html#advan2_trans1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>Description</strong>: One-compartment PK model with first-order absorption (KA, K, V)</p>
+<p><strong>Parameter table</strong>:</p>
+<table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Name
+</th>
+<th style="text-align:right;">
+Value
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;width: 2cm; ">
+KA
+</td>
+<td style="text-align:right;width: 2cm; ">
+1.000
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 2cm; ">
+K
+</td>
+<td style="text-align:right;width: 2cm; ">
+0.065
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 2cm; ">
+V
+</td>
+<td style="text-align:right;width: 2cm; ">
+80.000
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong>ODEs</strong>:</p>
+<p>d/dt(A_DEPOT)=-KA*A_DEPOT<BR>d/dt(A_CENTRAL)=-K*A_CENTRAL + KA*A_DEPOT<BR>d/dt(A_OUTPUT)=K*A_CENTRAL<BR>F=A_CENTRAL/S2</p>
+</div>
+<div id="advan2_trans2" class="section level3 hasAnchor" number="10.3.6">
+<h3><span class="header-section-number">10.3.6</span> advan2_trans2<a href="model-library.html#advan2_trans2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>Description</strong>: One-compartment PK model with first-order absorption (KA, CL, V)</p>
+<p><strong>Parameter table</strong>:</p>
+<table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Name
+</th>
+<th style="text-align:right;">
+Value
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;width: 2cm; ">
+KA
+</td>
+<td style="text-align:right;width: 2cm; ">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 2cm; ">
+CL
+</td>
+<td style="text-align:right;width: 2cm; ">
+5
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 2cm; ">
+V
+</td>
+<td style="text-align:right;width: 2cm; ">
+80
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong>ODEs</strong>:</p>
+<p>d/dt(A_DEPOT)=-KA*A_DEPOT<BR>d/dt(A_CENTRAL)=-CL*A_CENTRAL/V + KA*A_DEPOT<BR>d/dt(A_OUTPUT)=CL*A_CENTRAL/V<BR>F=A_CENTRAL/S2</p>
+</div>
+<div id="advan3_trans1" class="section level3 hasAnchor" number="10.3.7">
+<h3><span class="header-section-number">10.3.7</span> advan3_trans1<a href="model-library.html#advan3_trans1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>Description</strong>: Two-compartment PK model with zero-order absorption (K, V, K12, K21)</p>
+<p><strong>Parameter table</strong>:</p>
+<table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Name
+</th>
+<th style="text-align:right;">
+Value
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;width: 2cm; ">
+K
+</td>
+<td style="text-align:right;width: 2cm; ">
+0.0625
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 2cm; ">
+V
+</td>
+<td style="text-align:right;width: 2cm; ">
+80.0000
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 2cm; ">
+K12
+</td>
+<td style="text-align:right;width: 2cm; ">
+0.0500
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 2cm; ">
+K21
+</td>
+<td style="text-align:right;width: 2cm; ">
+0.2000
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong>ODEs</strong>:</p>
+<p>d/dt(A_CENTRAL)=K21*A_PERIPHERAL + (-K - K12)*A_CENTRAL<BR>d/dt(A_PERIPHERAL)=K12*A_CENTRAL - K21*A_PERIPHERAL<BR>d/dt(A_OUTPUT)=K*A_CENTRAL<BR>F=A_CENTRAL/S1</p>
+</div>
+<div id="advan3_trans3" class="section level3 hasAnchor" number="10.3.8">
+<h3><span class="header-section-number">10.3.8</span> advan3_trans3<a href="model-library.html#advan3_trans3" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>Description</strong>: Two-compartment PK model with zero-order absorption (CL, V, Q, VSS)</p>
+<p><strong>Parameter table</strong>:</p>
+<table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Name
+</th>
+<th style="text-align:right;">
+Value
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;width: 2cm; ">
+CL
+</td>
+<td style="text-align:right;width: 2cm; ">
+5
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 2cm; ">
+V
+</td>
+<td style="text-align:right;width: 2cm; ">
+80
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 2cm; ">
+Q
+</td>
+<td style="text-align:right;width: 2cm; ">
+4
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 2cm; ">
+VSS
+</td>
+<td style="text-align:right;width: 2cm; ">
+300
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong>ODEs</strong>:</p>
+<p>d/dt(A_CENTRAL)=Q*A_PERIPHERAL/(-V + VSS) + (-CL/V - Q/V)*A_CENTRAL<BR>d/dt(A_PERIPHERAL)=-Q*A_PERIPHERAL/(-V + VSS) + Q*A_CENTRAL/V<BR>d/dt(A_OUTPUT)=CL*A_CENTRAL/V<BR>F=A_CENTRAL/S1</p>
+</div>
+<div id="advan3_trans4" class="section level3 hasAnchor" number="10.3.9">
+<h3><span class="header-section-number">10.3.9</span> advan3_trans4<a href="model-library.html#advan3_trans4" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>Description</strong>: Two-compartment PK model with zero-order absorption (CL, V1, V2, Q)</p>
+<p><strong>Parameter table</strong>:</p>
+<table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Name
+</th>
+<th style="text-align:right;">
+Value
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;width: 2cm; ">
+CL
+</td>
+<td style="text-align:right;width: 2cm; ">
+5
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 2cm; ">
+V1
+</td>
+<td style="text-align:right;width: 2cm; ">
+80
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 2cm; ">
+V2
+</td>
+<td style="text-align:right;width: 2cm; ">
+20
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 2cm; ">
+Q
+</td>
+<td style="text-align:right;width: 2cm; ">
+4
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong>ODEs</strong>:</p>
+<p>d/dt(A_CENTRAL)=Q*A_PERIPHERAL/V2 + (-CL/V1 - Q/V1)*A_CENTRAL<BR>d/dt(A_PERIPHERAL)=-Q*A_PERIPHERAL/V2 + Q*A_CENTRAL/V1<BR>d/dt(A_OUTPUT)=CL*A_CENTRAL/V1<BR>F=A_CENTRAL/S1</p>
+</div>
+<div id="advan3_trans5" class="section level3 hasAnchor" number="10.3.10">
+<h3><span class="header-section-number">10.3.10</span> advan3_trans5<a href="model-library.html#advan3_trans5" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>Description</strong>: Two-compartment PK model with zero-order absorption (AOB, ALPHA, BETA)</p>
+<p><strong>Parameter table</strong>:</p>
+<table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Name
+</th>
+<th style="text-align:right;">
+Value
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;width: 2cm; ">
+AOB
+</td>
+<td style="text-align:right;width: 2cm; ">
+5.0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 2cm; ">
+ALPHA
+</td>
+<td style="text-align:right;width: 2cm; ">
+0.2
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 2cm; ">
+BETA
+</td>
+<td style="text-align:right;width: 2cm; ">
+1.0
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong>ODEs</strong>:</p>
+<p>d/dt(A_CENTRAL)=(ALPHA + AOB*BETA)*A_PERIPHERAL/(AOB + 1) + (-ALPHA*BETA/K21 - ALPHA - BETA + K + K21)*A_CENTRAL<BR>d/dt(A_PERIPHERAL)=-(ALPHA + AOB*BETA)*A_PERIPHERAL/(AOB + 1) + (ALPHA + BETA - K - K21)*A_CENTRAL<BR>d/dt(A_OUTPUT)=ALPHA*BETA*A_CENTRAL/K21<BR>F=A_CENTRAL/S1</p>
+</div>
+<div id="advan4_trans1" class="section level3 hasAnchor" number="10.3.11">
+<h3><span class="header-section-number">10.3.11</span> advan4_trans1<a href="model-library.html#advan4_trans1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>Description</strong>: Two-compartment PK model with first-order absorption (KA, K, V, K23, K32)</p>
+<p><strong>Parameter table</strong>:</p>
+<table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Name
+</th>
+<th style="text-align:right;">
+Value
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;width: 2cm; ">
+KA
+</td>
+<td style="text-align:right;width: 2cm; ">
+1.0000
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 2cm; ">
+K
+</td>
+<td style="text-align:right;width: 2cm; ">
+0.0625
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 2cm; ">
+V
+</td>
+<td style="text-align:right;width: 2cm; ">
+80.0000
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 2cm; ">
+K23
+</td>
+<td style="text-align:right;width: 2cm; ">
+0.0500
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 2cm; ">
+K32
+</td>
+<td style="text-align:right;width: 2cm; ">
+0.2000
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong>ODEs</strong>:</p>
+<p>d/dt(A_DEPOT)=-KA*A_DEPOT<BR>d/dt(A_CENTRAL)=K32*A_PERIPHERAL + KA*A_DEPOT + (-K - K23)*A_CENTRAL<BR>d/dt(A_PERIPHERAL)=K23*A_CENTRAL - K32*A_PERIPHERAL<BR>d/dt(A_OUTPUT)=K*A_CENTRAL<BR>F=A_CENTRAL/S2</p>
+</div>
+<div id="advan4_trans3" class="section level3 hasAnchor" number="10.3.12">
+<h3><span class="header-section-number">10.3.12</span> advan4_trans3<a href="model-library.html#advan4_trans3" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>Description</strong>: Two-compartment PK model with first-order absorption (KA, CL, V, Q, VSS)</p>
+<p><strong>Parameter table</strong>:</p>
+<table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Name
+</th>
+<th style="text-align:right;">
+Value
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;width: 2cm; ">
+KA
+</td>
+<td style="text-align:right;width: 2cm; ">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 2cm; ">
+CL
+</td>
+<td style="text-align:right;width: 2cm; ">
+5
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 2cm; ">
+V
+</td>
+<td style="text-align:right;width: 2cm; ">
+80
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 2cm; ">
+Q
+</td>
+<td style="text-align:right;width: 2cm; ">
+4
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 2cm; ">
+VSS
+</td>
+<td style="text-align:right;width: 2cm; ">
+300
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong>ODEs</strong>:</p>
+<p>d/dt(A_DEPOT)=-KA*A_DEPOT<BR>d/dt(A_CENTRAL)=KA*A_DEPOT + Q*A_PERIPHERAL/(-V + VSS) + (-CL/V - Q/V)*A_CENTRAL<BR>d/dt(A_PERIPHERAL)=-Q*A_PERIPHERAL/(-V + VSS) + Q*A_CENTRAL/V<BR>d/dt(A_OUTPUT)=CL*A_CENTRAL/V<BR>F=A_CENTRAL/S2</p>
+</div>
+<div id="advan4_trans4" class="section level3 hasAnchor" number="10.3.13">
+<h3><span class="header-section-number">10.3.13</span> advan4_trans4<a href="model-library.html#advan4_trans4" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>Description</strong>: Two-compartment PK model with first-order absorption (KA, CL, V2, V3, Q)</p>
+<p><strong>Parameter table</strong>:</p>
+<table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Name
+</th>
+<th style="text-align:right;">
+Value
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;width: 2cm; ">
+KA
+</td>
+<td style="text-align:right;width: 2cm; ">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 2cm; ">
+CL
+</td>
+<td style="text-align:right;width: 2cm; ">
+5
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 2cm; ">
+V2
+</td>
+<td style="text-align:right;width: 2cm; ">
+80
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 2cm; ">
+V3
+</td>
+<td style="text-align:right;width: 2cm; ">
+20
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 2cm; ">
+Q
+</td>
+<td style="text-align:right;width: 2cm; ">
+4
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong>ODEs</strong>:</p>
+<p>d/dt(A_DEPOT)=-KA*A_DEPOT<BR>d/dt(A_CENTRAL)=KA*A_DEPOT + Q*A_PERIPHERAL/V3 + (-CL/V2 - Q/V2)*A_CENTRAL<BR>d/dt(A_PERIPHERAL)=-Q*A_PERIPHERAL/V3 + Q*A_CENTRAL/V2<BR>d/dt(A_OUTPUT)=CL*A_CENTRAL/V2<BR>F=A_CENTRAL/S2</p>
+</div>
+<div id="advan4_trans5" class="section level3 hasAnchor" number="10.3.14">
+<h3><span class="header-section-number">10.3.14</span> advan4_trans5<a href="model-library.html#advan4_trans5" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>Description</strong>: Two-compartment PK model with first-order absorption (KA, AOB, ALPHA, BETA)</p>
+<p><strong>Parameter table</strong>:</p>
+<table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Name
+</th>
+<th style="text-align:right;">
+Value
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;width: 2cm; ">
+AOB
+</td>
+<td style="text-align:right;width: 2cm; ">
+5.0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 2cm; ">
+ALPHA
+</td>
+<td style="text-align:right;width: 2cm; ">
+0.2
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 2cm; ">
+BETA
+</td>
+<td style="text-align:right;width: 2cm; ">
+1.0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 2cm; ">
+KA
+</td>
+<td style="text-align:right;width: 2cm; ">
+0.5
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong>ODEs</strong>:</p>
+<p>d/dt(A_DEPOT)=-KA*A_DEPOT<BR>d/dt(A_CENTRAL)=KA*A_DEPOT + (ALPHA + AOB*BETA)*A_PERIPHERAL/(AOB + 1) + (-ALPHA*BETA/K32 - ALPHA - BETA + K + K32)*A_CENTRAL<BR>d/dt(A_PERIPHERAL)=-(ALPHA + AOB*BETA)*A_PERIPHERAL/(AOB + 1) + (ALPHA + BETA - K - K32)*A_CENTRAL<BR>d/dt(A_OUTPUT)=ALPHA*BETA*A_CENTRAL/K32<BR>F=A_CENTRAL/S2</p>
 
 </div>
 </div>
