@@ -6,9 +6,9 @@
 
 When entering the app, a simple PK model is already loaded by default.
 
-A different PK model can be selected from a large library ("Select PK model").
+A different PK model can be selected from a large library ("Select PK model"). The exhaustive list of PK models is available in the [PK](model-library.html#pk-section) section of the model library chapter.
 
-In "Select category", NONMEM models or models for target-mediated drug disposition (TMDD) can be also loaded.
+In "Select category", [NONMEM](model-library.html#nonmem-section) models or models for target-mediated drug disposition ([TMDD](model-library.html#tmdd-section)) can be also loaded.
 
 A PD model can be connected ("Connect PD model") to the PK model. This is done internally via campsismod (see [here](https://calvagone.github.io/campsismod.doc/articles/v06_append_pd_model.html)). If you do this you may have to check that the right PK output goes into the PD part of the model.
 
