@@ -2,6 +2,8 @@
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo=FALSE, message=FALSE, results="asis")
+options(kableExtra_view_html=FALSE) # Needed otherwise tables appear in Viewer only (not in html files)
+# See https://github.com/haozhu233/kableExtra/issues/455
 ```
 
 ```{r}
@@ -79,17 +81,22 @@ for (name in names(pks)) {
   model <- pks[[name]]
   description <- getDescription(name)
   thetas <- getThetas(model)
+  odeBlock <- model %>% find(OdeRecord())
+  odeCapture <- gsub(pattern="\\*", replacement="\\\\*", x=paste0(capture.output(print(odeBlock))[-1], collapse="<BR>"))
   
   cat("###", name, "\n")
-  cat("Description:", description, "\n\n")
-  cat("Parameters:", "\n")
-  kableExtra::kbl(thetas, booktabs=T) %>%
+  cat("**Description**:", description, "\n\n")
+  cat("**Parameter table**:", "\n\n")
+  kableExtra::kbl(thetas, booktabs=T, format="html") %>%
     kableExtra::kable_styling(full_width=F) %>%
     kableExtra::column_spec(1, width = "2cm") %>%
     kableExtra::column_spec(2, width = "2cm") %>%
     kableExtra::column_spec(3, width = "10cm") %>% 
     kableExtra::column_spec(4, width = "2cm") %>% 
     print()
+  cat("\n")
+  cat("**ODEs**:", "\n\n")
+  cat(odeCapture, "\n")
   cat("\n")
 }
 ```

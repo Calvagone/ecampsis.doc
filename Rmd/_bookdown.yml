@@ -1,6 +1,6 @@
 delete_merged_file: true
 output_dir: "../"
-rmd_files: ["index.Rmd", "Model.Rmd", "Trial-design.Rmd", "Simulation.Rmd", "Post-processing.Rmd", "Sensitivity-analysis.Rmd", "Forest-plots.Rmd","Download.Rmd", "Settings.Rmd","Info.Rmd"]
+rmd_files: ["index.Rmd", "Model.Rmd", "Trial-design.Rmd", "Simulation.Rmd", "Post-processing.Rmd", "Sensitivity-analysis.Rmd", "Forest-plots.Rmd","Download.Rmd", "Settings.Rmd", "Model-library.Rmd", "Info.Rmd"]
 language:
   ui:
     chapter_name: "Chapter "
