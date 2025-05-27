@@ -12,43 +12,32 @@ github-repo: "rstudio/bookdown-demo"
 
 # About
 
-[e-Campsis](https://ecampsis.shinyapps.io/free/) is a free web application developed by [Calvagone](https://www.calvagone.com/) that provides an intuitive and user-friendly interface for setting up population PK/PD simulations. The app is built on the R-package [campsis](https://calvagone.github.io/), which serves as a powerful frontend for running model-based simulations using *mrgsolve* or *rxode2*.
+[e-Campsis](https://webapp.e-campsis.com/) is a free web application developed by [Calvagone](https://www.calvagone.com/) that provides an intuitive and user-friendly interface for setting up population PK/PD simulations. The app is built on the R-package [campsis](https://calvagone.github.io/), which serves as a powerful frontend for running model-based simulations using *mrgsolve* or *rxode2*.
 
 ## e-Campsis versions
 
 ### e-Campsis free
 
-*e-Campsis free* is, as the name suggests, freely accessible to everyone without registration at <https://ecampsis.shinyapps.io/free/>.
+*e-Campsis free* is, as the name suggests, freely accessible to everyone without registration at <https://webapp.e-campsis.com/>.
 
 It comes with certain limitations regarding the size of the simulation and misses some functionality of the pro-version.
 
-### e-Campsis free+
-
-If you want to simulate up to 16 arms or scenarios, 100 subjects/arm and 250 observations/arm we invite you to become an authorized user of *e-Campsis free+*.
-
-Please send us the pre-filled email below and you will get an invitation to register as soon as possible:
-
-```{=html}
-<a class="mailtoui" href="mailto:campsis@calvagone.com?subject=e-Campsis%20free%2B&amp;cc=&amp;bcc=&amp;body=Hello%2C%20%0A%0A%20I%27d%20like%20to%20get%20access%20to%20e-Campsis%20free%2B.%20%0A%0A%20Thank%20you%2C%20%0A%0A%20%3CYour%20name%3E%20%0A%0ABy%20sending%20this%20e-mail%20I%20agree%20that%20Calvagone%20gets%20in%20touch%20with%20me%20regarding%20Campsis%20and%20associated%20services.%20I%20understand%20that%20Calvagone%20will%20never%20sell%20or%20distribute%20my%20contact%20information%20to%20a%20third%20party%20and%20promises%20to%20keep%20my%20details%20safe%20and%20secure.%20If%20I%20don%27t%20want%20to%20receive%20e-mails%20from%20Calvagone%20anymore%20or%20have%20questions%20around%20their%20GDPR%20compliance%2C%20I%20will%20contact%20them%20at%20contact%40calvagone.com.">campsis@calvagone.com</a>
-```
 ### e-Campsis pro
 
 The professional version of e-Campsis is available as a yearly subscription and includes the following additional functionality:
 
 -   Save/load e-Campsis projects
--   NONMEM code import
+-   NONMEM&reg;, Monolix&reg; and rxode2 code import
 -   Number of arms, scenarios, subjects, observations only limited by memory
 -   Advanced customization of plots
 -   NCA & summary statistics
 -   Sensitivity analysis
 -   Forest plots
--   Upload of external data for plotting
--   Bootstrap covariates from external file or NHANES\*
+-   Overlay external data on plots
+-   Bootstrap covariates from external file or NHANES
 -   Replicate simulation with parameter uncertainty
--   Import rxode2 and mrgsolve simulation code\*
 -   Personalized support via email
 
-\**Under development.*
 
 For further information, contact us at the following e-mail address: [campsis\@calvagone.com](mailto:campsis@calvagone.com){.email}
 

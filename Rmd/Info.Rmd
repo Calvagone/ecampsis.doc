@@ -6,8 +6,18 @@ If you run into problems using e-Campsis, please provide your feedback here: <ht
 
 # Disclaimer
 
-e-Campsis is provided "as is", without warranty of any kind, express or implied, including but not limited to the warranties of merchantability, fitness for a particular purpose and noninfringement. In no event shall Calvagone SAS be liable for any claim, damages or other liability, whether in an action of contract, tort or otherwise, arising from, out of or in connection with the software or the use or other dealings with the software. Calvagone reserves the right to discontinue the service at any time.
+e-Campsis is provided "as is" and "as available", without warranty of any kind, express or implied, including but not limited to the warranties of merchantability, fitness for a particular purpose and noninfringement. In no event shall Calvagone SAS be liable for any claim, damages or other liability, whether in an action of contract, tort or otherwise, arising from, out of or in connection with the software or the use or other dealings with the software. Calvagone reserves the right to discontinue the service at any time.
 
-# Terms and Conditions
 
+# Terms of Service
+
+## Current version
+![](pictures/e-Campsis_Terms_of_Service_v4_250417.pdf){width="21cm" height="29cm"}
+
+## Legacy version applying to e-Campsis hosted on shinyapps.io
 ![](pictures/e-Campsis_T&C_v3_240911.pdf){width="21cm" height="29cm"}
+
+
+# Privacy Policy
+
+![](pictures/e-Campsis_Privacy_Policy_v1_250417.pdf){width="21cm" height="29cm"}

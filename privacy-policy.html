@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 4 Simulation | e-Campsis documentation</title>
+  <title>Chapter 14 Privacy Policy | e-Campsis documentation</title>
   <meta name="description" content="Here you will find a description of the tabs of e-campsis." />
   <meta name="generator" content="bookdown 0.42 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 4 Simulation | e-Campsis documentation" />
+  <meta property="og:title" content="Chapter 14 Privacy Policy | e-Campsis documentation" />
   <meta property="og:type" content="book" />
   <meta property="og:image" content="/ecampsis_logo.png" />
   <meta property="og:description" content="Here you will find a description of the tabs of e-campsis." />
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 4 Simulation | e-Campsis documentation" />
+  <meta name="twitter:title" content="Chapter 14 Privacy Policy | e-Campsis documentation" />
   
   <meta name="twitter:description" content="Here you will find a description of the tabs of e-campsis." />
   <meta name="twitter:image" content="/ecampsis_logo.png" />
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="trial-design.html"/>
-<link rel="next" href="post-processing.html"/>
+<link rel="prev" href="terms-of-service.html"/>
+
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -306,137 +306,18 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="simulation" class="section level1 hasAnchor" number="4">
-<h1><span class="header-section-number">Chapter 4</span> Simulation<a href="simulation.html#simulation" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p><img src="pictures/simulation_tab.png" width="561" /></p>
-<div id="scenarios" class="section level2 hasAnchor" number="4.1">
-<h2><span class="header-section-number">4.1</span> Scenarios<a href="simulation.html#scenarios" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Make several scenarios that you want to compare. For each scenario, parameter values can be changed. If you use scenarios, make sure to apply the appropriate stratification or color-grouping in the Plot settings.</p>
-</div>
-<div id="simulation-settings" class="section level2 hasAnchor" number="4.2">
-<h2><span class="header-section-number">4.2</span> Simulation settings<a href="simulation.html#simulation-settings" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<ul>
-<li>IIV/RUV: Should the inter-individual and residual variability be taken into account in the simulations? Check IIV or RUV boxes accordingly. <strong>IMPORTANT:</strong> If you simulate only 1 subject with the intention of simulating a typical profile, make sure that IIV is switch off!</li>
-<li>Seed: a seed number can be used.</li>
-<li>Select output(s): select one or several outputs you would like to look at.</li>
-<li>Select engine: choose one of the two simulation packages rxode2 or mrgsolve.</li>
-<li>Execution/Manual: check the box to make any changes without updating the plot and, when all is configured, click the “play” button <span class="math inline">\(\vartriangleright\)</span></li>
-</ul>
-</div>
-<div id="plot-settings" class="section level2 hasAnchor" number="4.3">
-<h2><span class="header-section-number">4.3</span> Plot settings<a href="simulation.html#plot-settings" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Click “+” to pull the tab down.</p>
-<ul>
-<li><p>Three plot options can be chosen:</p>
-<ul>
-<li>spaghetti plot: overlay of the individual profiles of the selected output(s) versus time</li>
-<li>shaded plot: median of the simulated output(s) versus time with 5th and 95th percentiles of the simulations</li>
-<li>scatter plot: relationship between two selected outputs</li>
-</ul></li>
-<li><p>Colour-group by: profiles will have different colors by ARM or SCENARIO</p></li>
-<li><p>Stratify-group by: split the plots by ARM or SCENARIO</p></li>
-<li><p>X-axis or Y-axis in log: select to show the X- or Y-axis on log scale</p></li>
-<li><p>Interactive plot: when checked, more options on plots are available (from Plotly)</p></li>
-<li><p>Plot height: adjust the height of the figure</p></li>
-<li><p>More annotation options: allows to customize the plot</p>
-<ul>
-<li>Plot title</li>
-<li>X-axis label, limits, breaks</li>
-<li>Y-axis label, limits, breaks</li>
-<li>Footnote</li>
-<li>Horizontal/Vertical line(s): add one or several horizontal or vertical line(s) to the plot, and select colours and type</li>
-<li>Facet scales: scales for facet can be fixed, free, or free in one dimension</li>
-<li>Facet nrow: number of facets per row</li>
-<li>Facet scaled: include or not the facet variable name</li>
-</ul></li>
-<li><p>Data overlay (pro version): Overlay the observed data on the simulated data. See specific section below on how to overlay your external data.</p></li>
-<li><p>Custom plot (pro version): R-code can be edited to directly customize the plot, then check “enable custom plot” to update the plot after editing the code. Click “Generate code from GUI” to update the code from the plot.</p></li>
-</ul>
-</div>
-<div id="data-overlay" class="section level2 hasAnchor" number="4.4">
-<h2><span class="header-section-number">4.4</span> Data overlay<a href="simulation.html#data-overlay" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p><img src="pictures/lock_pro.png" width="50" />  This feature is reserved for pro users only.</p>
-<p>e-Campsis offers a very powerful interface to overlay external data on the simulated data. This feature, can be useful to:</p>
-<ul>
-<li>Compare the simulated data with observed data or with summarized observed data (like median, percentiles, etc.)</li>
-<li>Show data from literature (e.g. PK profiles from a publication or confidence intervals at some specific points of the profile, etc.) on top of your plot</li>
-<li>More generally, add any ggplot layer to annotate your plot (e.g. add a label, some text, lines or points, cross bars, etc.)</li>
-</ul>
-<p>This section will explain you how to use the functionality.</p>
-<div id="data-overlay-interface" class="section level3 hasAnchor" number="4.4.1">
-<h3><span class="header-section-number">4.4.1</span> Data overlay interface<a href="simulation.html#data-overlay-interface" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>In the plot settings, click on the “Edit layers” button to open the interface that will allow you to edit up to 8 layers.</p>
-<p><img src="pictures/data_overlay_interface.png" style="width:60.0%" /></p>
-<p>Three actions can be performed on each layer:</p>
-<ul>
-<li>Edit: opens a window where you can edit the layer.</li>
-<li>Clear: removes the layer from the plot. The entered data for this layer will be lost.</li>
-<li>Show: shows or hides the layer on the plot.</li>
-</ul>
-</div>
-<div id="edit-a-layer" class="section level3 hasAnchor" number="4.4.2">
-<h3><span class="header-section-number">4.4.2</span> Edit a layer<a href="simulation.html#edit-a-layer" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Click on the “Edit” button to open the layer editor window.</p>
-<p><img src="pictures/layer_editor_window.png" style="width:60.0%" /></p>
-<p>Here are the steps to follow:</p>
-<ul>
-<li><strong>Select type of layer</strong>: the following types can be selected: <code>Point</code>, <code>Line</code>, <code>Horizontal line</code>, <code>Vertical line</code>, <code>Point range</code>, <code>Step</code>, <code>Error bar</code>, <code>Cross bar</code>, <code>Text</code> and <code>Label</code>. Based on your selection, the required column names (aesthetics in the ggplot2 terminology) will be displayed in the table and will have to be filled in with your data.</li>
-<li><strong>Add specific columns</strong>:
-<ul>
-<li>ID: needed if your external data refers to individuals</li>
-<li>ARM: may be needed if you have more than 1 arm in your simulation</li>
-<li>SCENARIO: may be needed if you have more than 1 scenario in your simulation</li>
-</ul></li>
-<li><strong>Time unit</strong>: select the time unit of your data. This is important to ensure that the data is correctly overlaid on the plot.</li>
-<li><strong>Table</strong>: enter your data in the table. The table content can be edited directly in the interface. You can also copy-paste your data from an external source (e.g. a CSV or Excel file).</li>
-<li><strong>Add/Delete rows</strong>: use these buttons to add or delete 50 rows at once in the table.</li>
-<li><strong>Delete unused rows</strong>: delete empty/unused rows.</li>
-<li><strong>Source reference</strong>: add a reference to the source of your data. This will be shown in the generated R code.</li>
-<li><strong>Related output</strong>:
-<ul>
-<li>Non-specific: the data will be overlaid on all outputs.</li>
-<li>Specific: the data will be overlaid on the selected output(s).</li>
-</ul></li>
-<li><strong>Colour</strong>:
-<ul>
-<li>Manual: in that case, specify the colour string to use (name or hex code).</li>
-<li>Colour-group based: the data will be coloured based on stratification variable used for colouring the plot.</li>
-</ul></li>
-<li><strong>Alpha level</strong>: indicate the transparency level of the layer, a number between 0 and 1.</li>
-</ul>
-<p>Once your data is entered and your layer is configured, click on the “Save” button to save the layer. The layer will be added to the plot.</p>
-</div>
-<div id="example-overlay-summarised-observed-data-on-simulated-data" class="section level3 hasAnchor" number="4.4.3">
-<h3><span class="header-section-number">4.4.3</span> Example: overlay summarised observed data on simulated data<a href="simulation.html#example-overlay-summarised-observed-data-on-simulated-data" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Let’s say you have rich observed data for the median and 5th and 95th percentiles of the concentrations at Day 1 and Day 13, and trough concentrations for all days in between (your drug is given once daily). You have in your dataset slow metabolisers and fast metabolisers. You want to overlay this data on the simulated concentration profiles.</p>
-<p>In your trial design, you do also simulate two arms, the first one with slow metabolisers and the second one with fast metabolisers.</p>
-<p>Here is how you can proceed:</p>
-<ul>
-<li>Prepare your data in a CSV/Excel file with the following columns: <code>ARM</code>, <code>TIME</code>, <code>MEDIAN</code>, <code>P5</code>, <code>P95</code></li>
-<li>Column arm should be mapped to the ARM column in e-Campsis. E.g. use ‘Slow’ and ‘Fast’ as values, which are the same as in your trial design.</li>
-<li>Edit the first layer and enter the median. Select <code>Line</code> as the type of layer. Select <code>dotted</code> as the line type. Select the <code>ARM</code> checkbox. Fill in the required columns <code>ARM</code>, <code>x</code> (=<code>TIME</code>) and <code>y</code> (=<code>MEDIAN</code>) by copy pasting the data from your CSV/Excel file. Select the time unit of your data and click save.</li>
-</ul>
-<p>As an example, you could have the following data:</p>
-<p><img src="pictures/data_overlay_layer_example.png" style="width:60.0%" /></p>
-<ul>
-<li>Add a second layer for the 5th percentile and provide the corresponding data. Select <code>longdash</code> as the line type.</li>
-<li>Add a third layer for the 95th percentile and provide the corresponding data. Select <code>longdash</code> as the line type.</li>
-</ul>
-<p>Your layers should look like this:</p>
-<p><img src="pictures/data_overlay_layer_example_3layers.png" style="width:60.0%" /></p>
-<p>That’s it. Your plot will now show the simulated profiles with the median, 5th and 95th percentiles overlaid on top.</p>
-<p><img src="pictures/data_overlay_example_plot.png" style="width:60.0%" /></p>
+<div id="privacy-policy" class="section level1 hasAnchor" number="14">
+<h1><span class="header-section-number">Chapter 14</span> Privacy Policy<a href="privacy-policy.html#privacy-policy" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p><embed src="pictures/e-Campsis_Privacy_Policy_v1_250417.pdf" style="width:21cm;height:29cm" /></p>
 
-</div>
-</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="trial-design.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="post-processing.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="terms-of-service.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -467,7 +348,7 @@ gitbook.start({
     "size": 2
   },
   "edit": {
-    "link": "https://github.com/USERNAME/REPO/edit/BRANCH/Simulation.Rmd",
+    "link": "https://github.com/USERNAME/REPO/edit/BRANCH/Info.Rmd",
     "text": "Edit"
   },
   "history": {

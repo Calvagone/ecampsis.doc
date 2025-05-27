@@ -1,7 +1,6 @@
 about
 e-campsis-versions
 e-campsis-free
-e-campsis-free-1
 e-campsis-pro
 application-interface
 model-tab
@@ -169,4 +168,7 @@ advan4_trans4
 advan4_trans5
 feedback-and-help
 disclaimer
-terms-and-conditions
+terms-of-service
+current-version
+legacy-version-applying-to-e-campsis-hosted-on-shinyapps.io
+privacy-policy
