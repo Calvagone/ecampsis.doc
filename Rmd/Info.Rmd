@@ -11,13 +11,9 @@ e-Campsis is provided "as is" and "as available", without warranty of any kind, 
 
 # Terms of Service
 
-## Current version
-![](pictures/e-Campsis_Terms_of_Service_v4_250417.pdf){width="21cm" height="29cm"}
-
-## Legacy version applying to e-Campsis hosted on shinyapps.io
-![](pictures/e-Campsis_T&C_v3_240911.pdf){width="21cm" height="29cm"}
+![](pictures/e-Campsis_Terms_of_Service_v4_250528.pdf){width="21cm" height="29cm"}
 
 
 # Privacy Policy
 
-![](pictures/e-Campsis_Privacy_Policy_v1_250417.pdf){width="21cm" height="29cm"}
+![](pictures/e-Campsis_Privacy_Policy_v1_250528.pdf){width="21cm" height="29cm"}

@@ -169,6 +169,4 @@ advan4_trans5
 feedback-and-help
 disclaimer
 terms-of-service
-current-version
-legacy-version-applying-to-e-campsis-hosted-on-shinyapps.io
 privacy-policy

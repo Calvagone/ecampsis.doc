@@ -12,13 +12,13 @@ github-repo: "rstudio/bookdown-demo"
 
 # About
 
-[e-Campsis](https://webapp.e-campsis.com/) is a free web application developed by [Calvagone](https://www.calvagone.com/) that provides an intuitive and user-friendly interface for setting up population PK/PD simulations. The app is built on the R-package [campsis](https://calvagone.github.io/), which serves as a powerful frontend for running model-based simulations using *mrgsolve* or *rxode2*.
+[e-Campsis](https://ecampsis.shinyapps.io/free/) is a free web application developed by [Calvagone](https://www.calvagone.com/) that provides an intuitive and user-friendly interface for setting up population PK/PD simulations. The app is built on the R-package [campsis](https://calvagone.github.io/), which serves as a powerful frontend for running model-based simulations using *mrgsolve* or *rxode2*.
 
 ## e-Campsis versions
 
 ### e-Campsis free
 
-*e-Campsis free* is, as the name suggests, freely accessible to everyone without registration at <https://webapp.e-campsis.com/>.
+*e-Campsis free* is, as the name suggests, freely accessible to everyone at <https://ecampsis.shinyapps.io/free/>.
 
 It comes with certain limitations regarding the size of the simulation and misses some functionality of the pro-version.
 
