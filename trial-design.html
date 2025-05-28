@@ -323,6 +323,10 @@
 <li>If infusion is selected, you can choose whether the infusion is in the Model or in the Dataset; if the latter, the infusion duration can be entered</li>
 <li>Infusion into the Model means that the infusion duration is controlled by a parameter in the model. This is useful in cases where the infusion is actually not a real infusion but rather a 0-order input and you may have variability or covariates associate with it (e.g. a slow release formulation). See <a href="https://calvagone.github.io/campsis.doc/articles/v06_infusions.html">here</a> for more information:</li>
 </ul></li>
+<li>Administration compartments
+<ul>
+<li>Select the compartment(s) where to amount should be entered, either instantaneously (bolus) or as a zero-order process (infusion). You can select multiple compartments if you have a complex absorption model, e.g. sequential (or parallel) first-zero-order.</li>
+</ul></li>
 <li>Dose amount and compartment
 <ul>
 <li>The amount given into the specified compartment.</li>
@@ -330,6 +334,11 @@
 <li>Dosing interval and additional doses
 <ul>
 <li>The amount is repeatedly administered at a given interval for N additional doses (i.e. number of dosing events in addition to the first one)</li>
+</ul></li>
+<li>Dosing cycle
+<ul>
+<li>If the ‘repeat’ box is checked you can enter how often and in what length your schedule is repeated. This is useful if you have a e.g. daily dosing for 2 weeks, then 1 week pause, and then repeat again.</li>
+<li>Attention! Be careful with the length of the cycle and the number of doses and the interval within a cycle inorder to avoid duplicate dosing events.</li>
 </ul></li>
 <li>Observations (observation time)
 <ul>

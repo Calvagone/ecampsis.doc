@@ -15,10 +15,15 @@ For each arm tab, the following information can be entered:
 -   Administration type (bolus or infusion)
     -   If infusion is selected, you can choose whether the infusion is in the Model or in the Dataset; if the latter, the infusion duration can be entered
     -   Infusion into the Model means that the infusion duration is controlled by a parameter in the model. This is useful in cases where the infusion is actually not a real infusion but rather a 0-order input and you may have variability or covariates associate with it (e.g. a slow release formulation). See [here](https://calvagone.github.io/campsis.doc/articles/v06_infusions.html) for more information:
+-   Administration compartments
+    -   Select the compartment(s) where to amount should be entered, either instantaneously (bolus) or as a zero-order process (infusion). You can select multiple compartments if you have a complex absorption model, e.g. sequential (or parallel) first-zero-order.
 -   Dose amount and compartment
     -   The amount given into the specified compartment.
 -   Dosing interval and additional doses
     -   The amount is repeatedly administered at a given interval for N additional doses (i.e. number of dosing events in addition to the first one)
+-   Dosing cycle
+    -   If the 'repeat' box is checked you can enter how often and in what length your schedule is repeated. This is useful if you have a e.g. daily dosing for 2 weeks, then 1 week pause, and then repeat again.
+    -   Attention! Be careful with the length of the cycle and the number of doses and the interval within a cycle inorder to avoid duplicate dosing events.
 -   Observations (observation time)
     -   to be written in R vector notation, e.g. *`seq(0,24,by=1)`*`or c(seq(0, 5), seq(0, 5)+168, seq(0,5)+336, seq(0,504,6))`
     -   Enable the "as-time-after-dose" box, if you want to replicate the observation schedule after each dose
@@ -43,7 +48,7 @@ Here you will see a summary of your trial design. Especially when you have multi
 
 ## Custom dataset
 
-![](pictures/lock_pro.png){width=50px} &nbsp;This feature is reserved for pro users only.
+![](pictures/lock_pro.png){width="50px"}  This feature is reserved for pro users only.
 
 When you click on "Edit dataset" a window will pop-up that allows you to specify complex dosing schedules using the Campsis functions.
 
