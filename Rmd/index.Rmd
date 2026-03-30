@@ -1,13 +1,13 @@
 ---
-title: "e-Campsis documentation"
+title: "e-Campsis desktop"
 author: "Calvagone"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 documentclass: book
 cover-image: ecampsis_logo.png
-description: "Here you will find a description of the tabs of e-campsis.\n"
+description: "Here you will find a description of the tabs of e-Campsis desktop.\n"
 link-citations: yes
-github-repo: "rstudio/bookdown-demo"
+github-repo: "Calvagone/ecampsis.doc"
 ---
 
 # About
