@@ -184,7 +184,7 @@ printModelSummary <- function(description, thetas, ode) {
 ## PK section
 
 ```{r, results='asis'}
-pks <- ecampsis::e_model_suite$pk
+pks <- campsismod::model_suite$pk
 
 for (name in names(pks)) {
   model <- pks[[name]]
@@ -198,7 +198,7 @@ for (name in names(pks)) {
 ## TMDD section
 
 ```{r, results='asis'}
-tmdds <- ecampsis::e_model_suite$tmdd
+tmdds <- campsismod::model_suite$tmdd
 
 for (name in names(tmdds)) {
   model <- tmdds[[name]]
@@ -212,7 +212,7 @@ for (name in names(tmdds)) {
 ## NONMEM section
 
 ```{r, results='asis'}
-nonmems <- ecampsis::e_model_suite$nonmem
+nonmems <- campsismod::model_suite$nonmem
 
 for (name in names(nonmems)) {
   model <- nonmems[[name]]
