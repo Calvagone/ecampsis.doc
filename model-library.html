@@ -23,7 +23,7 @@
 <meta name="author" content="Calvagone" />
 
 
-<meta name="date" content="2026-03-30" />
+<meta name="date" content="2026-04-03" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -87,11 +87,12 @@
 </ul></li>
 <li class="chapter" data-level="2" data-path="model-tab.html"><a href="model-tab.html"><i class="fa fa-check"></i><b>2</b> Model tab</a>
 <ul>
-<li class="chapter" data-level="2.1" data-path="model-tab.html"><a href="model-tab.html#model-from-library"><i class="fa fa-check"></i><b>2.1</b> Model from library</a></li>
-<li class="chapter" data-level="2.2" data-path="model-tab.html"><a href="model-tab.html#campsis-model-import"><i class="fa fa-check"></i><b>2.2</b> Campsis model import</a></li>
-<li class="chapter" data-level="2.3" data-path="model-tab.html"><a href="model-tab.html#nonmem-model-import"><i class="fa fa-check"></i><b>2.3</b> NONMEM model import</a></li>
-<li class="chapter" data-level="2.4" data-path="model-tab.html"><a href="model-tab.html#model-code"><i class="fa fa-check"></i><b>2.4</b> Model code</a></li>
-<li class="chapter" data-level="2.5" data-path="model-tab.html"><a href="model-tab.html#parameters"><i class="fa fa-check"></i><b>2.5</b> Parameters</a></li>
+<li class="chapter" data-level="2.1" data-path="model-tab.html"><a href="model-tab.html#model-code-section"><i class="fa fa-check"></i><b>2.1</b> Model code section</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="model-tab.html"><a href="model-tab.html#writing-a-model-from-scratch"><i class="fa fa-check"></i><b>2.1.1</b> Writing a model from scratch</a></li>
+<li class="chapter" data-level="2.1.2" data-path="model-tab.html"><a href="model-tab.html#importing-an-existing-model"><i class="fa fa-check"></i><b>2.1.2</b> Importing an existing model</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="model-tab.html"><a href="model-tab.html#model-parameters-section"><i class="fa fa-check"></i><b>2.2</b> Model parameters section</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="trial-design.html"><a href="trial-design.html"><i class="fa fa-check"></i><b>3</b> Trial design</a>
 <ul>
@@ -276,6 +277,17 @@
 <li class="chapter" data-level="10.3.12" data-path="model-library.html"><a href="model-library.html#advan4_trans3"><i class="fa fa-check"></i><b>10.3.12</b> advan4_trans3</a></li>
 <li class="chapter" data-level="10.3.13" data-path="model-library.html"><a href="model-library.html#advan4_trans4"><i class="fa fa-check"></i><b>10.3.13</b> advan4_trans4</a></li>
 <li class="chapter" data-level="10.3.14" data-path="model-library.html"><a href="model-library.html#advan4_trans5"><i class="fa fa-check"></i><b>10.3.14</b> advan4_trans5</a></li>
+</ul></li>
+<li class="chapter" data-level="10.4" data-path="model-library.html"><a href="model-library.html#pd-section"><i class="fa fa-check"></i><b>10.4</b> PD section</a>
+<ul>
+<li class="chapter" data-level="10.4.1" data-path="model-library.html"><a href="model-library.html#direct_effect_model"><i class="fa fa-check"></i><b>10.4.1</b> direct_effect_model</a></li>
+<li class="chapter" data-level="10.4.2" data-path="model-library.html"><a href="model-library.html#effect_cmt_model"><i class="fa fa-check"></i><b>10.4.2</b> effect_cmt_model</a></li>
+<li class="chapter" data-level="10.4.3" data-path="model-library.html"><a href="model-library.html#irm_kin_inhibition"><i class="fa fa-check"></i><b>10.4.3</b> irm_kin_inhibition</a></li>
+<li class="chapter" data-level="10.4.4" data-path="model-library.html"><a href="model-library.html#irm_kin_stimulation"><i class="fa fa-check"></i><b>10.4.4</b> irm_kin_stimulation</a></li>
+<li class="chapter" data-level="10.4.5" data-path="model-library.html"><a href="model-library.html#irm_kout_inhibition"><i class="fa fa-check"></i><b>10.4.5</b> irm_kout_inhibition</a></li>
+<li class="chapter" data-level="10.4.6" data-path="model-library.html"><a href="model-library.html#irm_kout_stimulation"><i class="fa fa-check"></i><b>10.4.6</b> irm_kout_stimulation</a></li>
+<li class="chapter" data-level="10.4.7" data-path="model-library.html"><a href="model-library.html#myelosuppression_model"><i class="fa fa-check"></i><b>10.4.7</b> myelosuppression_model</a></li>
+<li class="chapter" data-level="10.4.8" data-path="model-library.html"><a href="model-library.html#transit_cmt_model"><i class="fa fa-check"></i><b>10.4.8</b> transit_cmt_model</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="11" data-path="feedback-and-help.html"><a href="feedback-and-help.html"><i class="fa fa-check"></i><b>11</b> Feedback and help</a></li>
@@ -14961,6 +14973,668 @@ KA
 </table>
 <p><strong>ODEs</strong>:</p>
 <p>d/dt(A_DEPOT)=-KA*A_DEPOT<BR>d/dt(A_CENTRAL)=KA*A_DEPOT + (ALPHA + AOB*BETA)*A_PERIPHERAL/(AOB + 1) + (-ALPHA*BETA/K32 - ALPHA - BETA + K + K32)*A_CENTRAL<BR>d/dt(A_PERIPHERAL)=-(ALPHA + AOB*BETA)*A_PERIPHERAL/(AOB + 1) + (ALPHA + BETA - K - K32)*A_CENTRAL<BR>d/dt(A_OUTPUT)=ALPHA*BETA*A_CENTRAL/K32<BR>F=A_CENTRAL/S2</p>
+</div>
+</div>
+<div id="pd-section" class="section level2 hasAnchor" number="10.4">
+<h2><span class="header-section-number">10.4</span> PD section<a href="model-library.html#pd-section" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="direct_effect_model" class="section level3 hasAnchor" number="10.4.1">
+<h3><span class="header-section-number">10.4.1</span> direct_effect_model<a href="model-library.html#direct_effect_model" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>Description</strong>: Direct effect PD model (Emax relationship driven directly by PK concentration)</p>
+<p><strong>Parameter table</strong>:</p>
+<table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Name
+</th>
+<th style="text-align:right;">
+Value
+</th>
+<th style="text-align:left;">
+Label
+</th>
+<th style="text-align:left;">
+Unit
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;width: 2cm; ">
+EMAX
+</td>
+<td style="text-align:right;width: 2cm; ">
+100.0
+</td>
+<td style="text-align:left;width: 10cm; ">
+Maximum effect
+</td>
+<td style="text-align:left;width: 2cm; ">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 2cm; ">
+EC50
+</td>
+<td style="text-align:right;width: 2cm; ">
+10.0
+</td>
+<td style="text-align:left;width: 10cm; ">
+Concentration at 50% of EMAX
+</td>
+<td style="text-align:left;width: 2cm; ">
+ng/mL
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 2cm; ">
+GAMMA
+</td>
+<td style="text-align:right;width: 2cm; ">
+1.5
+</td>
+<td style="text-align:left;width: 10cm; ">
+Hill coefficient
+</td>
+<td style="text-align:left;width: 2cm; ">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 2cm; ">
+E0
+</td>
+<td style="text-align:right;width: 2cm; ">
+20.0
+</td>
+<td style="text-align:left;width: 10cm; ">
+Baseline
+</td>
+<td style="text-align:left;width: 2cm; ">
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong>ODEs</strong>:</p>
+<p>PK_CONC=10<BR>EFFECT=E0 + EMAX*pow(PK_CONC, GAMMA)/(pow(EC50, GAMMA) + pow(PK_CONC, GAMMA))</p>
+</div>
+<div id="effect_cmt_model" class="section level3 hasAnchor" number="10.4.2">
+<h3><span class="header-section-number">10.4.2</span> effect_cmt_model<a href="model-library.html#effect_cmt_model" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>Description</strong>: Effect compartment PD model with a delay between PK concentration and effect</p>
+<p><strong>Parameter table</strong>:</p>
+<table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Name
+</th>
+<th style="text-align:right;">
+Value
+</th>
+<th style="text-align:left;">
+Label
+</th>
+<th style="text-align:left;">
+Unit
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;width: 2cm; ">
+EMAX
+</td>
+<td style="text-align:right;width: 2cm; ">
+100.0
+</td>
+<td style="text-align:left;width: 10cm; ">
+Maximum effect
+</td>
+<td style="text-align:left;width: 2cm; ">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 2cm; ">
+EC50
+</td>
+<td style="text-align:right;width: 2cm; ">
+10.0
+</td>
+<td style="text-align:left;width: 10cm; ">
+Concentration at 50% of EMAX
+</td>
+<td style="text-align:left;width: 2cm; ">
+ng/mL
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 2cm; ">
+GAMMA
+</td>
+<td style="text-align:right;width: 2cm; ">
+1.5
+</td>
+<td style="text-align:left;width: 10cm; ">
+Hill coefficient
+</td>
+<td style="text-align:left;width: 2cm; ">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 2cm; ">
+E0
+</td>
+<td style="text-align:right;width: 2cm; ">
+20.0
+</td>
+<td style="text-align:left;width: 10cm; ">
+Baseline
+</td>
+<td style="text-align:left;width: 2cm; ">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 2cm; ">
+KE0
+</td>
+<td style="text-align:right;width: 2cm; ">
+0.5
+</td>
+<td style="text-align:left;width: 10cm; ">
+Effect compartment delay rate
+</td>
+<td style="text-align:left;width: 2cm; ">
+1/h
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong>ODEs</strong>:</p>
+<p>PK_CONC=10<BR>d/dt(A_ECONC)=KE0*(PK_CONC - A_ECONC)<BR>EFFECT=E0 + EMAX*pow(A_ECONC, GAMMA)/(pow(EC50, GAMMA) + pow(A_ECONC, GAMMA))</p>
+</div>
+<div id="irm_kin_inhibition" class="section level3 hasAnchor" number="10.4.3">
+<h3><span class="header-section-number">10.4.3</span> irm_kin_inhibition<a href="model-library.html#irm_kin_inhibition" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>Description</strong>: Indirect response model with inhibition of production rate (KIN)</p>
+<p><strong>Parameter table</strong>:</p>
+<table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Name
+</th>
+<th style="text-align:right;">
+Value
+</th>
+<th style="text-align:left;">
+Label
+</th>
+<th style="text-align:left;">
+Unit
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;width: 2cm; ">
+IC50
+</td>
+<td style="text-align:right;width: 2cm; ">
+15.0
+</td>
+<td style="text-align:left;width: 10cm; ">
+Concentration at 50% of IMAX
+</td>
+<td style="text-align:left;width: 2cm; ">
+ng/mL
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 2cm; ">
+KOUT
+</td>
+<td style="text-align:right;width: 2cm; ">
+0.1
+</td>
+<td style="text-align:left;width: 10cm; ">
+Rate of decline of response
+</td>
+<td style="text-align:left;width: 2cm; ">
+1/h
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 2cm; ">
+IMAX
+</td>
+<td style="text-align:right;width: 2cm; ">
+1.0
+</td>
+<td style="text-align:left;width: 10cm; ">
+Maximum inhibition
+</td>
+<td style="text-align:left;width: 2cm; ">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 2cm; ">
+BL
+</td>
+<td style="text-align:right;width: 2cm; ">
+100.0
+</td>
+<td style="text-align:left;width: 10cm; ">
+Baseline
+</td>
+<td style="text-align:left;width: 2cm; ">
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong>ODEs</strong>:</p>
+<p>PK_CONC=10<BR>COEF=1 - IMAX*PK_CONC/(IC50 + PK_CONC)<BR>d/dt(A_EFFECT)=KIN*COEF - KOUT*A_EFFECT</p>
+</div>
+<div id="irm_kin_stimulation" class="section level3 hasAnchor" number="10.4.4">
+<h3><span class="header-section-number">10.4.4</span> irm_kin_stimulation<a href="model-library.html#irm_kin_stimulation" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>Description</strong>: Indirect response model with stimulation of production rate (KIN)</p>
+<p><strong>Parameter table</strong>:</p>
+<table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Name
+</th>
+<th style="text-align:right;">
+Value
+</th>
+<th style="text-align:left;">
+Label
+</th>
+<th style="text-align:left;">
+Unit
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;width: 2cm; ">
+KOUT
+</td>
+<td style="text-align:right;width: 2cm; ">
+0.1
+</td>
+<td style="text-align:left;width: 10cm; ">
+Rate of decline of response
+</td>
+<td style="text-align:left;width: 2cm; ">
+1/h
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 2cm; ">
+BL
+</td>
+<td style="text-align:right;width: 2cm; ">
+100.0
+</td>
+<td style="text-align:left;width: 10cm; ">
+Baseline
+</td>
+<td style="text-align:left;width: 2cm; ">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 2cm; ">
+EC50
+</td>
+<td style="text-align:right;width: 2cm; ">
+20.0
+</td>
+<td style="text-align:left;width: 10cm; ">
+Concentration at 50% of EMAX
+</td>
+<td style="text-align:left;width: 2cm; ">
+ng/mL
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 2cm; ">
+EMAX
+</td>
+<td style="text-align:right;width: 2cm; ">
+1.0
+</td>
+<td style="text-align:left;width: 10cm; ">
+Maximum stimulation
+</td>
+<td style="text-align:left;width: 2cm; ">
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong>ODEs</strong>:</p>
+<p>PK_CONC=10<BR>COEF=1 + EMAX*PK_CONC/(EC50 + PK_CONC)<BR>d/dt(A_EFFECT)=KIN*COEF - KOUT*A_EFFECT</p>
+</div>
+<div id="irm_kout_inhibition" class="section level3 hasAnchor" number="10.4.5">
+<h3><span class="header-section-number">10.4.5</span> irm_kout_inhibition<a href="model-library.html#irm_kout_inhibition" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>Description</strong>: Indirect response model with inhibition of loss rate (KOUT)</p>
+<p><strong>Parameter table</strong>:</p>
+<table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Name
+</th>
+<th style="text-align:right;">
+Value
+</th>
+<th style="text-align:left;">
+Label
+</th>
+<th style="text-align:left;">
+Unit
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;width: 2cm; ">
+IC50
+</td>
+<td style="text-align:right;width: 2cm; ">
+15.0
+</td>
+<td style="text-align:left;width: 10cm; ">
+Concentration at 50% of IMAX
+</td>
+<td style="text-align:left;width: 2cm; ">
+ng/mL
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 2cm; ">
+KOUT
+</td>
+<td style="text-align:right;width: 2cm; ">
+0.1
+</td>
+<td style="text-align:left;width: 10cm; ">
+Rate of decline of response
+</td>
+<td style="text-align:left;width: 2cm; ">
+1/h
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 2cm; ">
+IMAX
+</td>
+<td style="text-align:right;width: 2cm; ">
+1.0
+</td>
+<td style="text-align:left;width: 10cm; ">
+Maximum inhibition
+</td>
+<td style="text-align:left;width: 2cm; ">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 2cm; ">
+BL
+</td>
+<td style="text-align:right;width: 2cm; ">
+100.0
+</td>
+<td style="text-align:left;width: 10cm; ">
+Baseline
+</td>
+<td style="text-align:left;width: 2cm; ">
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong>ODEs</strong>:</p>
+<p>PK_CONC=10<BR>COEF=1 - IMAX*PK_CONC/(IC50 + PK_CONC)<BR>d/dt(A_EFFECT)=KIN - KOUT*COEF*A_EFFECT</p>
+</div>
+<div id="irm_kout_stimulation" class="section level3 hasAnchor" number="10.4.6">
+<h3><span class="header-section-number">10.4.6</span> irm_kout_stimulation<a href="model-library.html#irm_kout_stimulation" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>Description</strong>: Indirect response model with stimulation of loss rate (KOUT)</p>
+<p><strong>Parameter table</strong>:</p>
+<table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Name
+</th>
+<th style="text-align:right;">
+Value
+</th>
+<th style="text-align:left;">
+Label
+</th>
+<th style="text-align:left;">
+Unit
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;width: 2cm; ">
+KOUT
+</td>
+<td style="text-align:right;width: 2cm; ">
+0.1
+</td>
+<td style="text-align:left;width: 10cm; ">
+Rate of decline of response
+</td>
+<td style="text-align:left;width: 2cm; ">
+1/h
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 2cm; ">
+BL
+</td>
+<td style="text-align:right;width: 2cm; ">
+100.0
+</td>
+<td style="text-align:left;width: 10cm; ">
+Baseline
+</td>
+<td style="text-align:left;width: 2cm; ">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 2cm; ">
+EC50
+</td>
+<td style="text-align:right;width: 2cm; ">
+20.0
+</td>
+<td style="text-align:left;width: 10cm; ">
+Concentration at 50% of EMAX
+</td>
+<td style="text-align:left;width: 2cm; ">
+ng/mL
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 2cm; ">
+EMAX
+</td>
+<td style="text-align:right;width: 2cm; ">
+1.0
+</td>
+<td style="text-align:left;width: 10cm; ">
+Maximum stimulation
+</td>
+<td style="text-align:left;width: 2cm; ">
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong>ODEs</strong>:</p>
+<p>PK_CONC=10<BR>COEF=1 + EMAX*PK_CONC/(EC50 + PK_CONC)<BR>d/dt(A_EFFECT)=KIN - KOUT*COEF*A_EFFECT</p>
+</div>
+<div id="myelosuppression_model" class="section level3 hasAnchor" number="10.4.7">
+<h3><span class="header-section-number">10.4.7</span> myelosuppression_model<a href="model-library.html#myelosuppression_model" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>Description</strong>: Friberg et al. (2002) semi‑mechanistic myelosuppression model with transit compartments</p>
+<p><strong>Parameter table</strong>:</p>
+<table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Name
+</th>
+<th style="text-align:right;">
+Value
+</th>
+<th style="text-align:left;">
+Label
+</th>
+<th style="text-align:left;">
+Unit
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;width: 2cm; ">
+CIRC0
+</td>
+<td style="text-align:right;width: 2cm; ">
+5.0e+03
+</td>
+<td style="text-align:left;width: 10cm; ">
+Baseline neutrophil count
+</td>
+<td style="text-align:left;width: 2cm; ">
+cells/uL
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 2cm; ">
+GAMMA
+</td>
+<td style="text-align:right;width: 2cm; ">
+1.5e-01
+</td>
+<td style="text-align:left;width: 10cm; ">
+Exponent of feedback loop
+</td>
+<td style="text-align:left;width: 2cm; ">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 2cm; ">
+MTT
+</td>
+<td style="text-align:right;width: 2cm; ">
+9.0e+01
+</td>
+<td style="text-align:left;width: 10cm; ">
+Mean transit time
+</td>
+<td style="text-align:left;width: 2cm; ">
+1/h
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 2cm; ">
+SLOPE
+</td>
+<td style="text-align:right;width: 2cm; ">
+5.0e-03
+</td>
+<td style="text-align:left;width: 10cm; ">
+Slope of drug effect
+</td>
+<td style="text-align:left;width: 2cm; ">
+1/ng/mL
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong>ODEs</strong>:</p>
+<p>PK_CONC=10<BR>DRUG=SLOPE*PK_CONC<BR>d/dt(A_PROL)=KTR*A_PROL*pow(CIRC0/A_CIRC, GAMMA)*(1-DRUG)-KTR*A_PROL<BR>d/dt(A_TRANS1)=KTR*A_PROL - KTR*A_TRANS1<BR>d/dt(A_TRANS2)=KTR*A_TRANS1 - KTR*A_TRANS2<BR>d/dt(A_TRANS3)=KTR*A_TRANS2 - KTR*A_TRANS3<BR>d/dt(A_CIRC)=KTR*A_TRANS3- KTR*A_CIRC</p>
+</div>
+<div id="transit_cmt_model" class="section level3 hasAnchor" number="10.4.8">
+<h3><span class="header-section-number">10.4.8</span> transit_cmt_model<a href="model-library.html#transit_cmt_model" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>Description</strong>: Generic transit‑compartment PD model with drug‑dependent inhibition of proliferation</p>
+<p><strong>Parameter table</strong>:</p>
+<table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Name
+</th>
+<th style="text-align:right;">
+Value
+</th>
+<th style="text-align:left;">
+Label
+</th>
+<th style="text-align:left;">
+Unit
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;width: 2cm; ">
+BASE
+</td>
+<td style="text-align:right;width: 2cm; ">
+1.0e+03
+</td>
+<td style="text-align:left;width: 10cm; ">
+NA
+</td>
+<td style="text-align:left;width: 2cm; ">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 2cm; ">
+POWER
+</td>
+<td style="text-align:right;width: 2cm; ">
+1.5e-01
+</td>
+<td style="text-align:left;width: 10cm; ">
+NA
+</td>
+<td style="text-align:left;width: 2cm; ">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 2cm; ">
+MTT
+</td>
+<td style="text-align:right;width: 2cm; ">
+1.0e+02
+</td>
+<td style="text-align:left;width: 10cm; ">
+NA
+</td>
+<td style="text-align:left;width: 2cm; ">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 2cm; ">
+SLOPE
+</td>
+<td style="text-align:right;width: 2cm; ">
+5.0e-03
+</td>
+<td style="text-align:left;width: 10cm; ">
+NA
+</td>
+<td style="text-align:left;width: 2cm; ">
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong>ODEs</strong>:</p>
+<p>PK_CONC=10<BR>DRUG=SLOPE*PK_CONC<BR>d/dt(A_PROL)=KTR*A_PROL*pow(BASE/A_CIRC, POWER)*(1-DRUG)-KTR*A_PROL<BR>d/dt(A_TRANS1)=KTR*A_PROL - KTR*A_TRANS1<BR>d/dt(A_TRANS2)=KTR*A_TRANS1 - KTR*A_TRANS2<BR>d/dt(A_TRANS3)=KTR*A_TRANS2 - KTR*A_TRANS3<BR>d/dt(A_CIRC)=KTR*A_TRANS3- KTR*A_CIRC</p>
 
 </div>
 </div>
@@ -15025,20 +15699,6 @@ gitbook.start({
 });
 </script>
 
-<!-- dynamically load mathjax for compatibility with self-contained -->
-<script>
-  (function () {
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    var src = "true";
-    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
-    if (location.protocol !== "file:")
-      if (/^https?:/.test(src))
-        src = src.replace(/^https?:/, '');
-    script.src = src;
-    document.getElementsByTagName("head")[0].appendChild(script);
-  })();
-</script>
 </body>
 
 </html>

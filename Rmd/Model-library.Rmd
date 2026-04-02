@@ -136,6 +136,42 @@ getNONMEMDescription <- function(x) {
   return(desc)
 }
 
+## ---- pd-section-helpers ---------------------------------------------
+
+getPDDescription <- function(x) {
+  desc <- ""
+  
+  if (grepl("^direct_effect", x)) {
+    desc <- "Direct effect PD model (Emax relationship driven directly by PK concentration)"
+    
+  } else if (grepl("^effect_cmt", x)) {
+    desc <- "Effect compartment PD model with a delay between PK concentration and effect"
+    
+  } else if (grepl("^irm_kin_inhibition", x)) {
+    desc <- "Indirect response model with inhibition of production rate (KIN)"
+    
+  } else if (grepl("^irm_kin_stimulation", x)) {
+    desc <- "Indirect response model with stimulation of production rate (KIN)"
+    
+  } else if (grepl("^irm_kout_inhibition", x)) {
+    desc <- "Indirect response model with inhibition of loss rate (KOUT)"
+    
+  } else if (grepl("^irm_kout_stimulation", x)) {
+    desc <- "Indirect response model with stimulation of loss rate (KOUT)"
+    
+  } else if (grepl("^myelosuppression", x)) {
+    desc <- "Friberg et al. (2002) semi‑mechanistic myelosuppression model with transit compartments"
+    
+  } else if (grepl("^transit_cmt", x)) {
+    desc <- "Generic transit‑compartment PD model with drug‑dependent inhibition of proliferation"
+    
+  } else {
+    desc <- "Pharmacodynamic model"
+  }
+  
+  return(desc)
+}
+
 getThetas <- function(model, no_label=FALSE, no_unit=FALSE) {
   thetas <- model@parameters@list %>%
     purrr::keep(~is(.x, "theta")) %>%
@@ -218,6 +254,20 @@ for (name in names(nonmems)) {
   model <- nonmems[[name]]
   description <- getNONMEMDescription(name)
   thetas <- getThetas(model, no_label=TRUE, no_unit=TRUE)
+  ode <- model %>% find(OdeRecord())
+  printModelSummary(description, thetas, ode)
+}
+```
+
+## PD section
+
+```{r, results='asis'}
+pds <- campsismod::model_suite$pd
+
+for (name in names(pds)) {
+  model <- pds[[name]]
+  description <- getPDDescription(name)
+  thetas <- getThetas(model)
   ode <- model %>% find(OdeRecord())
   printModelSummary(description, thetas, ode)
 }
