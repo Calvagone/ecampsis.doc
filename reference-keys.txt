@@ -170,3 +170,7 @@ feedback-and-help
 disclaimer
 terms-of-service
 privacy-policy
+model-code-section
+writing-a-model-from-scratch
+importing-an-existing-model
+campsis-model

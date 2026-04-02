@@ -23,7 +23,7 @@
 <meta name="author" content="Calvagone" />
 
 
-<meta name="date" content="2026-03-30" />
+<meta name="date" content="2026-04-02" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -87,11 +87,12 @@
 </ul></li>
 <li class="chapter" data-level="2" data-path="model-tab.html"><a href="model-tab.html"><i class="fa fa-check"></i><b>2</b> Model tab</a>
 <ul>
-<li class="chapter" data-level="2.1" data-path="model-tab.html"><a href="model-tab.html#model-from-library"><i class="fa fa-check"></i><b>2.1</b> Model from library</a></li>
-<li class="chapter" data-level="2.2" data-path="model-tab.html"><a href="model-tab.html#campsis-model-import"><i class="fa fa-check"></i><b>2.2</b> Campsis model import</a></li>
-<li class="chapter" data-level="2.3" data-path="model-tab.html"><a href="model-tab.html#nonmem-model-import"><i class="fa fa-check"></i><b>2.3</b> NONMEM model import</a></li>
-<li class="chapter" data-level="2.4" data-path="model-tab.html"><a href="model-tab.html#model-code"><i class="fa fa-check"></i><b>2.4</b> Model code</a></li>
-<li class="chapter" data-level="2.5" data-path="model-tab.html"><a href="model-tab.html#parameters"><i class="fa fa-check"></i><b>2.5</b> Parameters</a></li>
+<li class="chapter" data-level="2.1" data-path="model-tab.html"><a href="model-tab.html#model-code-section"><i class="fa fa-check"></i><b>2.1</b> Model code section</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="model-tab.html"><a href="model-tab.html#writing-a-model-from-scratch"><i class="fa fa-check"></i><b>2.1.1</b> Writing a model from scratch</a></li>
+<li class="chapter" data-level="2.1.2" data-path="model-tab.html"><a href="model-tab.html#importing-an-existing-model"><i class="fa fa-check"></i><b>2.1.2</b> Importing an existing model</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="model-tab.html"><a href="model-tab.html#parameters"><i class="fa fa-check"></i><b>2.2</b> Parameters</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="trial-design.html"><a href="trial-design.html"><i class="fa fa-check"></i><b>3</b> Trial design</a>
 <ul>
@@ -154,129 +155,9 @@
 </ul></li>
 <li class="chapter" data-level="10" data-path="model-library.html"><a href="model-library.html"><i class="fa fa-check"></i><b>10</b> Model library</a>
 <ul>
-<li class="chapter" data-level="10.1" data-path="model-library.html"><a href="model-library.html#pk-section"><i class="fa fa-check"></i><b>10.1</b> PK section</a>
-<ul>
-<li class="chapter" data-level="10.1.1" data-path="model-library.html"><a href="model-library.html#cpt_fo"><i class="fa fa-check"></i><b>10.1.1</b> 1cpt_fo</a></li>
-<li class="chapter" data-level="10.1.2" data-path="model-library.html"><a href="model-library.html#cpt_fo_lag"><i class="fa fa-check"></i><b>10.1.2</b> 1cpt_fo_lag</a></li>
-<li class="chapter" data-level="10.1.3" data-path="model-library.html"><a href="model-library.html#cpt_fo_lag_mixed"><i class="fa fa-check"></i><b>10.1.3</b> 1cpt_fo_lag_mixed</a></li>
-<li class="chapter" data-level="10.1.4" data-path="model-library.html"><a href="model-library.html#cpt_fo_lag_mm"><i class="fa fa-check"></i><b>10.1.4</b> 1cpt_fo_lag_mm</a></li>
-<li class="chapter" data-level="10.1.5" data-path="model-library.html"><a href="model-library.html#cpt_fo_mixed"><i class="fa fa-check"></i><b>10.1.5</b> 1cpt_fo_mixed</a></li>
-<li class="chapter" data-level="10.1.6" data-path="model-library.html"><a href="model-library.html#cpt_fo_mm"><i class="fa fa-check"></i><b>10.1.6</b> 1cpt_fo_mm</a></li>
-<li class="chapter" data-level="10.1.7" data-path="model-library.html"><a href="model-library.html#cpt_fo_transit"><i class="fa fa-check"></i><b>10.1.7</b> 1cpt_fo_transit</a></li>
-<li class="chapter" data-level="10.1.8" data-path="model-library.html"><a href="model-library.html#cpt_fo_transit_mixed"><i class="fa fa-check"></i><b>10.1.8</b> 1cpt_fo_transit_mixed</a></li>
-<li class="chapter" data-level="10.1.9" data-path="model-library.html"><a href="model-library.html#cpt_fo_transit_mm"><i class="fa fa-check"></i><b>10.1.9</b> 1cpt_fo_transit_mm</a></li>
-<li class="chapter" data-level="10.1.10" data-path="model-library.html"><a href="model-library.html#cpt_mmabs"><i class="fa fa-check"></i><b>10.1.10</b> 1cpt_mmabs</a></li>
-<li class="chapter" data-level="10.1.11" data-path="model-library.html"><a href="model-library.html#cpt_mmabs_mixed"><i class="fa fa-check"></i><b>10.1.11</b> 1cpt_mmabs_mixed</a></li>
-<li class="chapter" data-level="10.1.12" data-path="model-library.html"><a href="model-library.html#cpt_mmabs_mm"><i class="fa fa-check"></i><b>10.1.12</b> 1cpt_mmabs_mm</a></li>
-<li class="chapter" data-level="10.1.13" data-path="model-library.html"><a href="model-library.html#cpt_weibull"><i class="fa fa-check"></i><b>10.1.13</b> 1cpt_weibull</a></li>
-<li class="chapter" data-level="10.1.14" data-path="model-library.html"><a href="model-library.html#cpt_weibull_double"><i class="fa fa-check"></i><b>10.1.14</b> 1cpt_weibull_double</a></li>
-<li class="chapter" data-level="10.1.15" data-path="model-library.html"><a href="model-library.html#cpt_weibull_double_mixed"><i class="fa fa-check"></i><b>10.1.15</b> 1cpt_weibull_double_mixed</a></li>
-<li class="chapter" data-level="10.1.16" data-path="model-library.html"><a href="model-library.html#cpt_weibull_double_mm"><i class="fa fa-check"></i><b>10.1.16</b> 1cpt_weibull_double_mm</a></li>
-<li class="chapter" data-level="10.1.17" data-path="model-library.html"><a href="model-library.html#cpt_weibull_mixed"><i class="fa fa-check"></i><b>10.1.17</b> 1cpt_weibull_mixed</a></li>
-<li class="chapter" data-level="10.1.18" data-path="model-library.html"><a href="model-library.html#cpt_weibull_mm"><i class="fa fa-check"></i><b>10.1.18</b> 1cpt_weibull_mm</a></li>
-<li class="chapter" data-level="10.1.19" data-path="model-library.html"><a href="model-library.html#cpt_weibull_original"><i class="fa fa-check"></i><b>10.1.19</b> 1cpt_weibull_original</a></li>
-<li class="chapter" data-level="10.1.20" data-path="model-library.html"><a href="model-library.html#cpt_weibull_original_mixed"><i class="fa fa-check"></i><b>10.1.20</b> 1cpt_weibull_original_mixed</a></li>
-<li class="chapter" data-level="10.1.21" data-path="model-library.html"><a href="model-library.html#cpt_weibull_original_mm"><i class="fa fa-check"></i><b>10.1.21</b> 1cpt_weibull_original_mm</a></li>
-<li class="chapter" data-level="10.1.22" data-path="model-library.html"><a href="model-library.html#cpt_zo"><i class="fa fa-check"></i><b>10.1.22</b> 1cpt_zo</a></li>
-<li class="chapter" data-level="10.1.23" data-path="model-library.html"><a href="model-library.html#cpt_zo_mixed"><i class="fa fa-check"></i><b>10.1.23</b> 1cpt_zo_mixed</a></li>
-<li class="chapter" data-level="10.1.24" data-path="model-library.html"><a href="model-library.html#cpt_zo_mm"><i class="fa fa-check"></i><b>10.1.24</b> 1cpt_zo_mm</a></li>
-<li class="chapter" data-level="10.1.25" data-path="model-library.html"><a href="model-library.html#cpt_fo-1"><i class="fa fa-check"></i><b>10.1.25</b> 2cpt_fo</a></li>
-<li class="chapter" data-level="10.1.26" data-path="model-library.html"><a href="model-library.html#cpt_fo_lag-1"><i class="fa fa-check"></i><b>10.1.26</b> 2cpt_fo_lag</a></li>
-<li class="chapter" data-level="10.1.27" data-path="model-library.html"><a href="model-library.html#cpt_fo_lag_mixed-1"><i class="fa fa-check"></i><b>10.1.27</b> 2cpt_fo_lag_mixed</a></li>
-<li class="chapter" data-level="10.1.28" data-path="model-library.html"><a href="model-library.html#cpt_fo_lag_mm-1"><i class="fa fa-check"></i><b>10.1.28</b> 2cpt_fo_lag_mm</a></li>
-<li class="chapter" data-level="10.1.29" data-path="model-library.html"><a href="model-library.html#cpt_fo_mixed-1"><i class="fa fa-check"></i><b>10.1.29</b> 2cpt_fo_mixed</a></li>
-<li class="chapter" data-level="10.1.30" data-path="model-library.html"><a href="model-library.html#cpt_fo_mm-1"><i class="fa fa-check"></i><b>10.1.30</b> 2cpt_fo_mm</a></li>
-<li class="chapter" data-level="10.1.31" data-path="model-library.html"><a href="model-library.html#cpt_fo_transit-1"><i class="fa fa-check"></i><b>10.1.31</b> 2cpt_fo_transit</a></li>
-<li class="chapter" data-level="10.1.32" data-path="model-library.html"><a href="model-library.html#cpt_fo_transit_mixed-1"><i class="fa fa-check"></i><b>10.1.32</b> 2cpt_fo_transit_mixed</a></li>
-<li class="chapter" data-level="10.1.33" data-path="model-library.html"><a href="model-library.html#cpt_fo_transit_mm-1"><i class="fa fa-check"></i><b>10.1.33</b> 2cpt_fo_transit_mm</a></li>
-<li class="chapter" data-level="10.1.34" data-path="model-library.html"><a href="model-library.html#cpt_mmabs-1"><i class="fa fa-check"></i><b>10.1.34</b> 2cpt_mmabs</a></li>
-<li class="chapter" data-level="10.1.35" data-path="model-library.html"><a href="model-library.html#cpt_mmabs_mixed-1"><i class="fa fa-check"></i><b>10.1.35</b> 2cpt_mmabs_mixed</a></li>
-<li class="chapter" data-level="10.1.36" data-path="model-library.html"><a href="model-library.html#cpt_mmabs_mm-1"><i class="fa fa-check"></i><b>10.1.36</b> 2cpt_mmabs_mm</a></li>
-<li class="chapter" data-level="10.1.37" data-path="model-library.html"><a href="model-library.html#cpt_weibull-1"><i class="fa fa-check"></i><b>10.1.37</b> 2cpt_weibull</a></li>
-<li class="chapter" data-level="10.1.38" data-path="model-library.html"><a href="model-library.html#cpt_weibull_double-1"><i class="fa fa-check"></i><b>10.1.38</b> 2cpt_weibull_double</a></li>
-<li class="chapter" data-level="10.1.39" data-path="model-library.html"><a href="model-library.html#cpt_weibull_double_mixed-1"><i class="fa fa-check"></i><b>10.1.39</b> 2cpt_weibull_double_mixed</a></li>
-<li class="chapter" data-level="10.1.40" data-path="model-library.html"><a href="model-library.html#cpt_weibull_double_mm-1"><i class="fa fa-check"></i><b>10.1.40</b> 2cpt_weibull_double_mm</a></li>
-<li class="chapter" data-level="10.1.41" data-path="model-library.html"><a href="model-library.html#cpt_weibull_mixed-1"><i class="fa fa-check"></i><b>10.1.41</b> 2cpt_weibull_mixed</a></li>
-<li class="chapter" data-level="10.1.42" data-path="model-library.html"><a href="model-library.html#cpt_weibull_mm-1"><i class="fa fa-check"></i><b>10.1.42</b> 2cpt_weibull_mm</a></li>
-<li class="chapter" data-level="10.1.43" data-path="model-library.html"><a href="model-library.html#cpt_weibull_original-1"><i class="fa fa-check"></i><b>10.1.43</b> 2cpt_weibull_original</a></li>
-<li class="chapter" data-level="10.1.44" data-path="model-library.html"><a href="model-library.html#cpt_weibull_original_mixed-1"><i class="fa fa-check"></i><b>10.1.44</b> 2cpt_weibull_original_mixed</a></li>
-<li class="chapter" data-level="10.1.45" data-path="model-library.html"><a href="model-library.html#cpt_weibull_original_mm-1"><i class="fa fa-check"></i><b>10.1.45</b> 2cpt_weibull_original_mm</a></li>
-<li class="chapter" data-level="10.1.46" data-path="model-library.html"><a href="model-library.html#cpt_zo-1"><i class="fa fa-check"></i><b>10.1.46</b> 2cpt_zo</a></li>
-<li class="chapter" data-level="10.1.47" data-path="model-library.html"><a href="model-library.html#cpt_zo_mixed-1"><i class="fa fa-check"></i><b>10.1.47</b> 2cpt_zo_mixed</a></li>
-<li class="chapter" data-level="10.1.48" data-path="model-library.html"><a href="model-library.html#cpt_zo_mm-1"><i class="fa fa-check"></i><b>10.1.48</b> 2cpt_zo_mm</a></li>
-<li class="chapter" data-level="10.1.49" data-path="model-library.html"><a href="model-library.html#cpt_fo-2"><i class="fa fa-check"></i><b>10.1.49</b> 3cpt_fo</a></li>
-<li class="chapter" data-level="10.1.50" data-path="model-library.html"><a href="model-library.html#cpt_fo_lag-2"><i class="fa fa-check"></i><b>10.1.50</b> 3cpt_fo_lag</a></li>
-<li class="chapter" data-level="10.1.51" data-path="model-library.html"><a href="model-library.html#cpt_fo_lag_mixed-2"><i class="fa fa-check"></i><b>10.1.51</b> 3cpt_fo_lag_mixed</a></li>
-<li class="chapter" data-level="10.1.52" data-path="model-library.html"><a href="model-library.html#cpt_fo_lag_mm-2"><i class="fa fa-check"></i><b>10.1.52</b> 3cpt_fo_lag_mm</a></li>
-<li class="chapter" data-level="10.1.53" data-path="model-library.html"><a href="model-library.html#cpt_fo_mixed-2"><i class="fa fa-check"></i><b>10.1.53</b> 3cpt_fo_mixed</a></li>
-<li class="chapter" data-level="10.1.54" data-path="model-library.html"><a href="model-library.html#cpt_fo_mm-2"><i class="fa fa-check"></i><b>10.1.54</b> 3cpt_fo_mm</a></li>
-<li class="chapter" data-level="10.1.55" data-path="model-library.html"><a href="model-library.html#cpt_fo_transit-2"><i class="fa fa-check"></i><b>10.1.55</b> 3cpt_fo_transit</a></li>
-<li class="chapter" data-level="10.1.56" data-path="model-library.html"><a href="model-library.html#cpt_fo_transit_mixed-2"><i class="fa fa-check"></i><b>10.1.56</b> 3cpt_fo_transit_mixed</a></li>
-<li class="chapter" data-level="10.1.57" data-path="model-library.html"><a href="model-library.html#cpt_fo_transit_mm-2"><i class="fa fa-check"></i><b>10.1.57</b> 3cpt_fo_transit_mm</a></li>
-<li class="chapter" data-level="10.1.58" data-path="model-library.html"><a href="model-library.html#cpt_mmabs-2"><i class="fa fa-check"></i><b>10.1.58</b> 3cpt_mmabs</a></li>
-<li class="chapter" data-level="10.1.59" data-path="model-library.html"><a href="model-library.html#cpt_mmabs_mixed-2"><i class="fa fa-check"></i><b>10.1.59</b> 3cpt_mmabs_mixed</a></li>
-<li class="chapter" data-level="10.1.60" data-path="model-library.html"><a href="model-library.html#cpt_mmabs_mm-2"><i class="fa fa-check"></i><b>10.1.60</b> 3cpt_mmabs_mm</a></li>
-<li class="chapter" data-level="10.1.61" data-path="model-library.html"><a href="model-library.html#cpt_weibull-2"><i class="fa fa-check"></i><b>10.1.61</b> 3cpt_weibull</a></li>
-<li class="chapter" data-level="10.1.62" data-path="model-library.html"><a href="model-library.html#cpt_weibull_double-2"><i class="fa fa-check"></i><b>10.1.62</b> 3cpt_weibull_double</a></li>
-<li class="chapter" data-level="10.1.63" data-path="model-library.html"><a href="model-library.html#cpt_weibull_double_mixed-2"><i class="fa fa-check"></i><b>10.1.63</b> 3cpt_weibull_double_mixed</a></li>
-<li class="chapter" data-level="10.1.64" data-path="model-library.html"><a href="model-library.html#cpt_weibull_double_mm-2"><i class="fa fa-check"></i><b>10.1.64</b> 3cpt_weibull_double_mm</a></li>
-<li class="chapter" data-level="10.1.65" data-path="model-library.html"><a href="model-library.html#cpt_weibull_mixed-2"><i class="fa fa-check"></i><b>10.1.65</b> 3cpt_weibull_mixed</a></li>
-<li class="chapter" data-level="10.1.66" data-path="model-library.html"><a href="model-library.html#cpt_weibull_mm-2"><i class="fa fa-check"></i><b>10.1.66</b> 3cpt_weibull_mm</a></li>
-<li class="chapter" data-level="10.1.67" data-path="model-library.html"><a href="model-library.html#cpt_weibull_original-2"><i class="fa fa-check"></i><b>10.1.67</b> 3cpt_weibull_original</a></li>
-<li class="chapter" data-level="10.1.68" data-path="model-library.html"><a href="model-library.html#cpt_weibull_original_mixed-2"><i class="fa fa-check"></i><b>10.1.68</b> 3cpt_weibull_original_mixed</a></li>
-<li class="chapter" data-level="10.1.69" data-path="model-library.html"><a href="model-library.html#cpt_weibull_original_mm-2"><i class="fa fa-check"></i><b>10.1.69</b> 3cpt_weibull_original_mm</a></li>
-<li class="chapter" data-level="10.1.70" data-path="model-library.html"><a href="model-library.html#cpt_zo-2"><i class="fa fa-check"></i><b>10.1.70</b> 3cpt_zo</a></li>
-<li class="chapter" data-level="10.1.71" data-path="model-library.html"><a href="model-library.html#cpt_zo_mixed-2"><i class="fa fa-check"></i><b>10.1.71</b> 3cpt_zo_mixed</a></li>
-<li class="chapter" data-level="10.1.72" data-path="model-library.html"><a href="model-library.html#cpt_zo_mm-2"><i class="fa fa-check"></i><b>10.1.72</b> 3cpt_zo_mm</a></li>
-</ul></li>
-<li class="chapter" data-level="10.2" data-path="model-library.html"><a href="model-library.html#tmdd-section"><i class="fa fa-check"></i><b>10.2</b> TMDD section</a>
-<ul>
-<li class="chapter" data-level="10.2.1" data-path="model-library.html"><a href="model-library.html#cpt_fo_tmdd_full"><i class="fa fa-check"></i><b>10.2.1</b> 1cpt_fo_tmdd_full</a></li>
-<li class="chapter" data-level="10.2.2" data-path="model-library.html"><a href="model-library.html#cpt_fo_tmdd_full_cst_rtot"><i class="fa fa-check"></i><b>10.2.2</b> 1cpt_fo_tmdd_full_cst_rtot</a></li>
-<li class="chapter" data-level="10.2.3" data-path="model-library.html"><a href="model-library.html#cpt_fo_tmdd_full_cst_rtot_ib"><i class="fa fa-check"></i><b>10.2.3</b> 1cpt_fo_tmdd_full_cst_rtot_ib</a></li>
-<li class="chapter" data-level="10.2.4" data-path="model-library.html"><a href="model-library.html#cpt_fo_tmdd_full_ib"><i class="fa fa-check"></i><b>10.2.4</b> 1cpt_fo_tmdd_full_ib</a></li>
-<li class="chapter" data-level="10.2.5" data-path="model-library.html"><a href="model-library.html#cpt_fo_tmdd_qe"><i class="fa fa-check"></i><b>10.2.5</b> 1cpt_fo_tmdd_qe</a></li>
-<li class="chapter" data-level="10.2.6" data-path="model-library.html"><a href="model-library.html#cpt_fo_tmdd_qss"><i class="fa fa-check"></i><b>10.2.6</b> 1cpt_fo_tmdd_qss</a></li>
-<li class="chapter" data-level="10.2.7" data-path="model-library.html"><a href="model-library.html#cpt_fo_tmdd_wagner"><i class="fa fa-check"></i><b>10.2.7</b> 1cpt_fo_tmdd_wagner</a></li>
-<li class="chapter" data-level="10.2.8" data-path="model-library.html"><a href="model-library.html#cpt_zo_tmdd_full"><i class="fa fa-check"></i><b>10.2.8</b> 1cpt_zo_tmdd_full</a></li>
-<li class="chapter" data-level="10.2.9" data-path="model-library.html"><a href="model-library.html#cpt_zo_tmdd_full_cst_rtot"><i class="fa fa-check"></i><b>10.2.9</b> 1cpt_zo_tmdd_full_cst_rtot</a></li>
-<li class="chapter" data-level="10.2.10" data-path="model-library.html"><a href="model-library.html#cpt_zo_tmdd_full_cst_rtot_ib"><i class="fa fa-check"></i><b>10.2.10</b> 1cpt_zo_tmdd_full_cst_rtot_ib</a></li>
-<li class="chapter" data-level="10.2.11" data-path="model-library.html"><a href="model-library.html#cpt_zo_tmdd_full_ib"><i class="fa fa-check"></i><b>10.2.11</b> 1cpt_zo_tmdd_full_ib</a></li>
-<li class="chapter" data-level="10.2.12" data-path="model-library.html"><a href="model-library.html#cpt_zo_tmdd_qe"><i class="fa fa-check"></i><b>10.2.12</b> 1cpt_zo_tmdd_qe</a></li>
-<li class="chapter" data-level="10.2.13" data-path="model-library.html"><a href="model-library.html#cpt_zo_tmdd_qss"><i class="fa fa-check"></i><b>10.2.13</b> 1cpt_zo_tmdd_qss</a></li>
-<li class="chapter" data-level="10.2.14" data-path="model-library.html"><a href="model-library.html#cpt_zo_tmdd_wagner"><i class="fa fa-check"></i><b>10.2.14</b> 1cpt_zo_tmdd_wagner</a></li>
-<li class="chapter" data-level="10.2.15" data-path="model-library.html"><a href="model-library.html#cpt_fo_tmdd_full-1"><i class="fa fa-check"></i><b>10.2.15</b> 2cpt_fo_tmdd_full</a></li>
-<li class="chapter" data-level="10.2.16" data-path="model-library.html"><a href="model-library.html#cpt_fo_tmdd_full_cst_rtot-1"><i class="fa fa-check"></i><b>10.2.16</b> 2cpt_fo_tmdd_full_cst_rtot</a></li>
-<li class="chapter" data-level="10.2.17" data-path="model-library.html"><a href="model-library.html#cpt_fo_tmdd_full_cst_rtot_ib-1"><i class="fa fa-check"></i><b>10.2.17</b> 2cpt_fo_tmdd_full_cst_rtot_ib</a></li>
-<li class="chapter" data-level="10.2.18" data-path="model-library.html"><a href="model-library.html#cpt_fo_tmdd_full_ib-1"><i class="fa fa-check"></i><b>10.2.18</b> 2cpt_fo_tmdd_full_ib</a></li>
-<li class="chapter" data-level="10.2.19" data-path="model-library.html"><a href="model-library.html#cpt_fo_tmdd_qe-1"><i class="fa fa-check"></i><b>10.2.19</b> 2cpt_fo_tmdd_qe</a></li>
-<li class="chapter" data-level="10.2.20" data-path="model-library.html"><a href="model-library.html#cpt_fo_tmdd_qss-1"><i class="fa fa-check"></i><b>10.2.20</b> 2cpt_fo_tmdd_qss</a></li>
-<li class="chapter" data-level="10.2.21" data-path="model-library.html"><a href="model-library.html#cpt_fo_tmdd_wagner-1"><i class="fa fa-check"></i><b>10.2.21</b> 2cpt_fo_tmdd_wagner</a></li>
-<li class="chapter" data-level="10.2.22" data-path="model-library.html"><a href="model-library.html#cpt_zo_tmdd_full-1"><i class="fa fa-check"></i><b>10.2.22</b> 2cpt_zo_tmdd_full</a></li>
-<li class="chapter" data-level="10.2.23" data-path="model-library.html"><a href="model-library.html#cpt_zo_tmdd_full_cst_rtot-1"><i class="fa fa-check"></i><b>10.2.23</b> 2cpt_zo_tmdd_full_cst_rtot</a></li>
-<li class="chapter" data-level="10.2.24" data-path="model-library.html"><a href="model-library.html#cpt_zo_tmdd_full_cst_rtot_ib-1"><i class="fa fa-check"></i><b>10.2.24</b> 2cpt_zo_tmdd_full_cst_rtot_ib</a></li>
-<li class="chapter" data-level="10.2.25" data-path="model-library.html"><a href="model-library.html#cpt_zo_tmdd_full_ib-1"><i class="fa fa-check"></i><b>10.2.25</b> 2cpt_zo_tmdd_full_ib</a></li>
-<li class="chapter" data-level="10.2.26" data-path="model-library.html"><a href="model-library.html#cpt_zo_tmdd_qe-1"><i class="fa fa-check"></i><b>10.2.26</b> 2cpt_zo_tmdd_qe</a></li>
-<li class="chapter" data-level="10.2.27" data-path="model-library.html"><a href="model-library.html#cpt_zo_tmdd_qss-1"><i class="fa fa-check"></i><b>10.2.27</b> 2cpt_zo_tmdd_qss</a></li>
-<li class="chapter" data-level="10.2.28" data-path="model-library.html"><a href="model-library.html#cpt_zo_tmdd_wagner-1"><i class="fa fa-check"></i><b>10.2.28</b> 2cpt_zo_tmdd_wagner</a></li>
-</ul></li>
-<li class="chapter" data-level="10.3" data-path="model-library.html"><a href="model-library.html#nonmem-section"><i class="fa fa-check"></i><b>10.3</b> NONMEM section</a>
-<ul>
-<li class="chapter" data-level="10.3.1" data-path="model-library.html"><a href="model-library.html#advan1_trans1"><i class="fa fa-check"></i><b>10.3.1</b> advan1_trans1</a></li>
-<li class="chapter" data-level="10.3.2" data-path="model-library.html"><a href="model-library.html#advan1_trans2"><i class="fa fa-check"></i><b>10.3.2</b> advan1_trans2</a></li>
-<li class="chapter" data-level="10.3.3" data-path="model-library.html"><a href="model-library.html#advan11_trans4"><i class="fa fa-check"></i><b>10.3.3</b> advan11_trans4</a></li>
-<li class="chapter" data-level="10.3.4" data-path="model-library.html"><a href="model-library.html#advan12_trans4"><i class="fa fa-check"></i><b>10.3.4</b> advan12_trans4</a></li>
-<li class="chapter" data-level="10.3.5" data-path="model-library.html"><a href="model-library.html#advan2_trans1"><i class="fa fa-check"></i><b>10.3.5</b> advan2_trans1</a></li>
-<li class="chapter" data-level="10.3.6" data-path="model-library.html"><a href="model-library.html#advan2_trans2"><i class="fa fa-check"></i><b>10.3.6</b> advan2_trans2</a></li>
-<li class="chapter" data-level="10.3.7" data-path="model-library.html"><a href="model-library.html#advan3_trans1"><i class="fa fa-check"></i><b>10.3.7</b> advan3_trans1</a></li>
-<li class="chapter" data-level="10.3.8" data-path="model-library.html"><a href="model-library.html#advan3_trans3"><i class="fa fa-check"></i><b>10.3.8</b> advan3_trans3</a></li>
-<li class="chapter" data-level="10.3.9" data-path="model-library.html"><a href="model-library.html#advan3_trans4"><i class="fa fa-check"></i><b>10.3.9</b> advan3_trans4</a></li>
-<li class="chapter" data-level="10.3.10" data-path="model-library.html"><a href="model-library.html#advan3_trans5"><i class="fa fa-check"></i><b>10.3.10</b> advan3_trans5</a></li>
-<li class="chapter" data-level="10.3.11" data-path="model-library.html"><a href="model-library.html#advan4_trans1"><i class="fa fa-check"></i><b>10.3.11</b> advan4_trans1</a></li>
-<li class="chapter" data-level="10.3.12" data-path="model-library.html"><a href="model-library.html#advan4_trans3"><i class="fa fa-check"></i><b>10.3.12</b> advan4_trans3</a></li>
-<li class="chapter" data-level="10.3.13" data-path="model-library.html"><a href="model-library.html#advan4_trans4"><i class="fa fa-check"></i><b>10.3.13</b> advan4_trans4</a></li>
-<li class="chapter" data-level="10.3.14" data-path="model-library.html"><a href="model-library.html#advan4_trans5"><i class="fa fa-check"></i><b>10.3.14</b> advan4_trans5</a></li>
-</ul></li>
+<li class="chapter" data-level="10.1" data-path="model-library.html"><a href="model-library.html#pk-section"><i class="fa fa-check"></i><b>10.1</b> PK section</a></li>
+<li class="chapter" data-level="10.2" data-path="model-library.html"><a href="model-library.html#tmdd-section"><i class="fa fa-check"></i><b>10.2</b> TMDD section</a></li>
+<li class="chapter" data-level="10.3" data-path="model-library.html"><a href="model-library.html#nonmem-section"><i class="fa fa-check"></i><b>10.3</b> NONMEM section</a></li>
 </ul></li>
 <li class="chapter" data-level="11" data-path="feedback-and-help.html"><a href="feedback-and-help.html"><i class="fa fa-check"></i><b>11</b> Feedback and help</a></li>
 <li class="chapter" data-level="12" data-path="disclaimer.html"><a href="disclaimer.html"><i class="fa fa-check"></i><b>12</b> Disclaimer</a></li>
@@ -304,35 +185,68 @@
             <section class="normal" id="section-">
 <div id="model-tab" class="section level1 hasAnchor" number="2">
 <h1><span class="header-section-number">Chapter 2</span> Model tab<a href="model-tab.html#model-tab" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p><img src="pictures/model-tab-new.png" /></p>
-<div id="model-from-library" class="section level2 hasAnchor" number="2.1">
-<h2><span class="header-section-number">2.1</span> Model from library<a href="model-tab.html#model-from-library" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>When entering the app, a simple PK model is already loaded by default.</p>
-<p>A different PK model can be selected from a large library (“Select PK model”). The exhaustive list of PK models is available in the <a href="model-library.html#pk-section">PK</a> section of the model library chapter.</p>
-<p>In “Select category”, <a href="model-library.html#nonmem-section">NONMEM</a> models or models for target-mediated drug disposition (<a href="model-library.html#tmdd-section">TMDD</a>) can be also loaded.</p>
-<p>A PD model can be connected (“Connect PD model”) to the PK model. This is done internally via campsismod (see <a href="https://calvagone.github.io/campsismod.doc/articles/v06_append_pd_model.html">here</a>). If you do this you may have to check that the right PK output goes into the PD part of the model.</p>
+<p>When you open the e‑campsis desktop application, the <strong>Model</strong> tab is displayed automatically. This page is divided into two main sections:</p>
+<ul>
+<li>On the left, the <em>Model code</em> section shows the full model script.</li>
+<li>On the right, the <em>Model parameters</em> section presents the population parameters (Theta), variability parameters (Omega), and residual error (Sigma), each presented in dedicated parameter sub-sections.</li>
+</ul>
+<p>By default, a simple PK model from the model library is already loaded to help you get started.</p>
+<p><img src="pictures/model_tab_overview.png" /></p>
+<div id="model-code-section" class="section level2 hasAnchor" number="2.1">
+<h2><span class="header-section-number">2.1</span> Model code section<a href="model-tab.html#model-code-section" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>In the <em>Model code</em> section, you have two options:</p>
+<div id="writing-a-model-from-scratch" class="section level3 hasAnchor" number="2.1.1">
+<h3><span class="header-section-number">2.1.1</span> Writing a model from scratch<a href="model-tab.html#writing-a-model-from-scratch" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The <strong>code editor</strong> window allows direct creation of a model using the Campsis model syntax and includes syntax highlighting to make the structure and equations easy to read and modify. The editor displays the full PK model specification, organized into blocks such as <em>[MAIN]</em>, <em>[ODE]</em>, <em>[F]</em>, and <em>[ERROR]</em>,which define parameter initialization, differential equations, input mappings, and the residual error model.
+Please note that the code is case sensitive (e.g. <em>log</em>, <em>exp</em>, <em>sqrt</em> should be used). The power function is <em>pow(x,d)</em>, <em>x</em> to the power of <em>d</em>.Comments can be added using the # symbol.</p>
 </div>
-<div id="campsis-model-import" class="section level2 hasAnchor" number="2.2">
-<h2><span class="header-section-number">2.2</span> Campsis model import<a href="model-tab.html#campsis-model-import" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>An existing Campsis model can be uploaded from this box (including files <em>model.campsis</em>, <em>omega.csv</em>, <em>theta.csv</em> and <em>sigma.csv</em>).</p>
+<div id="importing-an-existing-model" class="section level3 hasAnchor" number="2.1.2">
+<h3><span class="header-section-number">2.1.2</span> Importing an existing model<a href="model-tab.html#importing-an-existing-model" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>An existing model can be loaded through the <strong>Import model</strong> button: <img src="pictures/model_tab_import_button.png" style="display: block; margin: 0 auto" /></p>
+<p>Clicking this button opens the <strong>Model import wizard</strong> window.
+The first element in this window is a dropdown menu labeled <strong>Import model from</strong>, which allows selecting the source of the model. Available options include <em>Model library</em>, <em>Campsis</em>, <em>NONMEM</em>, <em>Monolix</em>, and <em>rxode2</em>.
+<img src="pictures/model_tab_import_wizard.png" /></p>
+<div id="model-from-library" class="section level4 hasAnchor" number="2.1.2.1">
+<h4><span class="header-section-number">2.1.2.1</span> Model from library<a href="model-tab.html#model-from-library" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>When <strong>Model library</strong> is selected in the <strong>Import model from</strong> dropdown menu, predefined models from the built‑in Campsis model library become available for import.This option displays a list of available PK (<strong>Select PK model</strong>) and PD models (<strong>Select PD model</strong>) that can be loaded directly into the interface. Both lists are presented in dropdown menus, allowing selection from the available models in each category.
+<img src="pictures/model_tab_import_model_from_library.png" /></p>
+<p>The exhaustive list of PK models is grouped into several categories in the model library and can be found:</p>
+<ul>
+<li>in the <a href="model-library.html#pk-section">PK</a> section for simple PK model</li>
+<li>in the <a href="model-library.html#tmdd-section">TMDD</a> section for target-mediated drug disposition model</li>
+<li>in the <a href="model-library.html#nonmem-section">NONMEM</a> section for NONMEM‑derived models</li>
+</ul>
+<p>A PD model can be connected to the selected PK model using <strong>Select PD model</strong>. This is done internally via campsismod (see <a href="https://calvagone.github.io/campsismod.doc/articles/v06_append_pd_model.html">here</a>). When connecting a PD model, it is recommended to verify that the correct PK output variable is used as input to the PD component of the combined model.
+Please note that it is not possible to import or define a PD model without an associated PK model.</p>
 </div>
-<div id="nonmem-model-import" class="section level2 hasAnchor" number="2.3">
-<h2><span class="header-section-number">2.3</span> NONMEM model import<a href="model-tab.html#nonmem-model-import" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p><img src="pictures/lock_pro.png" width="50" />  This feature is reserved for pro users only.</p>
-<p>In the pro version, an existing NONMEM control file (extension <em>.mod</em> and <em>.ctl</em> ) can be uploaded from this box. The parameter estimates will be extracted from the NONMEM control file unless you also select the corresponding <em>.ext</em> file. In this case the final parameter estimates will be used.</p>
-<p>When you start the import for the first time it may take a short while (2-3 minutes) for the functionality to be available. A notification will popup when done and you may need to select the NONMEM files you want to import again.</p>
-<p>We have tested the translation of NONMEM models to Campsis for a number of models, but it is possible that some models are not correctly translated or fail. If you encounter such a model, please let us know and we will try to fix it.</p>
-<p>In many cases you model will not run immediately after import. This is because you likely have variables (e.g. covariates or flagging variables) in your model that are not defined.
-You can either edit the model code directly in the editor window (e.g. TRT = 1) or you can define the variables in the “Trial design” as a covariate.</p>
+<div id="campsis-model" class="section level4 hasAnchor" number="2.1.2.2">
+<h4><span class="header-section-number">2.1.2.2</span> Campsis model<a href="model-tab.html#campsis-model" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>When <strong>Campsis</strong> is selected in the <strong>Import model from</strong> dropdown menu, an existing Campsis model can be imported.</p>
+<p>The window provides the following options:</p>
+<ul>
+<li><strong>Campsis format selection</strong>: The model format can be selected as either a JSON format or a legacy format.</li>
+<li><strong>Campsis model files selection</strong>: The Browse button is used to select the required Campsis model files from the local filesystem.Depending on the selected format, this may include a single JSON file or a set of legacy files such as <em>model.campsis</em>, <em>omega.csv</em>, <em>theta.csv</em> and <em>sigma.csv</em>.</li>
+</ul>
+<p><img src="pictures/model_tab_import_model_from_Campsis.png" /></p>
 </div>
-<div id="model-code" class="section level2 hasAnchor" number="2.4">
-<h2><span class="header-section-number">2.4</span> Model code<a href="model-tab.html#model-code" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>The model code is shown in the editor window where it can be easily modified. Please note that the code is case sensitive (e.g. <em>log</em>, <em>exp</em>, <em>sqrt</em> should be used). The power function is <em>pow(x,d)</em>, <em>x</em> to the power of <em>d</em>.
-You can add comments using the # symbol.</p>
-<p>Clicking on the “Download” button, Campsis model code will be downloaded as a ZIP folder, including <em>model.campsis</em>, <em>omega.csv</em>, <em>theta.csv</em> and <em>sigma.csv</em>.</p>
+<div id="nonmem-model-import" class="section level4 hasAnchor" number="2.1.2.3">
+<h4><span class="header-section-number">2.1.2.3</span> NONMEM model import<a href="model-tab.html#nonmem-model-import" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>When <strong>NONMEM</strong> is selected in the <strong>Import model from</strong> dropdown menu, an existing NONMEM model can be imported.</p>
+<p>The window provides the following options:</p>
+<ul>
+<li><strong>Select NONMEM control stream</strong>:A NONMEM control file (extension <em>.mod</em> and <em>.ctl</em> ) can be imported.By default, parameter estimates are extracted from the initial estimates defined in the control file. If a corresponding <em>.ext</em> file is also selected, the final parameter estimates from that file are used instead.</li>
+<li><strong>Select parameter estimates (optional)</strong>: An optional <em>.ext</em> file containing parameter estimates from a previous NONMEM run can be provided. When selected, the final estimates from this file override those defined in the control stream.</li>
+<li><strong>Select variance–covariance matrix (optional)</strong>: An optional <em>.cov</em> file containing the variance–covariance matrix of the parameter estimates from a previous NONMEM run can be provided.</li>
+</ul>
+<p><img src="pictures/model_tab_import_model_from_NONMEM.png" /></p>
+<p>At the first NONMEM import, the translation functionality may require a short initialization period (typically less than one minute). Once initialization is complete, a notification is displayed.
+The translation of NONMEM models into Campsis has been tested on a variety of models; however, some models may not be fully supported and could be translated incorrectly or fail. If such a case is encountered, it is recommended to report it so the issue can be investigated.
+In many cases, an imported NONMEM model may not run immediately. This usually occurs when the model contains variables (for example, covariates or flag variables) that are not yet defined in the interface. These variables can either be defined directly in the model code using the editor window (e.g. TRT = 1) or specified as covariates in the <strong>Trial design</strong> tab.</p>
 </div>
-<div id="parameters" class="section level2 hasAnchor" number="2.5">
-<h2><span class="header-section-number">2.5</span> Parameters<a href="model-tab.html#parameters" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+</div>
+</div>
+<div id="parameters" class="section level2 hasAnchor" number="2.2">
+<h2><span class="header-section-number">2.2</span> Parameters<a href="model-tab.html#parameters" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>The list of parameters for THETA, OMEGA and SIGMA is given in this box. Their values and labels can be changed. Comments can be added.</p>
 <p>The type for OMEGA and SIGMA can be changed: sd, var, covar, cv, cv%, cor, for standard deviation, variance, covariance, coefficient of variation, coefficient of variation (as %) or correlation, respectively.</p>
 <p>Correlations between omegas can be added by right-clicking on a cell in the OMEGA table. For example, enter “KA, VC” as name, 1 and 2 in index and index2, and add the correlation value.</p>
@@ -400,20 +314,6 @@ gitbook.start({
 });
 </script>
 
-<!-- dynamically load mathjax for compatibility with self-contained -->
-<script>
-  (function () {
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    var src = "true";
-    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
-    if (location.protocol !== "file:")
-      if (/^https?:/.test(src))
-        src = src.replace(/^https?:/, '');
-    script.src = src;
-    document.getElementsByTagName("head")[0].appendChild(script);
-  })();
-</script>
 </body>
 
 </html>
