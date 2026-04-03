@@ -4,11 +4,16 @@ e-campsis-free
 e-campsis-pro
 application-interface
 model-tab
+model-code-section
+writing-a-model-from-scratch
+importing-an-existing-model
 model-from-library
-campsis-model-import
+campsis-model
 nonmem-model-import
-model-code
-parameters
+monolix-model-import
+rxode2-model-import
+append-model-option
+model-parameters-section
 trial-design
 trial-design-1
 summary
@@ -166,20 +171,6 @@ advan4_trans1
 advan4_trans3
 advan4_trans4
 advan4_trans5
-feedback-and-help
-disclaimer
-terms-of-service
-privacy-policy
-model-code-section
-writing-a-model-from-scratch
-importing-an-existing-model
-campsis-model
-<<<<<<< HEAD
-model-parameters-section
-monolix-model-import
-rxode2-model-import
-option
-append-model-option
 pd-section
 direct_effect_model
 effect_cmt_model
@@ -189,5 +180,7 @@ irm_kout_inhibition
 irm_kout_stimulation
 myelosuppression_model
 transit_cmt_model
-=======
->>>>>>> origin/desktop-version
+feedback-and-help
+disclaimer
+terms-of-service
+privacy-policy
