@@ -23,7 +23,11 @@
 <meta name="author" content="Calvagone" />
 
 
+<<<<<<< HEAD
 <meta name="date" content="2026-04-03" />
+=======
+<meta name="date" content="2026-04-02" />
+>>>>>>> origin/desktop-version
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -92,7 +96,11 @@
 <li class="chapter" data-level="2.1.1" data-path="model-tab.html"><a href="model-tab.html#writing-a-model-from-scratch"><i class="fa fa-check"></i><b>2.1.1</b> Writing a model from scratch</a></li>
 <li class="chapter" data-level="2.1.2" data-path="model-tab.html"><a href="model-tab.html#importing-an-existing-model"><i class="fa fa-check"></i><b>2.1.2</b> Importing an existing model</a></li>
 </ul></li>
+<<<<<<< HEAD
 <li class="chapter" data-level="2.2" data-path="model-tab.html"><a href="model-tab.html#model-parameters-section"><i class="fa fa-check"></i><b>2.2</b> Model parameters section</a></li>
+=======
+<li class="chapter" data-level="2.2" data-path="model-tab.html"><a href="model-tab.html#parameters"><i class="fa fa-check"></i><b>2.2</b> Parameters</a></li>
+>>>>>>> origin/desktop-version
 </ul></li>
 <li class="chapter" data-level="3" data-path="trial-design.html"><a href="trial-design.html"><i class="fa fa-check"></i><b>3</b> Trial design</a>
 <ul>
@@ -158,7 +166,10 @@
 <li class="chapter" data-level="10.1" data-path="model-library.html"><a href="model-library.html#pk-section"><i class="fa fa-check"></i><b>10.1</b> PK section</a></li>
 <li class="chapter" data-level="10.2" data-path="model-library.html"><a href="model-library.html#tmdd-section"><i class="fa fa-check"></i><b>10.2</b> TMDD section</a></li>
 <li class="chapter" data-level="10.3" data-path="model-library.html"><a href="model-library.html#nonmem-section"><i class="fa fa-check"></i><b>10.3</b> NONMEM section</a></li>
+<<<<<<< HEAD
 <li class="chapter" data-level="10.4" data-path="model-library.html"><a href="model-library.html#pd-section"><i class="fa fa-check"></i><b>10.4</b> PD section</a></li>
+=======
+>>>>>>> origin/desktop-version
 </ul></li>
 <li class="chapter" data-level="11" data-path="feedback-and-help.html"><a href="feedback-and-help.html"><i class="fa fa-check"></i><b>11</b> Feedback and help</a></li>
 <li class="chapter" data-level="12" data-path="disclaimer.html"><a href="disclaimer.html"><i class="fa fa-check"></i><b>12</b> Disclaimer</a></li>
@@ -189,6 +200,7 @@
 <p>When you open the e‑campsis desktop application, the <strong>Model</strong> tab is displayed automatically. This page is divided into two main sections:</p>
 <ul>
 <li>On the left, the <em>Model code</em> section shows the full model script.</li>
+<<<<<<< HEAD
 <li>On the right, the <em>Model parameters</em> section presents the population parameters (Theta), variability parameters (Omega), and residual error (Sigma), each in its own dedicated sub‑section.</li>
 </ul>
 <p>By default, a simple PK model from the model library (<a href="model-library.html#cpt_fo">1cpt_fo</a>) is already loaded to help you get started.</p>
@@ -205,11 +217,25 @@
 <li>The power function is <em>pow(x,d)</em>, <em>x</em> to the power of <em>d</em>.</li>
 <li>Comments can be added using the # symbol.</li>
 </ul>
+=======
+<li>On the right, the <em>Model parameters</em> section presents the population parameters (Theta), variability parameters (Omega), and residual error (Sigma), each presented in dedicated parameter sub-sections.</li>
+</ul>
+<p>By default, a simple PK model from the model library is already loaded to help you get started.</p>
+<p><img src="pictures/model_tab_overview.png" /></p>
+<div id="model-code-section" class="section level2 hasAnchor" number="2.1">
+<h2><span class="header-section-number">2.1</span> Model code section<a href="model-tab.html#model-code-section" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>In the <em>Model code</em> section, you have two options:</p>
+<div id="writing-a-model-from-scratch" class="section level3 hasAnchor" number="2.1.1">
+<h3><span class="header-section-number">2.1.1</span> Writing a model from scratch<a href="model-tab.html#writing-a-model-from-scratch" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The <strong>code editor</strong> window allows direct creation of a model using the Campsis model syntax and includes syntax highlighting to make the structure and equations easy to read and modify. The editor displays the full PK model specification, organized into blocks such as <em>[MAIN]</em>, <em>[ODE]</em>, <em>[F]</em>, and <em>[ERROR]</em>,which define parameter initialization, differential equations, input mappings, and the residual error model.
+Please note that the code is case sensitive (e.g. <em>log</em>, <em>exp</em>, <em>sqrt</em> should be used). The power function is <em>pow(x,d)</em>, <em>x</em> to the power of <em>d</em>.Comments can be added using the # symbol.</p>
+>>>>>>> origin/desktop-version
 </div>
 <div id="importing-an-existing-model" class="section level3 hasAnchor" number="2.1.2">
 <h3><span class="header-section-number">2.1.2</span> Importing an existing model<a href="model-tab.html#importing-an-existing-model" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>An existing model can be loaded through the <strong>Import model</strong> button: <img src="pictures/model_tab_import_button.png" style="display: block; margin: 0 auto" /></p>
 <p>Clicking this button opens the <strong>Model import wizard</strong> window.
+<<<<<<< HEAD
 At the top of this window, a dropdown menu labeled <strong>Import model from</strong> allows selecting the source of the model. Available options include <em>Model library</em>, <em>Campsis</em>, <em>NONMEM</em>, <em>Monolix</em>, and <em>rxode2</em>.
 <img src="pictures/model_tab_import_wizard.png" /></p>
 <div id="model-from-library" class="section level4 hasAnchor" number="2.1.2.1">
@@ -217,14 +243,29 @@ At the top of this window, a dropdown menu labeled <strong>Import model from</st
 <p>When <strong>Model library</strong> is selected in the <strong>Import model from</strong> dropdown menu, predefined models from the built‑in Campsis model library are available for import.This option displays a list of available PK (<strong>Select PK model</strong>) and PD models (<strong>Select PD model</strong>) that can be loaded directly into the interface. Both lists are presented in dropdown menus, allowing selection from the available models in each category.
 <img src="pictures/model_tab_import_model_from_library.png" /></p>
 <p>The exhaustive list of available models is grouped into several categories in the model library and can be found:</p>
+=======
+The first element in this window is a dropdown menu labeled <strong>Import model from</strong>, which allows selecting the source of the model. Available options include <em>Model library</em>, <em>Campsis</em>, <em>NONMEM</em>, <em>Monolix</em>, and <em>rxode2</em>.
+<img src="pictures/model_tab_import_wizard.png" /></p>
+<div id="model-from-library" class="section level4 hasAnchor" number="2.1.2.1">
+<h4><span class="header-section-number">2.1.2.1</span> Model from library<a href="model-tab.html#model-from-library" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>When <strong>Model library</strong> is selected in the <strong>Import model from</strong> dropdown menu, predefined models from the built‑in Campsis model library become available for import.This option displays a list of available PK (<strong>Select PK model</strong>) and PD models (<strong>Select PD model</strong>) that can be loaded directly into the interface. Both lists are presented in dropdown menus, allowing selection from the available models in each category.
+<img src="pictures/model_tab_import_model_from_library.png" /></p>
+<p>The exhaustive list of PK models is grouped into several categories in the model library and can be found:</p>
+>>>>>>> origin/desktop-version
 <ul>
 <li>in the <a href="model-library.html#pk-section">PK</a> section for simple PK model</li>
 <li>in the <a href="model-library.html#tmdd-section">TMDD</a> section for target-mediated drug disposition model</li>
 <li>in the <a href="model-library.html#nonmem-section">NONMEM</a> section for NONMEM‑derived models</li>
+<<<<<<< HEAD
 <li>in the <a href="model-library.html#pd-section">PD</a> section for PD models</li>
 </ul>
 <p>When connecting a PD model, it is recommended to verify that the correct PK output variable is used as input to the PD component of the combined model.</p>
 <p>Please note that it is not possible to import or define a PD model without an associated PK model.</p>
+=======
+</ul>
+<p>A PD model can be connected to the selected PK model using <strong>Select PD model</strong>. This is done internally via campsismod (see <a href="https://calvagone.github.io/campsismod.doc/articles/v06_append_pd_model.html">here</a>). When connecting a PD model, it is recommended to verify that the correct PK output variable is used as input to the PD component of the combined model.
+Please note that it is not possible to import or define a PD model without an associated PK model.</p>
+>>>>>>> origin/desktop-version
 </div>
 <div id="campsis-model" class="section level4 hasAnchor" number="2.1.2.2">
 <h4><span class="header-section-number">2.1.2.2</span> Campsis model<a href="model-tab.html#campsis-model" class="anchor-section" aria-label="Anchor link to header"></a></h4>
@@ -232,7 +273,11 @@ At the top of this window, a dropdown menu labeled <strong>Import model from</st
 <p>The window provides the following options:</p>
 <ul>
 <li><strong>Campsis format selection</strong>: The model format can be selected as either a JSON format or a legacy format.</li>
+<<<<<<< HEAD
 <li><strong>Campsis model files selection</strong>: The <strong>Browse</strong> button is used to select the required Campsis model files from the local filesystem. Depending on the selected format, this may include a single JSON file or a set of legacy files such as <em>model.campsis</em>, <em>omega.csv</em>, <em>theta.csv</em> and <em>sigma.csv</em>.</li>
+=======
+<li><strong>Campsis model files selection</strong>: The Browse button is used to select the required Campsis model files from the local filesystem.Depending on the selected format, this may include a single JSON file or a set of legacy files such as <em>model.campsis</em>, <em>omega.csv</em>, <em>theta.csv</em> and <em>sigma.csv</em>.</li>
+>>>>>>> origin/desktop-version
 </ul>
 <p><img src="pictures/model_tab_import_model_from_Campsis.png" /></p>
 </div>
@@ -241,11 +286,16 @@ At the top of this window, a dropdown menu labeled <strong>Import model from</st
 <p>When <strong>NONMEM</strong> is selected in the <strong>Import model from</strong> dropdown menu, an existing NONMEM model can be imported.</p>
 <p>The window provides the following options:</p>
 <ul>
+<<<<<<< HEAD
 <li><strong>Select NONMEM control stream</strong>:A NONMEM control file (extension <em>.mod</em> and <em>.ctl</em> ) can be imported.By default, parameter estimates are extracted from the initial estimates defined in the control file.</li>
+=======
+<li><strong>Select NONMEM control stream</strong>:A NONMEM control file (extension <em>.mod</em> and <em>.ctl</em> ) can be imported.By default, parameter estimates are extracted from the initial estimates defined in the control file. If a corresponding <em>.ext</em> file is also selected, the final parameter estimates from that file are used instead.</li>
+>>>>>>> origin/desktop-version
 <li><strong>Select parameter estimates (optional)</strong>: An optional <em>.ext</em> file containing parameter estimates from a previous NONMEM run can be provided. When selected, the final estimates from this file override those defined in the control stream.</li>
 <li><strong>Select variance–covariance matrix (optional)</strong>: An optional <em>.cov</em> file containing the variance–covariance matrix of the parameter estimates from a previous NONMEM run can be provided.</li>
 </ul>
 <p><img src="pictures/model_tab_import_model_from_NONMEM.png" /></p>
+<<<<<<< HEAD
 <p>At the first NONMEM import, the translation functionality may require a short initialization period (typically less than one minute). Warning messages may be displayed once initialization is complete.</p>
 <p>The translation of NONMEM models into Campsis has been tested on a variety of models; however, some models may not be fully supported and could be translated incorrectly or fail. If such a case is encountered, it is recommended to report it so the issue can be investigated.
 In many cases, an imported NONMEM model may not run immediately. This usually occurs when the model contains variables (for example, covariates or flag variables) that are not yet defined in the interface. These variables can either be defined directly in the model code using the editor window (e.g. TRT = 1) or specified as covariates in the <strong>Trial design</strong> tab.</p>
@@ -296,6 +346,20 @@ For example, appending a <a href="model-library.html#cpt_fo-1">2cpt_fo</a> model
 </ul>
 <p><img src="pictures/omega_matrix_edit.png" />
 <img src="pictures/sigma_matrix_edit.png" /></p>
+=======
+<p>At the first NONMEM import, the translation functionality may require a short initialization period (typically less than one minute). Once initialization is complete, a notification is displayed.
+The translation of NONMEM models into Campsis has been tested on a variety of models; however, some models may not be fully supported and could be translated incorrectly or fail. If such a case is encountered, it is recommended to report it so the issue can be investigated.
+In many cases, an imported NONMEM model may not run immediately. This usually occurs when the model contains variables (for example, covariates or flag variables) that are not yet defined in the interface. These variables can either be defined directly in the model code using the editor window (e.g. TRT = 1) or specified as covariates in the <strong>Trial design</strong> tab.</p>
+</div>
+</div>
+</div>
+<div id="parameters" class="section level2 hasAnchor" number="2.2">
+<h2><span class="header-section-number">2.2</span> Parameters<a href="model-tab.html#parameters" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The list of parameters for THETA, OMEGA and SIGMA is given in this box. Their values and labels can be changed. Comments can be added.</p>
+<p>The type for OMEGA and SIGMA can be changed: sd, var, covar, cv, cv%, cor, for standard deviation, variance, covariance, coefficient of variation, coefficient of variation (as %) or correlation, respectively.</p>
+<p>Correlations between omegas can be added by right-clicking on a cell in the OMEGA table. For example, enter “KA, VC” as name, 1 and 2 in index and index2, and add the correlation value.</p>
+<p>Clicking on “Get parameter names from code”, the code will be scanned for the strings <em>THETA_name</em>, <em>ETA_name</em> and <em>EPS_name</em> and the names will be extracted and added to the table.</p>
+>>>>>>> origin/desktop-version
 
 </div>
 </div>
