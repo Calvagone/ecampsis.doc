@@ -1,6 +1,6 @@
 # Model tab
 
-When you open the e‑campsis desktop application, the **Model** tab is displayed automatically. This page is divided into two main sections:
+By opening the e‑campsis desktop application, the **Model** tab is displayed automatically. This page is divided into two main sections:
 
 - On the left, the *Model code* section shows the full model script.
 - On the right, the *Model parameters* section presents the population parameters (Theta), variability parameters (Omega), and residual error (Sigma), each in its own dedicated sub‑section.

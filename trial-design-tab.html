@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 3 Trial design | e-Campsis desktop</title>
+  <title>Chapter 3 Trial design tab | e-Campsis desktop</title>
   <meta name="description" content="Here you will find a description of the tabs of e-Campsis desktop." />
   <meta name="generator" content="bookdown 0.46 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 3 Trial design | e-Campsis desktop" />
+  <meta property="og:title" content="Chapter 3 Trial design tab | e-Campsis desktop" />
   <meta property="og:type" content="book" />
   <meta property="og:image" content="/ecampsis_logo.png" />
   <meta property="og:description" content="Here you will find a description of the tabs of e-Campsis desktop." />
   <meta name="github-repo" content="Calvagone/ecampsis.doc" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 3 Trial design | e-Campsis desktop" />
+  <meta name="twitter:title" content="Chapter 3 Trial design tab | e-Campsis desktop" />
   
   <meta name="twitter:description" content="Here you will find a description of the tabs of e-Campsis desktop." />
   <meta name="twitter:image" content="/ecampsis_logo.png" />
@@ -23,7 +23,7 @@
 <meta name="author" content="Calvagone" />
 
 
-<meta name="date" content="2026-04-10" />
+<meta name="date" content="2026-04-22" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -94,11 +94,16 @@
 </ul></li>
 <li class="chapter" data-level="2.2" data-path="model-tab.html"><a href="model-tab.html#model-parameters-section"><i class="fa fa-check"></i><b>2.2</b> Model parameters section</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="trial-design.html"><a href="trial-design.html"><i class="fa fa-check"></i><b>3</b> Trial design</a>
+<li class="chapter" data-level="3" data-path="trial-design-tab.html"><a href="trial-design-tab.html"><i class="fa fa-check"></i><b>3</b> Trial design tab</a>
 <ul>
-<li class="chapter" data-level="3.1" data-path="trial-design.html"><a href="trial-design.html#trial-design-1"><i class="fa fa-check"></i><b>3.1</b> Trial design</a></li>
-<li class="chapter" data-level="3.2" data-path="trial-design.html"><a href="trial-design.html#summary"><i class="fa fa-check"></i><b>3.2</b> Summary</a></li>
-<li class="chapter" data-level="3.3" data-path="trial-design.html"><a href="trial-design.html#custom-dataset"><i class="fa fa-check"></i><b>3.3</b> Custom dataset</a></li>
+<li class="chapter" data-level="3.1" data-path="trial-design-tab.html"><a href="trial-design-tab.html#trial-configuration-section"><i class="fa fa-check"></i><b>3.1</b> Trial configuration section</a>
+<ul>
+<li class="chapter" data-level="3.1.1" data-path="trial-design-tab.html"><a href="trial-design-tab.html#arm-definition"><i class="fa fa-check"></i><b>3.1.1</b> Arm definition</a></li>
+<li class="chapter" data-level="3.1.2" data-path="trial-design-tab.html"><a href="trial-design-tab.html#administration-settings"><i class="fa fa-check"></i><b>3.1.2</b> Administration settings</a></li>
+<li class="chapter" data-level="3.1.3" data-path="trial-design-tab.html"><a href="trial-design-tab.html#covariates-and-observation-settings"><i class="fa fa-check"></i><b>3.1.3</b> Covariates and observation settings</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="trial-design-tab.html"><a href="trial-design-tab.html#trial-design-overview"><i class="fa fa-check"></i><b>3.2</b> Trial design overview</a></li>
+<li class="chapter" data-level="3.3" data-path="trial-design-tab.html"><a href="trial-design-tab.html#dataset-configuration"><i class="fa fa-check"></i><b>3.3</b> Dataset configuration</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="simulation.html"><a href="simulation.html"><i class="fa fa-check"></i><b>4</b> Simulation</a>
 <ul>
@@ -184,81 +189,98 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="trial-design" class="section level1 hasAnchor" number="3">
-<h1><span class="header-section-number">Chapter 3</span> Trial design<a href="trial-design.html#trial-design" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div id="trial-design-1" class="section level2 hasAnchor" number="3.1">
-<h2><span class="header-section-number">3.1</span> Trial design<a href="trial-design.html#trial-design-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p><img src="pictures/trial_design.png" width="500" /></p>
-<p>The study arms can be configured here.</p>
-<p>For each arm tab, the following information can be entered:</p>
+<div id="trial-design-tab" class="section level1 hasAnchor" number="3">
+<h1><span class="header-section-number">Chapter 3</span> Trial design tab<a href="trial-design-tab.html#trial-design-tab" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>By clicking on the <strong>Trial design</strong> tab, the e‑campsis application displays a structured and interactive environment to set up the study design prior to running simulations. This page is divided into two main sections:</p>
 <ul>
-<li>Number of subjects
+<li>On the left, the <em>Trial configuration</em> section serves as the main configuration area and is used to define treatment arms, subject numbers, administration details (dose, interval, route), and observation settings.</li>
+<li>On the right, the Summary area provides an overview of the current configuration, with the <em>Trial design overview</em> displayed at the top and the <em>Dataset configuration</em> section at the bottom, where the model time unit is defined.</li>
+</ul>
+<p><img src="pictures/Overview_Trial_design_tab.png" /></p>
+<div id="trial-configuration-section" class="section level2 hasAnchor" number="3.1">
+<h2><span class="header-section-number">3.1</span> Trial configuration section<a href="trial-design-tab.html#trial-configuration-section" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>In the <em>Trial configuration</em> section, study arms and all associated dosing, covariate, and observation settings are defined. By default, one study arm (<strong>ARM 1</strong>) is available. By clicking <strong>More</strong>, additional arms can be added or existing arms removed. When an arm is removed, the most recently created arm is deleted.</p>
+<p>For each arm tab, the configuration is organized into three main subsections.</p>
+<div id="arm-definition" class="section level3 hasAnchor" number="3.1.1">
+<h3><span class="header-section-number">3.1.1</span> Arm definition<a href="trial-design-tab.html#arm-definition" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>This subsection defines the general characteristics of the study arm.</p>
+<p><img src="pictures/arm_definition.png" /></p>
 <ul>
-<li>When set to 0 this arm is switched off.</li>
-</ul></li>
-<li>Arm label
+<li><p><strong>Number of subjects</strong>: The number of subjects to be simulated for the selected arm is entered here.</p></li>
+<li><p><strong>Arm label</strong>: The label used to identify the arm in plots and tables is defined in this field.</p></li>
+</ul>
+<p>Action buttons labeled <strong>Copy</strong>, <strong>Paste</strong>, and <strong>Reset</strong> are displayed next to the arm label. These buttons allow duplication of an existing arm configuration, pasting of a copied configuration, or restoration of default values.</p>
+</div>
+<div id="administration-settings" class="section level3 hasAnchor" number="3.1.2">
+<h3><span class="header-section-number">3.1.2</span> Administration settings<a href="trial-design-tab.html#administration-settings" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>This subsection defines how the treatment is administered for the selected arm.</p>
+<p><img src="pictures/administration_settings.png" /></p>
+<p>By default, one administration (<strong>ADM 1</strong>) is available. By clicking <strong>More</strong>, administrations can be added or removed.</p>
+<p>Two administration types are available:</p>
 <ul>
-<li>Enter here the text that should appear on plots and tables identifying the study arm</li>
-</ul></li>
-<li>Administration type (bolus or infusion)
+<li>Bolus (instantaneous): When this option is enabled, the administration compartment must be specified.</li>
+<li>Infusion (zero‑order): When this option is enabled, both the administration compartment and the infusion duration must be specified.
+When Duration handled in model is enabled, the infusion duration is controlled by a parameter defined in the model. This option is useful when the infusion represents a zero‑order input with variability or covariate effects (e.g. slow‑release formulations). Additional information is available at:
+<a href="https://calvagone.github.io/campsis.doc/articles/v06_infusions.html" class="uri">https://calvagone.github.io/campsis.doc/articles/v06_infusions.html</a></li>
+</ul>
+<p>Multiple administration compartments may be selected when using complex absorption models (e.g. sequential or parallel first‑ and zero‑order inputs).</p>
+<p>The following dosing parameters can be configured for each arm:</p>
 <ul>
-<li>If infusion is selected, you can choose whether the infusion is in the Model or in the Dataset; if the latter, the infusion duration can be entered</li>
-<li>Infusion into the Model means that the infusion duration is controlled by a parameter in the model. This is useful in cases where the infusion is actually not a real infusion but rather a 0-order input and you may have variability or covariates associate with it (e.g. a slow release formulation). See <a href="https://calvagone.github.io/campsis.doc/articles/v06_infusions.html">here</a> for more information:</li>
-</ul></li>
-<li>Administration compartments
-<ul>
-<li>Select the compartment(s) where to amount should be entered, either instantaneously (bolus) or as a zero-order process (infusion). You can select multiple compartments if you have a complex absorption model, e.g. sequential (or parallel) first-zero-order.</li>
-</ul></li>
-<li>Dose amount and compartment
-<ul>
-<li>The amount given into the specified compartment.</li>
-</ul></li>
-<li>Dosing interval and additional doses
-<ul>
-<li>The amount is repeatedly administered at a given interval for N additional doses (i.e. number of dosing events in addition to the first one)</li>
-</ul></li>
-<li>Dosing cycle
-<ul>
-<li>If the ‘repeat’ box is checked you can enter how often and in what length your schedule is repeated. This is useful if you have a e.g. daily dosing for 2 weeks, then 1 week pause, and then repeat again.</li>
-<li>Attention! Be careful with the length of the cycle and the number of doses and the interval within a cycle inorder to avoid duplicate dosing events.</li>
-</ul></li>
-<li>Observations (observation time)
-<ul>
-<li>to be written in R vector notation, e.g. <em><code>seq(0,24,by=1)</code></em><code>or c(seq(0, 5), seq(0, 5)+168, seq(0,5)+336, seq(0,504,6))</code></li>
-<li>Enable the “as-time-after-dose” box, if you want to replicate the observation schedule after each dose</li>
-<li>Be mindful with the number of observations that you choose as they contribute significantly to the size of the simulation and may cause memory issues.</li>
-</ul></li>
-<li>Covariates
-<ul>
-<li>Covariates or indicator variables that are used in the model code</li>
-<li>You can enter a single values: e.g. <code>BW=70|FLAG=1|SEX=1|BW=70</code></li>
-<li>Or use the Campsis distribution functions, e.g:
-<ul>
-<li><code>BW=NormalDistribution(mean=70, sd=10)</code></li>
-<li><code>BW=LogNormalDistribution(meanlog=log(70), sdlog=0.2)</code></li>
-<li><code>HT=UniformDistribution(min=150, max=190)</code></li>
-</ul></li>
-<li>It is also possible to enter a vector of values like so: <code>BW=c(50,60,70,80,90)</code>This is useful if you want to explore only certain specific covariate values. However, in this case you need to make sure that the length of the vector equals the number of subjects in the arm.r</li>
-<li>See <a href="https://calvagone.github.io/campsis.doc/articles/v03_covariates.html">here</a> for more information about covariates:</li>
-</ul></li>
-<li>Dose adaptation formula
-<ul>
-<li>Useful if the dose has to be adapted to the body weight; e.g. <code>AMT*BW</code></li>
-</ul></li>
+<li>Dose amount and start time</li>
+<li>Dosing interval and additional doses</li>
+<li>Cycle duration and number of repetitions, when <strong>Show cycle options</strong> is enabled
+Units can be selected independently for each dosing parameter.</li>
 </ul>
 </div>
-<div id="summary" class="section level2 hasAnchor" number="3.2">
-<h2><span class="header-section-number">3.2</span> Summary<a href="trial-design.html#summary" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p><img src="pictures/design_summary.png" width="484" /></p>
-<p>Here you will see a summary of your trial design. Especially when you have multiple arms with different schedules it is useful to have a look here and check if the design was correctly specified.</p>
+<div id="covariates-and-observation-settings" class="section level3 hasAnchor" number="3.1.3">
+<h3><span class="header-section-number">3.1.3</span> Covariates and observation settings<a href="trial-design-tab.html#covariates-and-observation-settings" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>This subsection defines subject‑level covariates and observation schedules for the arm.</p>
+<p><img src="pictures/covariates_observations.png" />
+Covariates associated with subjects in the arm are defined, and optional dose‑adaptation rules based on these covariates can be specified (e.g. AMT * BW). By clicking on <strong>add</strong> button, a covariate editor window opens.</p>
+<p><img src="pictures/covariate_editor.png" /></p>
+<p>The covariate name is defined and a distribution is selected from the following options:</p>
+<ul>
+<li><strong>Constant value</strong>: a single value is entered</li>
+<li><strong>Vector of values</strong>: a list of values is entered (e.g. 40, 50, 60)</li>
+<li><strong>Uniform distribution</strong>: minimum and maximum values are specified</li>
+<li><strong>Normal distribution</strong>: mean and standard deviation are specified</li>
+<li><strong>Lognormal distribution</strong>: mean and standard deviation are specified on the log scale</li>
+<li><strong>Discrete distribution</strong>: discrete values and their corresponding probabilities are entered (each probability must be between 0 and 1)</li>
+</ul>
+<p>By clicking on <strong>bootstrap</strong>, covariates are bootstrapped from an external dataset. Data can be copied and pasted directly into the table or imported from a CSV file.Two options are available: <em>Sample with replacement</em> and/or <em>Draw subjects randomly</em></p>
+<p><img src="pictures/bootstrap.png" /></p>
+<p>Observation times can be defined using one of the following approaches:</p>
+<ul>
+<li><em>Sequence</em>, where start time, end time, and time step are specified</li>
+<li><em>Custom</em> where a user‑defined observation time sequence is specified</li>
+</ul>
+<p>When <strong>Repeat after dose</strong> is enabled, the observation schedule is replicated after each dose.
+Care should be taken when defining the number of observations, as a large number of observation rows can substantially increase the size of the simulated dataset and may result in memory limitations.</p>
 </div>
-<div id="custom-dataset" class="section level2 hasAnchor" number="3.3">
-<h2><span class="header-section-number">3.3</span> Custom dataset<a href="trial-design.html#custom-dataset" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p><img src="pictures/lock_pro.png" width="50" />  This feature is reserved for pro users only.</p>
-<p>When you click on “Edit dataset” a window will pop-up that allows you to specify complex dosing schedules using the Campsis functions.</p>
-<p><img src="pictures/custom_design.png" width="470" /></p>
-<p>Here you can enter for example loading doses or specific titration schemes etc.</p>
-<p><a href="https://calvagone.github.io/campsis.doc/articles/v01_dataset.html">See the Campsis help</a> for details on how to enter complex trial designs.</p>
+</div>
+<div id="trial-design-overview" class="section level2 hasAnchor" number="3.2">
+<h2><span class="header-section-number">3.2</span> Trial design overview<a href="trial-design-tab.html#trial-design-overview" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><img src="pictures/trial_design_overview.png" /></p>
+<p>The Trial design overview panel displays a summary of the defined study arms and the resulting dataset size.</p>
+<p>Each study arm is listed with:</p>
+<ul>
+<li>the number of subjects,</li>
+<li>the administration scheme (dose, compartment, and time),</li>
+<li>the observation time points,</li>
+<li>and the presence or absence of covariates.</li>
+</ul>
+<p>At the bottom of the panel, the <em>Dataset info</em> section summarizes the total dataset size, including the total number of subjects, administration rows, and observation rows generated across all arms.</p>
+</div>
+<div id="dataset-configuration" class="section level2 hasAnchor" number="3.3">
+<h2><span class="header-section-number">3.3</span> Dataset configuration<a href="trial-design-tab.html#dataset-configuration" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><img src="pictures/dataset_configuration.png" /></p>
+<p>The Time unit in model field specifies the time unit used throughout the model (e.g. hour).</p>
+<p>Two export options are available:</p>
+<ul>
+<li>Export TSLD: exports a dataset including the variable TSLD (Time Since Last Dose).</li>
+<li>Export TDOS: exports a dataset including the variable TDOS (Time of Dosing).</li>
+</ul>
+<p>These options control which time‑related variables are included in the exported datasets for simulation.</p>
 
 </div>
 </div>

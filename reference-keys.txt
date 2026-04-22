@@ -184,3 +184,10 @@ feedback-and-help
 disclaimer
 terms-of-service
 privacy-policy
+trial-design-tab
+trial-configuration-section
+arm-definition
+administration-settings
+covariates-and-observation-settings
+trial-design-overview
+dataset-configuration

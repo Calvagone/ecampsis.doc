@@ -1,59 +1,109 @@
-# Trial design
+# Trial design tab
 
-## Trial design
+By clicking on the **Trial design** tab, the e‑campsis application displays a structured and interactive environment to set up the study design prior to running simulations. This page is divided into two main sections:
 
-![](pictures/trial_design.png){width="500"}
+* On the left, the *Trial configuration* section serves as the main configuration area and is used to define treatment arms, subject numbers, administration details (dose, interval, route), and observation settings.
+* On the right, the Summary area provides an overview of the current configuration, with the *Trial design overview* displayed at the top and the *Dataset configuration* section at the bottom, where the model time unit is defined.
 
-The study arms can be configured here.
+![](pictures/Overview_Trial_design_tab.png)
 
-For each arm tab, the following information can be entered:
+## Trial configuration section
 
--   Number of subjects
-    -   When set to 0 this arm is switched off.
--   Arm label
-    -   Enter here the text that should appear on plots and tables identifying the study arm
--   Administration type (bolus or infusion)
-    -   If infusion is selected, you can choose whether the infusion is in the Model or in the Dataset; if the latter, the infusion duration can be entered
-    -   Infusion into the Model means that the infusion duration is controlled by a parameter in the model. This is useful in cases where the infusion is actually not a real infusion but rather a 0-order input and you may have variability or covariates associate with it (e.g. a slow release formulation). See [here](https://calvagone.github.io/campsis.doc/articles/v06_infusions.html) for more information:
--   Administration compartments
-    -   Select the compartment(s) where to amount should be entered, either instantaneously (bolus) or as a zero-order process (infusion). You can select multiple compartments if you have a complex absorption model, e.g. sequential (or parallel) first-zero-order.
--   Dose amount and compartment
-    -   The amount given into the specified compartment.
--   Dosing interval and additional doses
-    -   The amount is repeatedly administered at a given interval for N additional doses (i.e. number of dosing events in addition to the first one)
--   Dosing cycle
-    -   If the 'repeat' box is checked you can enter how often and in what length your schedule is repeated. This is useful if you have a e.g. daily dosing for 2 weeks, then 1 week pause, and then repeat again.
-    -   Attention! Be careful with the length of the cycle and the number of doses and the interval within a cycle inorder to avoid duplicate dosing events.
--   Observations (observation time)
-    -   to be written in R vector notation, e.g. *`seq(0,24,by=1)`*`or c(seq(0, 5), seq(0, 5)+168, seq(0,5)+336, seq(0,504,6))`
-    -   Enable the "as-time-after-dose" box, if you want to replicate the observation schedule after each dose
-    -   Be mindful with the number of observations that you choose as they contribute significantly to the size of the simulation and may cause memory issues.
--   Covariates
-    -   Covariates or indicator variables that are used in the model code
-    -   You can enter a single values: e.g. `BW=70|FLAG=1|SEX=1|BW=70`
-    -   Or use the Campsis distribution functions, e.g:
-        -   `BW=NormalDistribution(mean=70, sd=10)`
-        -   `BW=LogNormalDistribution(meanlog=log(70), sdlog=0.2)`
-        -   `HT=UniformDistribution(min=150, max=190)`
-    -   It is also possible to enter a vector of values like so: `BW=c(50,60,70,80,90)`This is useful if you want to explore only certain specific covariate values. However, in this case you need to make sure that the length of the vector equals the number of subjects in the arm.r
-    -   See [here](https://calvagone.github.io/campsis.doc/articles/v03_covariates.html) for more information about covariates:
--   Dose adaptation formula
-    -   Useful if the dose has to be adapted to the body weight; e.g. `AMT*BW`
+In the *Trial configuration* section, study arms and all associated dosing, covariate, and observation settings are defined. By default, one study arm (**ARM 1**) is available. By clicking **More**, additional arms can be added or existing arms removed. When an arm is removed, the most recently created arm is deleted.
 
-## Summary
+For each arm tab, the configuration is organized into three main subsections.
 
-![](pictures/design_summary.png){width="484"}
+### Arm definition
 
-Here you will see a summary of your trial design. Especially when you have multiple arms with different schedules it is useful to have a look here and check if the design was correctly specified.
+This subsection defines the general characteristics of the study arm.
 
-## Custom dataset
+![](pictures/arm_definition.png)
 
-![](pictures/lock_pro.png){width="50px"}  This feature is reserved for pro users only.
+* **Number of subjects**: The number of subjects to be simulated for the selected arm is entered here.
 
-When you click on "Edit dataset" a window will pop-up that allows you to specify complex dosing schedules using the Campsis functions.
+* **Arm label**: The label used to identify the arm in plots and tables is defined in this field.
 
-![](pictures/custom_design.png){width="470"}
+Action buttons labeled **Copy**, **Paste**, and **Reset** are displayed next to the arm label. These buttons allow duplication of an existing arm configuration, pasting of a copied configuration, or restoration of default values.
 
-Here you can enter for example loading doses or specific titration schemes etc.
 
-[See the Campsis help](https://calvagone.github.io/campsis.doc/articles/v01_dataset.html) for details on how to enter complex trial designs.
+### Administration settings
+
+This subsection defines how the treatment is administered for the selected arm.
+
+![](pictures/administration_settings.png)
+
+By default, one administration (**ADM 1**) is available. By clicking **More**, administrations can be added or removed. 
+
+Two administration types are available:
+
+  * Bolus (instantaneous): When this option is enabled, the administration compartment must be specified.
+  * Infusion (zero‑order): When this option is enabled, both the administration compartment and the infusion duration must be specified.
+When Duration handled in model is enabled, the infusion duration is controlled by a parameter defined in the model. This option is useful when the infusion represents a zero‑order input with variability or covariate effects (e.g. slow‑release formulations). Additional information is available at:
+https://calvagone.github.io/campsis.doc/articles/v06_infusions.html
+
+Multiple administration compartments may be selected when using complex absorption models (e.g. sequential or parallel first‑ and zero‑order inputs).
+
+The following dosing parameters can be configured for each arm:
+
+* Dose amount and start time
+* Dosing interval and additional doses
+* Cycle duration and number of repetitions, when **Show cycle options** is enabled
+Units can be selected independently for each dosing parameter.
+
+### Covariates and observation settings
+
+This subsection defines subject‑level covariates and observation schedules for the arm.
+
+![](pictures/covariates_observations.png)
+Covariates associated with subjects in the arm are defined, and optional dose‑adaptation rules based on these covariates can be specified (e.g. AMT * BW). By clicking on **add** button, a covariate editor window opens.
+
+![](pictures/covariate_editor.png)
+
+The covariate name is defined and a distribution is selected from the following options:
+
+- **Constant value**: a single value is entered
+- **Vector of values**: a list of values is entered (e.g. 40, 50, 60)
+- **Uniform distribution**: minimum and maximum values are specified
+- **Normal distribution**: mean and standard deviation are specified
+- **Lognormal distribution**: mean and standard deviation are specified on the log scale
+- **Discrete distribution**: discrete values and their corresponding probabilities are entered (each probability must be between 0 and 1)
+
+By clicking on **bootstrap**, covariates are bootstrapped from an external dataset. Data can be copied and pasted directly into the table or imported from a CSV file.Two options are available: *Sample with replacement* and/or *Draw subjects randomly*
+
+![](pictures/bootstrap.png)
+
+Observation times can be defined using one of the following approaches:
+
+*  *Sequence*, where start time, end time, and time step are specified
+*  *Custom* where a user‑defined observation time sequence is specified
+
+When **Repeat after dose** is enabled, the observation schedule is replicated after each dose.
+Care should be taken when defining the number of observations, as a large number of observation rows can substantially increase the size of the simulated dataset and may result in memory limitations.
+
+## Trial design overview
+
+![](pictures/trial_design_overview.png)
+
+The Trial design overview panel displays a summary of the defined study arms and the resulting dataset size.
+
+Each study arm is listed with:
+
+* the number of subjects,
+* the administration scheme (dose, compartment, and time),
+* the observation time points,
+* and the presence or absence of covariates.
+
+At the bottom of the panel, the *Dataset info* section summarizes the total dataset size, including the total number of subjects, administration rows, and observation rows generated across all arms.
+
+## Dataset configuration
+
+![](pictures/dataset_configuration.png)
+
+The Time unit in model field specifies the time unit used throughout the model (e.g. hour).
+
+Two export options are available:
+
+* Export TSLD: exports a dataset including the variable TSLD (Time Since Last Dose).
+* Export TDOS: exports a dataset including the variable TDOS (Time of Dosing).
+
+These options control which time‑related variables are included in the exported datasets for simulation.
