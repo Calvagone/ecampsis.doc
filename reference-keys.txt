@@ -191,3 +191,6 @@ administration-settings
 covariates-and-observation-settings
 trial-design-overview
 dataset-configuration
+simulation-tab
+scenarios-settings
+overlay-external-data
