@@ -11,21 +11,26 @@ By clicking on the **Post-processing** tab,  the e‑campsis application display
 
 ## Step-by-step guide
 
-After a simulation has completed, post-processing calculations can be applied to the simulation results. This way non-compartmental PK parameters can be calculated. The post-processing calculation will be performed for each individual separately, but the results can easily be summarized in a table.
+After a simulation has completed, post-processing calculations can be applied to the results. This allows non-compartmental PK parameters to be calculated. These calculations are performed for each individual, and the results can then be summarized in a table.
 
 The steps are:
 
-1.  **Setup your analyses** : This panel (on the left) is used to define how data should be analyzed—specifying the time range to consider, the output variable, and how results should be grouped (stratified). At the top, there is a dropdown menu labeled **Select analysis**, currently set to *Default*, which allows the user to choose an existing analysis configuration. Beside it are three buttons, *Edit*,*Delete*, and *+ Create*, used to modify, remove, or create analysis setups.
-Below this, the user can define the analysis time range, with **Start time** set to *0* and **End time** set to *last*, indicating that the analysis spans from the beginning to the final available data point. The **Unit** dropdown is set to *hour*, defining the time measurement; other options such as *second*, *minute*, *day*, *week*, *month*, and *year* can also be selected.
-Further down, the **Output variable** is set to *CONC*, which refers to concentration, indicating the variable being analyzed. Finally, the stratification options:**Arm strata** and **Scenario strata** are both set to *all*, meaning that the analysis includes all treatment groups and all scenarios without filtering. It is also possible to filter on one arm or one scenario.
+1.  **Setup your analyses** : This panel (on the left)  is used to define how the data should be analyzed, including the time range, output variable, and stratification.
+At the top, a dropdown menu labeled **Select analysis**, currently set to *Default*, allows you to choose an existing analysis configuration. Three buttons, *Edit*,*Delete*, and *+ Create*, used to modify, remove, or create analysis setups.
 
-2. **Define metrics**: By clicking on **+New metrics**button, , in the middle panel called **Available metrics**, a create a new metric editor opens.
+You can then define:
+- the analysis time range, with **Start time** set to *0* and **End time** set to *last*, indicating that the analysis spans from the beginning to the final available data point. 
+- the **Unit** dropdown is set to *hour*, defining the time measurement; other options such as *second*, *minute*, *day*, *week*, *month*, and *year* can also be selected.
+-  the **Output variable** is set to *CONC*, which refers to concentration, indicating the variable being analyzed.
+- the stratification options:**Arm strata** and **Scenario strata** are both set to *all*, meaning all arms and scenarios are included. Filtering on a specific arm or scenario is also possible.
+
+2. **Define metrics**: Click on the **+New metrics** button, in the **Available metrics** panel (middle section) to open the metric editor.
 
     ![](pictures/create_new_metrics.png){width="462"}
 
     -   Select the analysis that a metric should be derived from by selecting it in **Reference analysis**.  All metrics are computed within a specified setup define in the previous step
 
-    -   Currently the following NCA metrics are available:
+    -   The following NCA metrics are available:
 
         -   AUC: area under the curve. In select AUC method field, the AUC calculation method can be selected *linlin*, *linlog*, *tmax_linlog*
                 -  lin–lin: Uses linear interpolation for all points (straight lines between values).
@@ -59,7 +64,14 @@ Further down, the **Output variable** is set to *CONC*, which refers to concentr
         
 At the bottom, the “Cancel” and “Create” buttons allow the user to discard changes or confirm the creation of the new metric.
     
-3.**Create  Summary statistics table**: Once all metrics are defined, you can click on Refresh to generate and update the summary statistics table with the selected settings.Below the table, several display and export options are available. The user can enter a title and subtitle, adjust the font size using a slider, and select the time unit (currently set to hour). Additional checkboxes allow customization of the table layout, such as displaying all strata as columns, swapping stratification variables, or showing all binary levels. A Refresh button updates the table based on the current settings. Finally, the table can be exported using the Download table as option, with the format set to HTML, along with a download button to save the file.
+3.**Create  Summary statistics table**: Once all metrics are defined, you can click on Refresh to generate and update the summary statistics table with the selected settings.
+Below the table, several display and export options are available:
+ - Enter a title and subtitle, 
+ - Adjust the font size using a slider
+ - Select the time unit (currently set to hour). 
+ - Additional checkboxes allow customization of the table layout, such as displaying all strata as columns, swapping stratification variables, or showing all binary levels. A Refresh button updates the table based on the current settings.
+ 
+The created table can be exported using the Download table as option, with the format set to HTML, along with a download button to save the file.
 
 ![](pictures/summary_statistics_table.png){width="462"}
 
@@ -70,6 +82,7 @@ An optional “Categorical endpoint” checkbox can be enabled if the metric ret
 
 - vector: works with the output variable and time vectors
 - tibble: works with the full dataset for each individual
+
 ![](pictures/custom_metric.png){width="462"}
 
 ### **Return categorical endpoint**
@@ -110,18 +123,15 @@ or
 
 Remember `.y` is the selected output variable and `.x` is the time vector. The above example will return the value of the output variable at time = 4. However, this of course only works if the time point you specify actually exists in the dataset.
 
-For advanced users:
-
-There is a special function `iValue` that works together with the campsisnca metric objects, e.g.:
+For advanced users, there is a special function `iValue` that works together with the campsisnca metric objects, e.g.:
 
 `~ AUC() %>% iValue(.x,.y)`
 
 ### Calculated from a combination of variables in the dataset
 
-If you select "tibble" as the metric type, you can define a custom metric as a function of any other variable available in the dataset. For example, you can calculate the ratio of two variables at a specific time. The function should be defined in R syntax and entered in the appropriate field:
+If you select "tibble" as the metric type, you can define a custom metric as a function of any other variable available in the dataset. For example, you can calculate the ratio of two variables at a specific time. 
 
-![](pictures/custom-metric2.png){width="462"} You can access the temporary dataframe of an individual for which the metric is to be calculated within the specified interval as a tibble object using `.x`. For example, the following custom function returns the ratio of two variables at baseline:
-`~ .x$VAR1[1] / .x$VAR2[1]`
+You can access the temporary dataframe of an individual for which the metric is to be calculated within the specified interval as a tibble object using `.x`. For example, the following custom function returns the ratio of two variables at baseline:`~ .x$VAR1[1] / .x$VAR2[1]`
 
 #### Examples
 
