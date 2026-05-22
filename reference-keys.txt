@@ -197,3 +197,4 @@ overlay-external-data
 custom-metric
 return-categorical-endpoint
 r-code
+info

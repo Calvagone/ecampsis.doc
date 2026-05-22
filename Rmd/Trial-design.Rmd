@@ -55,7 +55,18 @@ Units can be selected independently for each dosing parameter.
 This subsection defines subject‑level covariates and observation schedules for the arm.
 
 ![](pictures/covariates_observations.png)
-Covariates associated with subjects in the arm are defined, and optional dose‑adaptation rules based on these covariates can be specified (e.g. AMT * BW). By clicking on **add** button, a covariate editor window opens.
+
+Covariates associated with subjects in the arm are defined, and optional dose‑adaptation rules based on these covariates can be specified (e.g. AMT * BW). 
+
+Observation times can be defined using one of the following approaches:
+
+*  *Sequence*, where start time, end time, and time step are specified
+*  *Custom* where a user‑defined observation time sequence is specified
+
+When **Repeat after dose** is enabled, the observation schedule is replicated after each dose.
+Care should be taken when defining the number of observations, as a large number of observation rows can substantially increase the size of the simulated dataset and may result in memory limitations.
+
+By clicking on **add** button, a covariate editor window opens.
 
 ![](pictures/covariate_editor.png)
 
@@ -68,17 +79,16 @@ The covariate name is defined and a distribution is selected from the following 
 - **Lognormal distribution**: mean and standard deviation are specified on the log scale
 - **Discrete distribution**: discrete values and their corresponding probabilities are entered (each probability must be between 0 and 1)
 
-By clicking on **bootstrap**, covariates are bootstrapped from an external dataset. Data can be copied and pasted directly into the table or imported from a CSV file.Two options are available: *Sample with replacement* and/or *Draw subjects randomly*
+By clicking on **Bootstrap**, a dedicated window allows covariates to be sampled from an external dataset. Data can be entered directly into the table, imported from a CSV file using the **Browse** button, or retrieved from the NHANES database via the **Import DB** button.  Once the table is created, it can also be exported using the **Download** button.
 
 ![](pictures/bootstrap.png)
 
-Observation times can be defined using one of the following approaches:
+Within this interface, users can specify the covariates to include (e.g. AGE, BW) and preview the bootstrap dataset in a table. The Show filters option allows filtering the dataset by covariate values to refine the selection.
 
-*  *Sequence*, where start time, end time, and time step are specified
-*  *Custom* where a user‑defined observation time sequence is specified
+![](pictures/bootstrap2.png)
 
-When **Repeat after dose** is enabled, the observation schedule is replicated after each dose.
-Care should be taken when defining the number of observations, as a large number of observation rows can substantially increase the size of the simulated dataset and may result in memory limitations.
+Two sampling options are available: Sample with replacement and Draw subjects randomly.
+
 
 ## Trial design overview
 
