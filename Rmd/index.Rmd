@@ -1,55 +1,45 @@
 ---
-title: "e-Campsis documentation"
+title: "e-Campsis desktop"
 author: "Calvagone"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 documentclass: book
 cover-image: ecampsis_logo.png
-description: "Here you will find a description of the tabs of e-campsis.\n"
+description: "Here you will find a description of the tabs of e-Campsis desktop.\n"
 link-citations: yes
-github-repo: "rstudio/bookdown-demo"
+github-repo: "Calvagone/ecampsis.doc"
 ---
 
 # About
 
-[e-Campsis](https://ecampsis.shinyapps.io/free/) is a free web application developed by [Calvagone](https://www.calvagone.com/) that provides an intuitive and user-friendly interface for setting up population PK/PD simulations. The app is built on the R-package [campsis](https://calvagone.github.io/), which serves as a powerful frontend for running model-based simulations using *mrgsolve* or *rxode2*.
+[e-Campsis](https://ecampsis.com/) is a desktop application developed by [Calvagone](https://www.calvagone.com/) that provides an intuitive and user-friendly interface for setting up population PK/PD simulations. The app is built on the R-package [campsis](https://calvagone.github.io/), which serves as a powerful frontend for running model-based simulations using *mrgsolve* or *rxode2*.
 
 ## e-Campsis versions
 
-### e-Campsis free
 
-*e-Campsis free* is, as the name suggests, freely accessible to everyone at <https://ecampsis.shinyapps.io/free/>.
-
-It comes with certain limitations regarding the size of the simulation and misses some functionality of the pro-version.
-
-### e-Campsis pro
-
-The professional version of e-Campsis is available as a yearly subscription and includes the following additional functionality:
+*e-Campsis* is available as a yearly subscription at <https://ecampsis.com/> and includes the following additional functionality:
 
 -   Save/load e-Campsis projects
 -   NONMEM&reg;, Monolix&reg; and rxode2 code import
 -   Number of arms, scenarios, subjects, observations only limited by memory
 -   Advanced customization of plots
 -   NCA & summary statistics
--   Sensitivity analysis
--   Forest plots
 -   Overlay external data on plots
 -   Bootstrap covariates from external file or NHANES
--   Replicate simulation with parameter uncertainty
 -   Personalized support via email
-
 
 For further information, contact us at the following e-mail address: [campsis\@calvagone.com](mailto:campsis@calvagone.com){.email}
 
 ## Application interface
 
-The app consists of 8 main sections:
+The app consists of 7 main sections:
 
 -   **Model**: a powerful model editor to edit your Campsis model online. Try out one of the numerous models available from the library and adapt it to your needs.
 -   **Trial design**: an easy-to-use interface to quickly set-up the dosing regimen, observation times and covariates.
 -   **Simulation**: a single screen dedicated to the simulation configuration and visualization of the results. Explore different scenarios of parameter settings quickly and interactively. Overlay external data and produce beautiful ggplot2-based plots.
 -   **Post-processing**: here you can define summary variables such as non-compartmental PK parameters that you want to derive from your simulation results and show them in a table.
--   **Sensitivity analysis**: explore the effects of changing your model parameters on any outcome parameter (NCA metric) you have defined in the post-processing phase.
--   **Forest plots**: easily define and generate nice-looking forest plots and explore the impact of covariates on any outcome parameter.
--   **Settings**: define the time units of the user interface. More settings will come soon.
--   **Download**: last but not least, download the model, parameters and the whole code of the simulation to reproduce what you see in the app on your computer using the open-source Campsis suite.
+-   **R-code**: the R script configuration section provides instructions explaining that all actions performed in the interface can be exported as an R script using the open-source Campsis ecosystem. 
+-   **Settings**: define R server configuration of the user interface.
+-   **Info**: displays license information, application version, and contact details for support.
+
+Additionally, under the **File** menu, you can open, save, or create e‑Campsis projects, or open a new tab. The **Examples** menu provides ready-to-use projects.
