@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>e-Campsis desktop</title>
+  <title>Chapter 8 R-code | e-Campsis desktop</title>
   <meta name="description" content="Here you will find a description of the tabs of e-Campsis desktop." />
   <meta name="generator" content="bookdown 0.46 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="e-Campsis desktop" />
+  <meta property="og:title" content="Chapter 8 R-code | e-Campsis desktop" />
   <meta property="og:type" content="book" />
   <meta property="og:image" content="/ecampsis_logo.png" />
   <meta property="og:description" content="Here you will find a description of the tabs of e-Campsis desktop." />
   <meta name="github-repo" content="Calvagone/ecampsis.doc" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="e-Campsis desktop" />
+  <meta name="twitter:title" content="Chapter 8 R-code | e-Campsis desktop" />
   
   <meta name="twitter:description" content="Here you will find a description of the tabs of e-Campsis desktop." />
   <meta name="twitter:image" content="/ecampsis_logo.png" />
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-<link rel="next" href="model-tab.html"/>
+<link rel="prev" href="forest-plots.html"/>
+<link rel="next" href="settings.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -174,52 +174,37 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">e-Campsis desktop</h1>
-<p class="author"><em>Calvagone</em></p>
-<p class="date"><em>2026-05-22</em></p>
-</div>
-<div id="about" class="section level1 hasAnchor" number="1">
-<h1><span class="header-section-number">Chapter 1</span> About<a href="index.html#about" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p><a href="https://ecampsis.shinyapps.io/free/">e-Campsis</a> is a desktop application developed by <a href="https://www.calvagone.com/">Calvagone</a> that provides an intuitive and user-friendly interface for setting up population PK/PD simulations. The app is built on the R-package <a href="https://calvagone.github.io/">campsis</a>, which serves as a powerful frontend for running model-based simulations using <em>mrgsolve</em> or <em>rxode2</em>.</p>
-<div id="e-campsis-versions" class="section level2 hasAnchor" number="1.1">
-<h2><span class="header-section-number">1.1</span> e-Campsis versions<a href="index.html#e-campsis-versions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p><em>e-Campsis</em> is available as a yearly subscription at <a href="https://ecampsis.shinyapps.io/free/" class="uri">https://ecampsis.shinyapps.io/free/</a> and includes the following additional functionality:</p>
+<div id="r-code" class="section level1 hasAnchor" number="8">
+<h1><span class="header-section-number">Chapter 8</span> R-code<a href="r-code.html#r-code" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>In the <strong>R-code</strong> tab, users can reproduce the entire workflow from e‑Campsis in R.</p>
+<p>On the left, the R script configuration section provides instructions explaining that all actions performed in the interface can be exported as an R script using the open-source Campsis ecosystem. Users are prompted to first save their project, then either download the generated script or copy it to the clipboard.</p>
+<p>Additional options include selecting the version control setup (via campsisverse) and choosing the script form, which determines how much detail (e.g., intermediate steps) is included in the generated code.Several options are available to control how the R script is generated:</p>
 <ul>
-<li>Save/load e-Campsis projects</li>
-<li>NONMEM®, Monolix® and rxode2 code import</li>
-<li>Number of arms, scenarios, subjects, observations only limited by memory</li>
-<li>Advanced customization of plots</li>
-<li>NCA &amp; summary statistics</li>
-<li>Overlay external data on plots</li>
-<li>Bootstrap covariates from external file or NHANES</li>
-<li>Personalized support via email</li>
-</ul>
-<p>For further information, contact us at the following e-mail address: <a href="mailto:campsis@calvagone.com" class="email">campsis@calvagone.com</a></p>
-</div>
-<div id="application-interface" class="section level2 hasAnchor" number="1.2">
-<h2><span class="header-section-number">1.2</span> Application interface<a href="index.html#application-interface" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>The app consists of 7 main sections:</p>
+<li>Version control with campsisverse:
 <ul>
-<li><strong>Model</strong>: a powerful model editor to edit your Campsis model online. Try out one of the numerous models available from the library and adapt it to your needs.</li>
-<li><strong>Trial design</strong>: an easy-to-use interface to quickly set-up the dosing regimen, observation times and covariates.</li>
-<li><strong>Simulation</strong>: a single screen dedicated to the simulation configuration and visualization of the results. Explore different scenarios of parameter settings quickly and interactively. Overlay external data and produce beautiful ggplot2-based plots.</li>
-<li><strong>Post-processing</strong>: here you can define summary variables such as non-compartmental PK parameters that you want to derive from your simulation results and show them in a table.</li>
-<li><strong>R-code</strong>: the R script configuration section provides instructions explaining that all actions performed in the interface can be exported as an R script using the open-source Campsis ecosystem.</li>
-<li><strong>Settings</strong>: define R server configuration of the user interface.</li>
-<li><strong>Info</strong>: displays license information, application version, and contact details for support.</li>
+<li>Do nothing: no dependency management is applied</li>
+<li>campsisverse::use: sets up dependencies for reproducibility</li>
+<li>campsisverse::restore: restores a previously defined environment</li>
+</ul></li>
+<li>Script form:
+<ul>
+<li>Compact: minimal script</li>
+<li>Use &amp; show intermediate Campsis objects: includes intermediate objects for transparency</li>
+<li>Use intermediate Campsis objects: uses them without displaying</li>
+<li>Plotting only: generates code focused on visualization</li>
+</ul></li>
 </ul>
-<p>Additionally, under the <strong>File</strong> menu, you can open, save, or create e‑Campsis projects, or open a new tab. The <strong>Examples</strong> menu provides ready-to-use projects.</p>
+<p>On the right, the Generated R code panel displays a preview of the complete R script. This script includes loading required libraries (such as campsis, campsisnca, dplyr, and ggplot2), importing the project file in JSON format, and reconstructing key components such as the model, dataset, and scenarios. At the bottom, users can either Download the script as a file or Copy to clipboard, making it easy to run or further customize the analysis directly in an R environment.</p>
+<p><img src="pictures/Rcode.png" /></p>
 
-</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-
-<a href="model-tab.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="forest-plots.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="settings.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -250,7 +235,7 @@ gitbook.start({
     "size": 2
   },
   "edit": {
-    "link": "https://github.com/USERNAME/REPO/edit/BRANCH/index.Rmd",
+    "link": "https://github.com/USERNAME/REPO/edit/BRANCH/Download.Rmd",
     "text": "Edit"
   },
   "history": {

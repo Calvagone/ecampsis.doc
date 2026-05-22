@@ -194,3 +194,6 @@ dataset-configuration
 simulation-tab
 scenarios-settings
 overlay-external-data
+custom-metric
+return-categorical-endpoint
+r-code
