@@ -227,9 +227,9 @@ Below the table, several display and export options are available:
 An optional “Categorical endpoint” checkbox can be enabled if the metric returns categorical values (e.g., TRUE/FALSE or text). You must also choose an input type:</p>
 <ul>
 <li>vector: works with the output variable and time vectors</li>
-<li>tibble: works with the full dataset for each individual
-<img src="pictures/custom_metric.png" width="462" /></li>
+<li>tibble: works with the full dataset for each individual</li>
 </ul>
+<p><img src="pictures/custom_metric.png" width="462" /></p>
 <div id="return-categorical-endpoint" class="section level3 hasAnchor" number="5.2.1">
 <h3><span class="header-section-number">5.2.1</span> <strong>Return categorical endpoint</strong><a href="post-processing.html#return-categorical-endpoint" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>To check if the value of output variable (e.g. concentration) at the end of the interval is above 10 simply write:</p>
@@ -252,14 +252,13 @@ An optional “Categorical endpoint” checkbox can be enabled if the metric ret
 <p><strong>Return the value of the output variable at a specific time point</strong> within the interval, you can use the following syntax:</p>
 <p><code>~ .y[.x == 4]</code></p>
 <p>Remember <code>.y</code> is the selected output variable and <code>.x</code> is the time vector. The above example will return the value of the output variable at time = 4. However, this of course only works if the time point you specify actually exists in the dataset.</p>
-<p>For advanced users:</p>
-<p>There is a special function <code>iValue</code> that works together with the campsisnca metric objects, e.g.:</p>
+<p>For advanced users, there is a special function <code>iValue</code> that works together with the campsisnca metric objects, e.g.:</p>
 <p><code>~ AUC() %&gt;% iValue(.x,.y)</code></p>
 </div>
 <div id="calculated-from-a-combination-of-variables-in-the-dataset" class="section level3 hasAnchor" number="5.2.3">
 <h3><span class="header-section-number">5.2.3</span> Calculated from a combination of variables in the dataset<a href="post-processing.html#calculated-from-a-combination-of-variables-in-the-dataset" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>If you select “tibble” as the metric type, you can define a custom metric as a function of any other variable available in the dataset. For example, you can calculate the ratio of two variables at a specific time. The function should be defined in R syntax and entered in the appropriate field:</p>
-<p><img src="pictures/custom-metric2.png" width="462" /> You can access the temporary dataframe of an individual for which the metric is to be calculated within the specified interval as a tibble object using <code>.x</code>. For example, the following custom function returns the ratio of two variables at baseline:<code>~ .x$VAR1[1] / .x$VAR2[1]</code></p>
+<p>If you select “tibble” as the metric type, you can define a custom metric as a function of any other variable available in the dataset. For example, you can calculate the ratio of two variables at a specific time.</p>
+<p>You can access the temporary dataframe of an individual for which the metric is to be calculated within the specified interval as a tibble object using <code>.x</code>. For example, the following custom function returns the ratio of two variables at baseline:<code>~ .x$VAR1[1] / .x$VAR2[1]</code></p>
 <div id="examples" class="section level4 hasAnchor" number="5.2.3.1">
 <h4><span class="header-section-number">5.2.3.1</span> Examples<a href="post-processing.html#examples" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p><strong>Alternative to calculate the change from baseline</strong>,</p>
