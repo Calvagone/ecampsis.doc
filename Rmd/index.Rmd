@@ -28,7 +28,7 @@ github-repo: "Calvagone/ecampsis.doc"
 -   Bootstrap covariates from external file or NHANES
 -   Personalized support via email
 
-For further information, contact us at the following e-mail address: [campsis\@calvagone.com](mailto:campsis@calvagone.com){.email}
+For further information, contact us at the following e-mail address: [info\@e-campsis.com](mailto:info@e-campsis.com){.email}
 
 ## Application interface
 
