@@ -198,3 +198,4 @@ custom-metric
 return-categorical-endpoint
 r-code
 info
+license-agreement
