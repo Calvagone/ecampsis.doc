@@ -164,5 +164,5 @@ myelosuppression_model
 transit_cmt_model
 feedback-and-help
 disclaimer
-terms-of-service
+license-agreement
 privacy-policy
