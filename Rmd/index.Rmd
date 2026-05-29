@@ -12,12 +12,14 @@ github-repo: "Calvagone/ecampsis.doc"
 
 # About
 
-[e-Campsis](https://ecampsis.com/) is a desktop application developed by [Calvagone](https://www.calvagone.com/) that provides an intuitive and user-friendly interface for setting up population PK/PD simulations. The app is built on the R-package [campsis](https://calvagone.github.io/), which serves as a powerful frontend for running model-based simulations using *mrgsolve* or *rxode2*.
+[e-Campsis](https://ecampsis.com/) is a desktop application developed by [Calvagone](https://www.calvagone.com/) that provides an intuitive and user-friendly interface for setting up population PK/PD simulations. 
+
+The app runs on the localhost in the user’s web browser (e.g. Edge or Chrome) and invokes the users own R environment to execute simulations with the help of a series of open-source packages like *campsis*, *campsismod*, *campsisnca* (see here for details  [campsis](https://calvagone.github.io/). These packages use *rxode2* or *mrgsolve* as simulation engine per the users choice. 
 
 ## e-Campsis versions
 
 
-*e-Campsis* is available as a yearly subscription at <https://ecampsis.com/> and includes the following additional functionality:
+*e-Campsis* standard includes the following additional functionality:
 
 -   Save/load e-Campsis projects
 -   NONMEM&reg;, Monolix&reg; and rxode2 code import
@@ -27,6 +29,8 @@ github-repo: "Calvagone/ecampsis.doc"
 -   Overlay external data on plots
 -   Bootstrap covariates from external file or NHANES
 -   Personalized support via email
+
+Advanced features such as an AI assistant to facilitate the setup of simulations and a qualification suite are available in an advanced version. Please check the full feature list here: [e-Campsis](www.e-campsis.com)  
 
 For further information, contact us at the following e-mail address: [info\@e-campsis.com](mailto:info@e-campsis.com){.email}
 
