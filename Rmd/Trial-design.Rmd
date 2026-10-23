@@ -39,7 +39,7 @@ Two administration types are available:
   * Bolus (instantaneous): When this option is enabled, the administration compartment must be specified.
   * Infusion (zero‑order): When this option is enabled, both the administration compartment and the infusion duration must be specified.
 When Duration handled in model is enabled, the infusion duration is controlled by a parameter defined in the model. This option is useful when the infusion represents a zero‑order input with variability or covariate effects (e.g. slow‑release formulations). Additional information is available at:
-https://calvagone.github.io/campsis.doc/articles/v06_infusions.html
+https://campsisverse.github.io/campsis.doc/articles/v06_infusions.html
 
 Multiple administration compartments may be selected when using complex absorption models (e.g. sequential or parallel first‑ and zero‑order inputs).
 

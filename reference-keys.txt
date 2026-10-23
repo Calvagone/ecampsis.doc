@@ -165,4 +165,6 @@ transit_cmt_model
 feedback-and-help
 disclaimer
 license-agreement
+third-party-components-licenses
+campsis-json-schemas
 privacy-policy

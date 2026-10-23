@@ -1,6 +1,6 @@
 # Feedback and help
 
-On the [**Campsis**](https://calvagone.github.io/) website, you will find extensive information about the open-source Campsis simulation platform. There you will also find a section on e-Campsis, including example use cases.
+On the [**Campsis**](https://campsisverse.github.io/) website, you will find extensive information about the open-source Campsis simulation platform. There you will also find a section on e-Campsis, including example use cases.
 
 If you run into problems using e-Campsis, please provide your feedback here: <https://github.com/Calvagone/ecampsis.feedback/issues>
 
@@ -12,6 +12,26 @@ e-Campsis is provided "as is" and "as available", without warranty of any kind, 
 # License agreement
 
 ![](pictures/e-Campsis_EULA_v1.0.pdf){width="21cm" height="29cm"}
+
+# Third-Party Components & Licenses
+
+The data models and validation structures in `e-Campsis` rely on object models generated from the Campsis JSON Schemas. 
+
+## Campsis JSON Schemas
+
+The following schemas are used under the terms of the [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/) license:
+
+* **Campsismod JSON Schema v1.0** (© 2026 Nicolas Luyckx / Calvagone)
+* **Campsis JSON Schema v1.0** (© 2026 Nicolas Luyckx / Calvagone)
+* **Campsis Scenarios JSON Schema v1.0** (© 2026 Nicolas Luyckx / Calvagone)
+* **Campsis Settings JSON Schema v1.0** (© 2026 Nicolas Luyckx / Calvagone)
+* **Campsisnca Table JSON Schema v1.0** (© 2026 Nicolas Luyckx / Calvagone)
+* **Replicated Campsisnca Table JSON Schema v1.0** (© 2026 Nicolas Luyckx / Calvagone)
+* **Forest Plot JSON Schema v1.0** (© 2026 Nicolas Luyckx / Calvagone)
+
+Portions of the Python data models (Pydantic classes) in this software were generated or adapted from these schemas. You are free to share and adapt these schemas provided appropriate credit is given.
+
+All JSON schemas are available at [https://campsisverse.github.io/](https://campsisverse.github.io/).
 
 
 # Privacy Policy

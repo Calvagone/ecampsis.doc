@@ -6,7 +6,7 @@ site: bookdown::bookdown_site
 documentclass: book
 cover-image: ecampsis_logo.png
 description: "Here you will find a description of the tabs of e-Campsis desktop.\n"
-link-citations: yes
+link-citations: true
 github-repo: "Calvagone/ecampsis.doc"
 ---
 
@@ -14,7 +14,7 @@ github-repo: "Calvagone/ecampsis.doc"
 
 [e-Campsis](https://ecampsis.com/) is a desktop application developed by [Calvagone](https://www.calvagone.com/) that provides an intuitive and user-friendly interface for setting up population PK/PD simulations. 
 
-The app runs on the localhost in the user’s web browser (e.g. Edge or Chrome) and invokes the users own R environment to execute simulations with the help of a series of open-source packages like *campsis*, *campsismod*, *campsisnca* (see here for details  [campsis](https://calvagone.github.io/). These packages use *rxode2* or *mrgsolve* as simulation engine per the users choice. 
+The app runs on the localhost in the user’s web browser (e.g. Edge or Chrome) and invokes the users own R environment to execute simulations with the help of a series of open-source packages like *campsis*, *campsismod*, *campsisnca* (see here for details  [campsis](https://campsisverse.github.io/). These packages use *rxode2* or *mrgsolve* as simulation engine per the users choice. 
 
 ## e-Campsis versions
 
